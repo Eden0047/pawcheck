@@ -18,7 +18,16 @@ export default function TopNav() {
   return (
     <nav className="sticky top-0 z-50 bg-cream/90 backdrop-blur-md border-b border-[#F2E4DA]">
       <div className="max-w-[1080px] mx-auto px-6 py-3.5 flex items-center justify-between flex-wrap gap-3">
-        <div className="font-nunito font-black text-xl">PawCheck 🐾</div>
+        <div className="flex items-center gap-2">
+          <div className="font-nunito font-black text-xl">PawCheck 🐾</div>
+          <span
+            title="Currently available in the UK only"
+            className="text-base leading-none"
+            aria-label="UK only"
+          >
+            🇬🇧
+          </span>
+        </div>
         <div className="flex gap-1.5 flex-wrap">
           {NAV_ITEMS.map((n) => (
             <button

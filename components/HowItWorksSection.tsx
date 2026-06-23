@@ -36,6 +36,12 @@ export default function HowItWorksSection() {
             );
           })}
         </div>
+
+        <div className="text-center mt-8">
+          <span className="inline-block bg-white border-[1.5px] border-softgreen text-[#1F8A5B] font-nunito font-extrabold text-xs px-4 py-1.5 rounded-full">
+            🇬🇧 Currently available in the UK only
+          </span>
+        </div>
       </div>
     </section>
   );
