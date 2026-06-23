@@ -1,0 +1,106 @@
+"use client";
+
+export interface CheckResult {
+  likelyCauses: string[];
+  homeAdvice: string[];
+  sources: string[];
+  urgencyLevel: "low" | "medium" | "high";
+  urgencyMessage: string;
+}
+
+interface ResultsPanelProps {
+  loading: boolean;
+  result: CheckResult | null;
+  petEmoji: string;
+  petLabel: string;
+  issuesSummary: string;
+  severity: number;
+  severityColor: string;
+}
+
+function Skeleton() {
+  return (
+    <div className="bg-white rounded-[28px] p-8 shadow-xl">
+      <div className="h-7 w-[55%] rounded-lg mb-6 bg-[linear-gradient(90deg,#eee_25%,#f6f6f6_50%,#eee_75%)] bg-[length:800px_100%] animate-shimmer" />
+      <div className="h-4 rounded-lg mb-3.5 bg-[linear-gradient(90deg,#eee_25%,#f6f6f6_50%,#eee_75%)] bg-[length:800px_100%] animate-shimmer" />
+      <div className="h-4 w-4/5 rounded-lg mb-3.5 bg-[linear-gradient(90deg,#eee_25%,#f6f6f6_50%,#eee_75%)] bg-[length:800px_100%] animate-shimmer" />
+      <div className="h-4 w-[65%] rounded-lg bg-[linear-gradient(90deg,#eee_25%,#f6f6f6_50%,#eee_75%)] bg-[length:800px_100%] animate-shimmer" />
+    </div>
+  );
+}
+
+export default function ResultsPanel({
+  loading,
+  result,
+  petEmoji,
+  petLabel,
+  issuesSummary,
+  severity,
+  severityColor,
+}: ResultsPanelProps) {
+  if (!loading && !result) return null;
+
+  return (
+    <section className="max-w-3xl mx-auto px-6 py-14 min-h-[80px]">
+      {loading && <Skeleton />}
+
+      {!loading && result && (
+        <div className="bg-white rounded-[28px] p-9 shadow-2xl animate-resultIn">
+          <div className="flex flex-wrap gap-2.5 items-center mb-2">
+            <span className="bg-teal text-white font-nunito font-extrabold text-sm px-4 py-1.5 rounded-full">
+              {petEmoji} {petLabel}
+            </span>
+            <span className="bg-[#FFF1F1] text-coral font-nunito font-extrabold text-sm px-4 py-1.5 rounded-full">
+              {issuesSummary}
+            </span>
+            <span
+              className="text-white font-nunito font-extrabold text-sm px-4 py-1.5 rounded-full"
+              style={{ background: severityColor }}
+            >
+              Severity {severity}/10
+            </span>
+          </div>
+
+          {result.urgencyLevel === "high" && (
+            <div className="bg-[#FFE3E3] border-[1.5px] border-coral text-[#C0392B] rounded-2xl px-5 py-3.5 font-semibold my-4">
+              ⚠️ {result.urgencyMessage || "Based on the severity, we recommend contacting a vet immediately."}
+            </div>
+          )}
+
+          <h3 className="font-nunito font-black text-xl mt-7 mb-3">✅ What it likely is</h3>
+          <ul className="pl-5 leading-loose list-disc">
+            {result.likelyCauses.map((c, i) => (
+              <li key={i}>{c}</li>
+            ))}
+          </ul>
+
+          <h3 className="font-nunito font-black text-xl mt-7 mb-3">💡 What you can do at home</h3>
+          <div className="flex flex-col gap-2.5">
+            {result.homeAdvice.map((t, i) => (
+              <div key={i} className="flex gap-3 items-start bg-[#F4FBFA] rounded-2xl px-4 py-3">
+                <span className="text-teal font-black">✓</span>
+                <span className="leading-relaxed">{t}</span>
+              </div>
+            ))}
+          </div>
+
+          <h3 className="font-nunito font-black text-xl mt-7 mb-3">🔗 Sources</h3>
+          <div className="flex flex-wrap gap-2.5">
+            {result.sources.map((s, i) => (
+              <span
+                key={i}
+                className="bg-[#F0FFF8] border-[1.5px] border-softgreen text-[#1F8A5B] font-bold text-sm px-4 py-2 rounded-full"
+              >
+                {s} · Verified ✓
+              </span>
+            ))}
+          </div>
+
+          <p className="text-muted text-sm mt-7 pt-5 border-t border-gray-100">
+            PawCheck does not replace professional veterinary advice. Always consult a vet if you&apos;re concerned.
+          </p>
+        </div>
+      )}
+    </section>
+  );
+}
