@@ -39,6 +39,11 @@ export default function CommunitySection() {
     return () => clearInterval(interval);
   }, [comments.length]);
 
+  const goTo = (index: number) => {
+    if (comments.length === 0) return;
+    setActiveIndex((index + comments.length) % comments.length);
+  };
+
   const submitComment = async () => {
     const t = commentText.trim();
     if (!t) {
@@ -83,38 +88,69 @@ export default function CommunitySection() {
     }
   };
 
-  const active = comments[activeIndex];
-
   return (
     <section className="max-w-[900px] mx-auto px-6 py-14">
       <h2 className="font-nunito font-black text-3xl sm:text-4xl text-center mb-9">
         What other pet parents are saying 💬
       </h2>
 
-      {active ? (
+      {comments.length > 0 ? (
         <div
           onMouseEnter={() => (hovering.current = true)}
           onMouseLeave={() => (hovering.current = false)}
-          className="relative bg-white rounded-2xl p-7 shadow-md mb-5 min-h-[180px] transition-opacity duration-500"
+          className="mb-5"
         >
-          <div className="flex items-center gap-2.5 mb-3">
-            <span className="text-3xl">{active.avatar}</span>
-            <div>
-              <div className="font-nunito font-extrabold text-sm">{active.user}</div>
-              <span className="text-xs font-bold bg-[#E9FBF8] text-[#0F8B80] px-2.5 py-0.5 rounded-full">
-                {active.pet}
-              </span>
+          <div className="flex items-center justify-center gap-3 max-w-lg mx-auto">
+            {comments.length > 1 && (
+              <button
+                onClick={() => goTo(activeIndex - 1)}
+                aria-label="Previous comment"
+                className="flex-none w-9 h-9 rounded-full bg-white shadow-md flex items-center justify-center text-coral font-bold hover:bg-[#FFE3DC]"
+              >
+                ‹
+              </button>
+            )}
+
+            <div className="flex-1 min-w-0 overflow-hidden rounded-xl">
+              <div
+                className="flex transition-transform duration-500 ease-out"
+                style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+              >
+                {comments.map((c) => (
+                  <div key={c.id} className="w-full flex-none bg-white rounded-xl p-5 shadow-md">
+                    <div className="flex items-center gap-2 mb-2.5">
+                      <span className="text-2xl">{c.avatar}</span>
+                      <div>
+                        <div className="font-nunito font-extrabold text-sm">{c.user}</div>
+                        <span className="text-[11px] font-bold bg-[#E9FBF8] text-[#0F8B80] px-2 py-0.5 rounded-full">
+                          {c.pet}
+                        </span>
+                      </div>
+                    </div>
+                    <p className="mb-2.5 leading-relaxed text-sm">{c.text}</p>
+                    <div className="font-bold text-muted text-sm">👍 {c.likes}</div>
+                  </div>
+                ))}
+              </div>
             </div>
+
+            {comments.length > 1 && (
+              <button
+                onClick={() => goTo(activeIndex + 1)}
+                aria-label="Next comment"
+                className="flex-none w-9 h-9 rounded-full bg-white shadow-md flex items-center justify-center text-coral font-bold hover:bg-[#FFE3DC]"
+              >
+                ›
+              </button>
+            )}
           </div>
-          <p className="mb-3 leading-relaxed text-base">{active.text}</p>
-          <div className="font-bold text-muted text-sm">👍 {active.likes}</div>
 
           {comments.length > 1 && (
-            <div className="flex gap-1.5 justify-center mt-5">
+            <div className="flex gap-1.5 justify-center mt-4">
               {comments.map((c, i) => (
                 <button
                   key={c.id}
-                  onClick={() => setActiveIndex(i)}
+                  onClick={() => goTo(i)}
                   aria-label={`Show comment ${i + 1}`}
                   className={`w-2 h-2 rounded-full transition-colors ${
                     i === activeIndex ? "bg-coral" : "bg-gray-200"
