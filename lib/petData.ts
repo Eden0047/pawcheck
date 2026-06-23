@@ -133,36 +133,47 @@ export const FAQS: Faq[] = [
 ];
 
 export interface Comment {
+  id: string;
   avatar: string;
   user: string;
   pet: string;
   text: string;
   likes: number;
+  createdAt: number;
 }
 
 export const INITIAL_COMMENTS: Comment[] = [
   {
+    id: "seed-1",
     avatar: "🐶",
     user: "@GoldenMumNewbury",
     pet: "🐶 Dog",
     likes: 42,
+    createdAt: Date.UTC(2026, 0, 3),
     text: "Helped me stay calm when Biscuit was poorly at 2am. Told me exactly what to watch for. Absolute lifesaver!",
   },
   {
+    id: "seed-2",
     avatar: "🐱",
     user: "@CatDadReading",
     pet: "🐱 Cat",
     likes: 31,
+    createdAt: Date.UTC(2026, 0, 5),
     text: "Used PawCheck for my cat's loss of appetite. The advice matched what the vet said!",
   },
   {
+    id: "seed-3",
     avatar: "🐰",
     user: "@BunnyLoverBasingstoke",
     pet: "🐰 Rabbit",
     likes: 27,
+    createdAt: Date.UTC(2026, 0, 8),
     text: "Finally an app that covers rabbits! Most pet health tools forget us bunny parents.",
   },
 ];
+
+export const SEED_RATING_AVERAGE = 4.8;
+export const SEED_RATING_COUNT = 1243;
 
 export function severityColor(severity: number): string {
   if (severity <= 3) return "#2BB673";
