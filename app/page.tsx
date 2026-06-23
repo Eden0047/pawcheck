@@ -1,11 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import TopNav from "@/components/TopNav";
 import HeroSection from "@/components/HeroSection";
+import HowItWorksSection from "@/components/HowItWorksSection";
+import PetPickerSection from "@/components/PetPickerSection";
 import SymptomChecker from "@/components/SymptomChecker";
 import ResultsPanel, { CheckResult } from "@/components/ResultsPanel";
 import EmergencySection from "@/components/EmergencySection";
 import CommunitySection from "@/components/CommunitySection";
+import FAQSection from "@/components/FAQSection";
 import WaveDivider from "@/components/WaveDivider";
 import { PETS, PetType, severityColor } from "@/lib/petData";
 
@@ -60,7 +64,14 @@ export default function Home() {
 
   return (
     <main className="relative min-h-screen overflow-x-hidden">
-      <HeroSection selectedPet={pet} onSelectPet={handleSelectPet} />
+      <TopNav />
+      <HeroSection />
+
+      <WaveDivider fill="#FFD8CE" bg="#FFF8F0" />
+      <HowItWorksSection />
+      <WaveDivider fill="#FFF8F0" bg="#FFD8CE" flip />
+
+      <PetPickerSection selectedPet={pet} onSelectPet={handleSelectPet} />
 
       {pet && current && (
         <>
@@ -95,13 +106,16 @@ export default function Home() {
 
       <CommunitySection />
 
+      <WaveDivider fill="#FFE66D" bg="#FFF8F0" />
+      <FAQSection />
+
       <footer className="bg-nearblack text-white px-6 py-12 text-center">
         <div className="font-nunito font-black text-2xl mb-1.5">PawCheck 🐾</div>
-        <p className="text-gray-400 mb-4">Trusted health advice for your furry family</p>
+        <p className="text-gray-400 mb-4">Helpful pet health guidance, gathered from trusted online sources</p>
         <div className="text-xl mb-4 tracking-[6px]">🐾 🐾 🐾</div>
         <p className="max-w-md mx-auto text-gray-500 text-xs leading-relaxed">
-          PawCheck is for informational purposes only and does not replace professional veterinary advice. Always
-          consult a qualified vet.
+          PawCheck is for informational purposes only and does not replace professional veterinary advice. Currently
+          available in the UK only.
         </p>
       </footer>
     </main>

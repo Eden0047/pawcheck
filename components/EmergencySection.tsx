@@ -2,7 +2,7 @@ import { EMERGENCY_CONTACTS, VET_LISTINGS } from "@/lib/petData";
 
 export default function EmergencySection() {
   return (
-    <section className="bg-softgreen px-6 py-12">
+    <section id="helpline" className="bg-softgreen px-6 py-12 scroll-mt-[72px]">
       <div className="max-w-[980px] mx-auto">
         <h2 className="font-nunito font-black text-[#1B5E45] text-3xl sm:text-4xl text-center mb-8">
           Need urgent help? 🚨

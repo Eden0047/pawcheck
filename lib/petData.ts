@@ -52,9 +52,9 @@ export interface EmergencyContact {
 }
 
 export const EMERGENCY_CONTACTS: EmergencyContact[] = [
-  { name: "RSPCA (UK)", phone: "0300 1234 999" },
-  { name: "Blue Cross Pet Helpline", phone: "0300 777 1897" },
-  { name: "Animal Poison Line", phone: "01202 509000" },
+  { name: "Animal PoisonLine (UK)", phone: "01202 509000" },
+  { name: "RSPCA Cruelty & Advice", phone: "0300 1234 999" },
+  { name: "Vets Now 24/7 Emergency", phone: "0333 240 2870" },
 ];
 
 export interface VetListing {
@@ -66,10 +66,70 @@ export interface VetListing {
 }
 
 export const VET_LISTINGS: VetListing[] = [
-  { name: "Newbury Vets4Pets", distance: "0.3 miles", stars: "★★★★★", phone: "01635 000111", open: true },
-  { name: "Berkshire Animal Hospital", distance: "1.1 miles", stars: "★★★★☆", phone: "01635 000222", open: true },
-  { name: "Thatcham Pet Clinic", distance: "2.4 miles", stars: "★★★☆☆", phone: "01635 000333", open: false },
-  { name: "Hungerford Vets", distance: "4.8 miles", stars: "★★★★☆", phone: "01488 000444", open: true },
+  { name: "Camden Paws Vets", distance: "0.4 miles", stars: "★★★★☆", phone: "020 7946 0182", open: true },
+  { name: "Riverside Animal Hospital", distance: "1.1 miles", stars: "★★★★★", phone: "020 7946 0247", open: true },
+  { name: "Oakwood Vet Surgery", distance: "2.3 miles", stars: "★★★☆☆", phone: "0117 496 0319", open: false },
+  { name: "Vets Now Emergency Clinic", distance: "3.0 miles", stars: "★★★★☆", phone: "0333 240 2870", open: true },
+];
+
+export interface HowStep {
+  n: string;
+  icon: string;
+  title: string;
+  body: string;
+}
+
+export const HOW_STEPS: HowStep[] = [
+  {
+    n: "1",
+    icon: "🐾",
+    title: "Pick your pet & symptoms",
+    body: "Choose your animal and tap the issues you've noticed, then set how severe things seem.",
+  },
+  {
+    n: "2",
+    icon: "🔎",
+    title: "We gather the guidance",
+    body: "PawCheck pulls together relevant information from trusted public pet-health sources into one summary.",
+  },
+  {
+    n: "3",
+    icon: "🩺",
+    title: "Read, act & verify",
+    body: "See likely causes and at-home tips, plus emergency contacts and nearby vets if you need a professional.",
+  },
+];
+
+export interface Faq {
+  q: string;
+  a: string;
+}
+
+export const FAQS: Faq[] = [
+  {
+    q: "Where does the advice come from?",
+    a: "Summaries are compiled from publicly available, reputable UK pet-health sources such as the PDSA, RSPCA and Blue Cross. We surface and condense that information — we don't generate medical opinions of our own.",
+  },
+  {
+    q: "Can PawCheck diagnose my pet?",
+    a: "No. PawCheck is an informational starting point only. It cannot examine your pet and may not reflect their specific condition. Always confirm anything serious with a qualified veterinarian.",
+  },
+  {
+    q: "Is my information stored?",
+    a: "This prototype keeps everything on your device for the session — nothing you enter is sent anywhere or saved permanently.",
+  },
+  {
+    q: "When should I see a vet immediately?",
+    a: "If symptoms are severe, worsening quickly, or you scored a high severity, contact a vet or one of the emergency lines right away rather than waiting.",
+  },
+  {
+    q: "Does PawCheck cover all animals?",
+    a: "It currently includes dogs, cats, rabbits, birds, fish and hamsters, with symptom lists tailored to each. More species and detail can be added over time.",
+  },
+  {
+    q: "Where is PawCheck available?",
+    a: "PawCheck is currently available in the UK only. Helplines, vet listings and sources shown are UK-based, so details may not apply if you're outside the UK.",
+  },
 ];
 
 export interface Comment {

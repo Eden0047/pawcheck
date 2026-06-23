@@ -27,7 +27,7 @@ export default function SymptomChecker({
   const options = SYMPTOMS[pet];
 
   return (
-    <section className="bg-teal px-6 py-12">
+    <section id="symptoms" className="bg-teal px-6 py-12 scroll-mt-[72px]">
       <div className="max-w-3xl mx-auto">
         <h2 className="font-nunito font-black text-white text-3xl sm:text-4xl text-center mb-8">
           What&apos;s going on with your {petLabel}?
