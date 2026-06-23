@@ -9,6 +9,7 @@ const ROTATE_MS = 5000;
 export default function CommunitySection() {
   const [comments, setComments] = useState<Comment[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [commentName, setCommentName] = useState("");
   const [commentText, setCommentText] = useState("");
   const [commentPet, setCommentPet] = useState(PET_OPTIONS[0]);
   const [commentMsg, setCommentMsg] = useState("");
@@ -58,7 +59,7 @@ export default function CommunitySection() {
       const res = await fetch("/api/comments", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ text: t, pet: commentPet }),
+        body: JSON.stringify({ text: t, pet: commentPet, name: commentName }),
       });
       const data = await res.json();
       if (!res.ok) {
@@ -68,6 +69,7 @@ export default function CommunitySection() {
       setComments((prev) => [data.comment, ...prev]);
       setActiveIndex(0);
       setCommentText("");
+      setCommentName("");
       setCommentMsg("Thanks for sharing! 🎉");
     } catch {
       setCommentMsg("Couldn't save your comment. Please try again.");
@@ -154,6 +156,14 @@ export default function CommunitySection() {
 
       <div className="bg-white rounded-3xl p-7 shadow-md mb-10">
         <h3 className="font-nunito font-black text-lg mb-4">Leave a comment</h3>
+        <input
+          type="text"
+          value={commentName}
+          onChange={(e) => setCommentName(e.target.value)}
+          placeholder="Your name (optional)"
+          maxLength={30}
+          className="w-full border-[1.5px] border-gray-200 rounded-2xl px-4 py-3 text-sm mb-3.5"
+        />
         <textarea
           value={commentText}
           onChange={(e) => {

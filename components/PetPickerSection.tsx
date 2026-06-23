@@ -11,7 +11,7 @@ export default function PetPickerSection({ selectedPet, onSelectPet }: PetPicker
   const current = PETS.find((p) => p.type === selectedPet);
 
   return (
-    <section className="max-w-[1080px] mx-auto px-6 pt-0 pb-12 text-center">
+    <section id="choose-pet" className="max-w-[1080px] mx-auto px-6 pt-0 pb-12 text-center scroll-mt-[72px]">
       <h2 className="font-nunito font-black text-3xl mb-7">Choose your pet</h2>
       <div className="flex flex-wrap gap-4 justify-center max-w-3xl mx-auto">
         {PETS.map((p) => {

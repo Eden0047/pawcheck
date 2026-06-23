@@ -2,7 +2,7 @@
 
 const NAV_ITEMS = [
   { label: "How it works", id: "how" },
-  { label: "Check symptoms", id: "symptoms" },
+  { label: "Check symptoms", id: "choose-pet" },
   { label: "Helpline", id: "helpline" },
   { label: "FAQ", id: "faq" },
 ];

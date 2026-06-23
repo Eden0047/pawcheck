@@ -19,10 +19,19 @@ export async function GET() {
   return NextResponse.json({ comments });
 }
 
+function toHandle(name: string): string {
+  const cleaned = name
+    .trim()
+    .replace(/[^a-zA-Z0-9 ]/g, "")
+    .replace(/\s+/g, "");
+  return cleaned ? `@${cleaned.slice(0, 30)}` : "@Anonymous";
+}
+
 export async function POST(req: NextRequest) {
   const body = await req.json();
   const text = typeof body.text === "string" ? body.text.trim() : "";
   const pet = typeof body.pet === "string" ? body.pet : "🐶 Dog";
+  const name = typeof body.name === "string" ? body.name : "";
 
   if (!text) {
     return NextResponse.json({ error: "Comment text is required" }, { status: 400 });
@@ -36,7 +45,7 @@ export async function POST(req: NextRequest) {
   const comment: Comment = {
     id: crypto.randomUUID(),
     avatar: pet.split(" ")[0] || "🐾",
-    user: "@you",
+    user: toHandle(name),
     pet,
     text,
     likes: 0,
