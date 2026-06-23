@@ -41,6 +41,10 @@ module.exports = {
           "0%": { opacity: "0", transform: "translateY(28px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
+        commentSlide: {
+          "0%": { opacity: "0", transform: "translateX(28px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
+        },
       },
       animation: {
         pawFade: "pawFade 1.1s forwards",
@@ -48,6 +52,7 @@ module.exports = {
         ctaPulse: "ctaPulse 2s ease-in-out infinite",
         shimmer: "shimmer 1.4s infinite",
         resultIn: "resultIn 0.5s ease-out",
+        commentSlide: "commentSlide 0.4s ease-out",
       },
     },
   },

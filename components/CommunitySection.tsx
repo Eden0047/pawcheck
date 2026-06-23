@@ -44,6 +44,9 @@ export default function CommunitySection() {
     setActiveIndex((index + comments.length) % comments.length);
   };
 
+  const visibleCount = Math.min(3, comments.length);
+  const visibleComments = Array.from({ length: visibleCount }, (_, i) => comments[(activeIndex + i) % comments.length]);
+
   const submitComment = async () => {
     const t = commentText.trim();
     if (!t) {
@@ -100,8 +103,8 @@ export default function CommunitySection() {
           onMouseLeave={() => (hovering.current = false)}
           className="mb-5"
         >
-          <div className="flex items-center justify-center gap-3 max-w-lg mx-auto">
-            {comments.length > 1 && (
+          <div className="flex items-center gap-3">
+            {comments.length > visibleCount && (
               <button
                 onClick={() => goTo(activeIndex - 1)}
                 aria-label="Previous comment"
@@ -111,30 +114,30 @@ export default function CommunitySection() {
               </button>
             )}
 
-            <div className="flex-1 min-w-0 overflow-hidden rounded-xl">
-              <div
-                className="flex transition-transform duration-500 ease-out"
-                style={{ transform: `translateX(-${activeIndex * 100}%)` }}
-              >
-                {comments.map((c) => (
-                  <div key={c.id} className="w-full flex-none bg-white rounded-xl p-5 shadow-md">
-                    <div className="flex items-center gap-2 mb-2.5">
-                      <span className="text-2xl">{c.avatar}</span>
-                      <div>
-                        <div className="font-nunito font-extrabold text-sm">{c.user}</div>
-                        <span className="text-[11px] font-bold bg-[#E9FBF8] text-[#0F8B80] px-2 py-0.5 rounded-full">
-                          {c.pet}
-                        </span>
-                      </div>
+            <div
+              key={activeIndex}
+              className={`flex-1 grid grid-cols-1 gap-4 animate-commentSlide ${
+                visibleCount === 3 ? "sm:grid-cols-3" : visibleCount === 2 ? "sm:grid-cols-2" : ""
+              }`}
+            >
+              {visibleComments.map((c) => (
+                <div key={c.id} className="bg-white rounded-xl p-5 shadow-md">
+                  <div className="flex items-center gap-2 mb-2.5">
+                    <span className="text-2xl">{c.avatar}</span>
+                    <div>
+                      <div className="font-nunito font-extrabold text-sm">{c.user}</div>
+                      <span className="text-[11px] font-bold bg-[#E9FBF8] text-[#0F8B80] px-2 py-0.5 rounded-full">
+                        {c.pet}
+                      </span>
                     </div>
-                    <p className="mb-2.5 leading-relaxed text-sm">{c.text}</p>
-                    <div className="font-bold text-muted text-sm">👍 {c.likes}</div>
                   </div>
-                ))}
-              </div>
+                  <p className="mb-2.5 leading-relaxed text-sm">{c.text}</p>
+                  <div className="font-bold text-muted text-sm">👍 {c.likes}</div>
+                </div>
+              ))}
             </div>
 
-            {comments.length > 1 && (
+            {comments.length > visibleCount && (
               <button
                 onClick={() => goTo(activeIndex + 1)}
                 aria-label="Next comment"
@@ -144,21 +147,6 @@ export default function CommunitySection() {
               </button>
             )}
           </div>
-
-          {comments.length > 1 && (
-            <div className="flex gap-1.5 justify-center mt-4">
-              {comments.map((c, i) => (
-                <button
-                  key={c.id}
-                  onClick={() => goTo(i)}
-                  aria-label={`Show comment ${i + 1}`}
-                  className={`w-2 h-2 rounded-full transition-colors ${
-                    i === activeIndex ? "bg-coral" : "bg-gray-200"
-                  }`}
-                />
-              ))}
-            </div>
-          )}
         </div>
       ) : (
         <p className="text-center text-muted mb-5">Loading comments…</p>
