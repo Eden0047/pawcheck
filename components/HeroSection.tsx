@@ -5,8 +5,8 @@ export default function HeroSection() {
         PawCheck <span className="text-5xl">🐾</span>
       </h1>
       <p className="text-muted text-lg sm:text-xl font-medium max-w-xl mx-auto">
-        Friendly pet health guidance for UK pet parents, gathered from trusted online sources — a helpful first step,
-        never a substitute for your vet.
+        Friendly, easy to understand health guidance for UK pet parents. A helpful first step, not a replacement for
+        your vet.
       </p>
     </section>
   );

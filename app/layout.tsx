@@ -16,7 +16,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "PawCheck 🐾 — Pet Health Advisor",
+  title: "PawCheck 🐾 | Pet Health Advisor",
   description: "Trusted health advice for your furry family",
 };
 
