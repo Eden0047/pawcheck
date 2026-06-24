@@ -1,0 +1,105 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-06-24",
+  "description": "Authoritative veterinary and animal welfare sources referenced in the PawCheck library. All content has been paraphrased and consolidated from these organisations.",
+  "sources": {
+    "PDSA": {
+      "full_name": "People's Dispensary for Sick Animals",
+      "type": "UK veterinary charity",
+      "url": "https://www.pdsa.org.uk",
+      "trust_level": "very_high",
+      "notes": "Leading UK veterinary charity; Pet Health Hub written by PDSA vets and vet nurses"
+    },
+    "RSPCA": {
+      "full_name": "Royal Society for the Prevention of Cruelty to Animals",
+      "type": "UK animal welfare charity",
+      "url": "https://www.rspca.org.uk",
+      "trust_level": "very_high"
+    },
+    "BlueCross": {
+      "full_name": "Blue Cross",
+      "type": "UK pet welfare charity",
+      "url": "https://www.bluecross.org.uk",
+      "trust_level": "very_high"
+    },
+    "ASPCA": {
+      "full_name": "American Society for the Prevention of Cruelty to Animals",
+      "type": "US animal welfare",
+      "url": "https://www.aspca.org",
+      "trust_level": "very_high"
+    },
+    "AVMA": {
+      "full_name": "American Veterinary Medical Association",
+      "type": "US professional veterinary body",
+      "url": "https://www.avma.org",
+      "trust_level": "very_high"
+    },
+    "VCA": {
+      "full_name": "VCA Animal Hospitals",
+      "type": "US veterinary hospital network",
+      "url": "https://vcahospitals.com",
+      "trust_level": "very_high"
+    },
+    "CatsProtection": {
+      "full_name": "Cats Protection",
+      "type": "UK cat welfare charity",
+      "url": "https://www.cats.org.uk",
+      "trust_level": "very_high"
+    },
+    "ICatCare": {
+      "full_name": "International Cat Care",
+      "type": "UK feline welfare charity",
+      "url": "https://icatcare.org",
+      "trust_level": "very_high"
+    },
+    "Cornell": {
+      "full_name": "Cornell University College of Veterinary Medicine",
+      "type": "Academic veterinary institution",
+      "url": "https://www.vet.cornell.edu",
+      "trust_level": "very_high"
+    },
+    "AMC": {
+      "full_name": "Schwarzman Animal Medical Center (NYC)",
+      "type": "Specialist animal hospital",
+      "url": "https://www.amcny.org",
+      "trust_level": "very_high"
+    },
+    "MSD": {
+      "full_name": "MSD/Merck Veterinary Manual",
+      "type": "Professional veterinary reference",
+      "url": "https://www.msdvetmanual.com",
+      "trust_level": "very_high"
+    },
+    "RWAF": {
+      "full_name": "Rabbit Welfare Association & Fund",
+      "type": "UK rabbit welfare charity",
+      "url": "https://rabbitwelfare.co.uk",
+      "trust_level": "very_high"
+    },
+    "HouseRabbit": {
+      "full_name": "House Rabbit Society",
+      "type": "US rabbit welfare",
+      "url": "https://rabbit.org",
+      "trust_level": "very_high"
+    },
+    "CornellBirds": {
+      "full_name": "Cornell Lab of Ornithology",
+      "type": "Bird research institution",
+      "url": "https://www.birds.cornell.edu",
+      "trust_level": "very_high"
+    },
+    "PracticalFishkeeping": {
+      "full_name": "Practical Fishkeeping Magazine",
+      "type": "UK fish welfare publication",
+      "url": "https://www.practicalfishkeeping.co.uk",
+      "trust_level": "high"
+    },
+    "PetMD": {
+      "full_name": "PetMD",
+      "type": "US veterinary information site (reviewed by DVMs)",
+      "url": "https://www.petmd.com",
+      "trust_level": "high"
+    }
+  },
+  "disclaimer": "This library is for informational use only. It is not a substitute for veterinary advice, diagnosis, or treatment. PawCheck always recommends consulting a qualified veterinarian for serious or persistent concerns."
+}

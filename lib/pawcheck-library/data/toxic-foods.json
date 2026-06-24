@@ -1,0 +1,849 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-06-24",
+  "description": "PawCheck toxic foods and substances quick reference. CRITICAL safety content - poisoning is one of the highest-stakes scenarios because incorrect or delayed advice can kill a pet within hours. All entries include dose thresholds where known, but ANY suspected poisoning is an emergency regardless of dose - always recommend immediate vet contact.",
+  "emergency_contacts_uk": {
+    "animal_poison_line": {
+      "number": "01202 509000",
+      "hours": "24/7",
+      "cost": "From £35 per call (cheaper than out-of-hours vet)",
+      "url": "https://www.animalpoisonline.co.uk",
+      "note": "First port of call for suspected poisoning - triages whether vet visit is needed"
+    },
+    "rspca": {
+      "number": "0300 1234 999",
+      "hours": "24/7",
+      "note": "For welfare emergencies including poisoning"
+    },
+    "vets_now": {
+      "url": "https://www.vets-now.com",
+      "note": "UK out-of-hours emergency vet network - find nearest clinic"
+    }
+  },
+  "universal_first_aid": {
+    "if_recent_ingestion": [
+      "Phone the Animal Poison Line (01202 509000) or your vet IMMEDIATELY - do not wait for symptoms",
+      "Have ready: pet's weight, what was eaten, how much, when, and the product packaging if possible",
+      "Do NOT induce vomiting unless specifically told to by a vet - some substances cause more damage coming back up",
+      "Do NOT give milk, salt water, or any home remedies - these are myths and can make things worse",
+      "Keep the pet calm and warm during transport",
+      "Bring any packaging, leaves, or vomit sample to the vet"
+    ],
+    "if_symptoms_already_present": [
+      "EMERGENCY - go straight to the nearest open vet, phone ahead",
+      "Note all symptoms and timing for the vet",
+      "If seizing, keep the pet on the floor away from furniture - do not restrain"
+    ]
+  },
+  "dog_toxins": [
+    {
+      "id": "tox_dog_001",
+      "name": "Chocolate",
+      "category": "Food",
+      "severity": "HIGH - dose dependent",
+      "active_ingredient": "Theobromine and caffeine (methylxanthines)",
+      "why_toxic": "Dogs metabolise theobromine much more slowly than humans, allowing it to accumulate to toxic levels. Affects heart, central nervous system, and kidneys.",
+      "danger_by_type": [
+        {"type": "White chocolate", "theobromine_per_100g": "Negligible (~0.1mg)", "risk": "Very low - fat content is the bigger issue"},
+        {"type": "Milk chocolate", "theobromine_per_100g": "~150-220mg", "risk": "Moderate - problem dose around 200g for a 10kg dog"},
+        {"type": "Dark chocolate", "theobromine_per_100g": "~500-600mg", "risk": "High - problem dose around 50g for a 10kg dog"},
+        {"type": "Cooking chocolate / cocoa powder", "theobromine_per_100g": "~800-1600mg", "risk": "Very high - small amounts dangerous"}
+      ],
+      "rough_toxic_dose": "Mild signs: ~20mg/kg theobromine. Severe: ~40-50mg/kg. Potentially fatal: ~100-200mg/kg.",
+      "example_calculations": [
+        "10kg Labrador eats one square (25g) of dark chocolate (~125mg theobromine) = 12.5mg/kg = monitor closely",
+        "5kg terrier eats half a milk chocolate bar (50g, ~85mg theobromine) = 17mg/kg = vet call",
+        "20kg dog eats a 100g bar of dark chocolate = 25mg/kg = vet visit, likely treatment needed"
+      ],
+      "symptoms_onset": "Usually 6-12 hours after eating",
+      "symptoms": [
+        "Vomiting and diarrhoea (often first signs)",
+        "Restlessness, hyperactivity, pacing",
+        "Excessive thirst and urination",
+        "Rapid heart rate or irregular rhythm",
+        "Tremors or muscle twitches",
+        "Seizures (in severe cases)",
+        "Collapse"
+      ],
+      "what_to_do": [
+        "Phone Animal Poison Line or vet IMMEDIATELY with: dog's weight, type of chocolate, amount eaten, time eaten",
+        "Keep the wrapper / packaging to show the cocoa percentage",
+        "Do NOT induce vomiting unless instructed",
+        "Treatment usually involves induced vomiting (if recent), activated charcoal, IV fluids, and monitoring"
+      ],
+      "prognosis": "Good with prompt treatment. Most dogs recover fully if seen within a few hours of ingestion.",
+      "sources": ["Animal Poison Line", "PDSA", "VCA Hospitals", "MSD Vet Manual"]
+    },
+    {
+      "id": "tox_dog_002",
+      "name": "Grapes, raisins, sultanas, currants",
+      "category": "Food",
+      "severity": "VERY HIGH - any amount potentially fatal",
+      "active_ingredient": "Unknown (suspected tartaric acid)",
+      "why_toxic": "Cause acute kidney failure in dogs. The toxic mechanism is still not fully understood and the toxic dose varies enormously between individuals - some dogs eat handfuls without harm, others die from a single grape. ALWAYS treat as an emergency.",
+      "danger_by_type": [
+        {"type": "Fresh grapes", "risk": "Unpredictable - any amount potentially toxic"},
+        {"type": "Raisins / sultanas", "risk": "Higher concentration - even smaller amounts dangerous"},
+        {"type": "Christmas pudding / mince pies / hot cross buns", "risk": "Common festive poisoning - all contain dried vine fruit"},
+        {"type": "Grape juice / wine", "risk": "Less common but still toxic"}
+      ],
+      "rough_toxic_dose": "No safe dose established. Cases of kidney failure reported from as little as 4-5 grapes in a small dog.",
+      "symptoms_onset": "Vomiting within 6-12 hours. Kidney failure signs within 24-72 hours.",
+      "symptoms": [
+        "Vomiting (almost always the first sign)",
+        "Loss of appetite",
+        "Lethargy",
+        "Diarrhoea",
+        "Reduced or absent urination (kidney shutdown)",
+        "Bad breath / ammonia smell",
+        "Abdominal pain"
+      ],
+      "what_to_do": [
+        "EMERGENCY - phone vet immediately, regardless of amount eaten",
+        "Treatment is most effective if started within 2 hours of ingestion (induce vomiting, activated charcoal)",
+        "After symptoms develop, prognosis is much poorer",
+        "Hospitalisation with IV fluids for 48-72 hours is standard treatment"
+      ],
+      "prognosis": "Excellent if treated within 2 hours. Once kidney failure develops, prognosis becomes guarded to poor.",
+      "sources": ["Animal Poison Line", "PDSA", "ASPCA", "VCA Hospitals"]
+    },
+    {
+      "id": "tox_dog_003",
+      "name": "Xylitol (artificial sweetener)",
+      "category": "Sweetener / chemical",
+      "severity": "VERY HIGH - extremely dangerous in tiny amounts",
+      "active_ingredient": "Xylitol",
+      "why_toxic": "Triggers massive insulin release in dogs causing sudden, severe blood sugar crash (hypoglycaemia). At higher doses also causes acute liver failure. Found in many products owners don't expect.",
+      "common_sources": [
+        "Sugar-free chewing gum (especially Wrigley's Extra, Orbit, Trident)",
+        "Sugar-free mints and sweets",
+        "Sugar-free peanut butter (CHECK LABELS - some brands now use xylitol)",
+        "Sugar-free baked goods and ice cream",
+        "Some toothpastes and mouthwashes",
+        "Some children's medicines and supplements",
+        "Some keto / diabetic-friendly products"
+      ],
+      "rough_toxic_dose": "Hypoglycaemia: 0.1g/kg (a single piece of gum may contain 0.3-1g xylitol - enough to poison a small dog). Liver failure: 0.5g/kg.",
+      "example_calculations": [
+        "10kg dog eats one piece of gum containing 1g xylitol = 0.1g/kg = hypoglycaemia risk - EMERGENCY",
+        "5kg dog eats two pieces of gum = potential liver failure dose"
+      ],
+      "symptoms_onset": "Hypoglycaemia within 30 minutes to 12 hours. Liver damage signs 12-72 hours later.",
+      "symptoms": [
+        "Vomiting (often the first sign)",
+        "Weakness, staggering, wobbliness",
+        "Collapse",
+        "Seizures",
+        "Tremors",
+        "Yellowing of gums or eyes (liver failure - later sign)",
+        "Black tarry stools (liver failure)"
+      ],
+      "what_to_do": [
+        "EMERGENCY - phone vet IMMEDIATELY, do not wait for symptoms",
+        "Treatment must start within an hour for best outcomes",
+        "If the dog is conscious and at home, you can rub a small amount of honey or golden syrup on the gums while travelling to the vet (does not replace vet care)",
+        "Hospitalisation with IV dextrose, liver protectants, and monitoring for 24-72 hours"
+      ],
+      "prognosis": "Good for hypoglycaemia alone if treated quickly. Guarded if liver failure develops.",
+      "sources": ["Animal Poison Line", "PDSA", "VCA Hospitals", "ASPCA"]
+    },
+    {
+      "id": "tox_dog_004",
+      "name": "Onions, garlic, leeks, chives, shallots (allium family)",
+      "category": "Food",
+      "severity": "MEDIUM-HIGH - cumulative damage",
+      "active_ingredient": "N-propyl disulfide and related compounds",
+      "why_toxic": "Damage red blood cells causing anaemia. All forms toxic - raw, cooked, dried, powdered. Powdered/concentrated forms (gravy granules, onion powder, soup mix) are most dangerous because the toxin is concentrated.",
+      "danger_by_type": [
+        {"type": "Onion powder / dried garlic", "risk": "High - concentrated form"},
+        {"type": "Cooked onion / garlic in food", "risk": "Moderate - cooking does not destroy the toxin"},
+        {"type": "Garlic supplements", "risk": "Moderate-high if given regularly"},
+        {"type": "Wild garlic / ramsons in woodland", "risk": "Lower but still toxic if eaten in quantity"}
+      ],
+      "rough_toxic_dose": "Onion: 15-30g per kg body weight (a 10kg dog needs about 150-300g of onion). Garlic is roughly 5x more toxic than onion. Repeated small doses can accumulate.",
+      "common_accidental_exposures": [
+        "Leftover takeaway curry, Chinese food, pasta sauce",
+        "Garlic bread crusts",
+        "Onion gravy or stock cubes",
+        "Babyfood with onion (jarred meat meals)",
+        "Pizza with onion topping"
+      ],
+      "symptoms_onset": "1-5 days (delayed) - this is why it's often missed",
+      "symptoms": [
+        "Vomiting and diarrhoea (early)",
+        "Lethargy and weakness",
+        "Pale or yellow gums",
+        "Rapid breathing",
+        "Dark / red-tinged urine (red blood cell breakdown)",
+        "Loss of appetite"
+      ],
+      "what_to_do": [
+        "Phone vet or Animal Poison Line - even small amounts of concentrated forms warrant advice",
+        "Bring the packaging if relevant",
+        "Treatment may include induced vomiting (if recent), activated charcoal, and blood tests",
+        "Severe cases may need blood transfusion"
+      ],
+      "prognosis": "Good with prompt treatment. Most dogs recover fully.",
+      "sources": ["Animal Poison Line", "PDSA", "VCA Hospitals"]
+    },
+    {
+      "id": "tox_dog_005",
+      "name": "Macadamia nuts",
+      "category": "Food",
+      "severity": "MEDIUM - usually self-limiting but distressing",
+      "active_ingredient": "Unknown",
+      "why_toxic": "Specific to macadamias - other nuts do not cause the same effect. Causes weakness in the back legs and a generalised illness.",
+      "danger_by_type": [
+        {"type": "Raw or roasted macadamia nuts", "risk": "Moderate"},
+        {"type": "Chocolate covered macadamias", "risk": "HIGH - double toxicity"},
+        {"type": "Macadamia cookies or baked goods", "risk": "Moderate - watch for added chocolate too"}
+      ],
+      "rough_toxic_dose": "Around 2g per kg (a 10kg dog eating about 20g of nuts can show signs)",
+      "symptoms_onset": "Within 12 hours",
+      "symptoms": [
+        "Weakness in the back legs (classic sign)",
+        "Inability to stand or walk normally",
+        "Vomiting",
+        "Tremors",
+        "Fever",
+        "Lethargy"
+      ],
+      "what_to_do": [
+        "Phone vet or Animal Poison Line",
+        "If recent ingestion, induced vomiting may be recommended",
+        "Symptoms usually resolve within 24-48 hours with supportive care",
+        "Check whether any chocolate was attached (changes urgency significantly)"
+      ],
+      "prognosis": "Excellent - full recovery is typical within 1-2 days.",
+      "sources": ["Animal Poison Line", "PDSA", "ASPCA"]
+    },
+    {
+      "id": "tox_dog_006",
+      "name": "Alcohol",
+      "category": "Drink",
+      "severity": "HIGH",
+      "active_ingredient": "Ethanol",
+      "why_toxic": "Dogs are much smaller and more sensitive to ethanol than humans. Causes central nervous system depression, breathing difficulty, low blood sugar, and dangerous drops in body temperature.",
+      "common_sources": [
+        "Beer, wine, spirits left in glasses",
+        "Christmas mulled wine and sherry trifle",
+        "Bread dough (yeast produces ethanol as it rises in the warm stomach)",
+        "Rotten or fermenting fallen fruit",
+        "Hand sanitiser (high alcohol content)"
+      ],
+      "rough_toxic_dose": "Around 5-8ml of pure alcohol per kg can be fatal. A 10kg dog drinking half a glass of wine is at significant risk.",
+      "symptoms_onset": "30 minutes to 2 hours",
+      "symptoms": [
+        "Wobbling, staggering, appearing drunk",
+        "Vomiting",
+        "Confusion or disorientation",
+        "Drowsiness progressing to coma",
+        "Slow or irregular breathing",
+        "Low body temperature",
+        "Seizures (severe cases)"
+      ],
+      "what_to_do": [
+        "EMERGENCY - phone vet immediately",
+        "Keep the dog warm during transport (hypothermia is a real risk)",
+        "Do NOT induce vomiting - aspiration risk is too high",
+        "Treatment: IV fluids, warming, breathing support, blood sugar monitoring"
+      ],
+      "prognosis": "Good for mild cases. Severe cases (deep coma, seizures) have guarded prognosis.",
+      "sources": ["Animal Poison Line", "PDSA", "VCA Hospitals"]
+    },
+    {
+      "id": "tox_dog_007",
+      "name": "Caffeine",
+      "category": "Stimulant",
+      "severity": "MEDIUM-HIGH",
+      "active_ingredient": "Caffeine (methylxanthine, related to theobromine)",
+      "why_toxic": "Similar mechanism to chocolate but acts faster. Affects heart and nervous system.",
+      "common_sources": [
+        "Coffee grounds (especially used grounds in compost / bin)",
+        "Tea bags (used and unused)",
+        "Energy drinks - very concentrated, dangerous",
+        "Caffeine pills / Pro Plus",
+        "Some weight loss supplements",
+        "Cocoa beans / mulch"
+      ],
+      "rough_toxic_dose": "Around 20mg/kg causes signs, 100-200mg/kg potentially fatal. An espresso has 60-100mg.",
+      "symptoms_onset": "30 minutes to 2 hours",
+      "symptoms": [
+        "Restlessness, hyperactivity",
+        "Vomiting",
+        "Rapid breathing",
+        "Rapid heart rate or irregular rhythm",
+        "Muscle tremors",
+        "Seizures",
+        "Collapse"
+      ],
+      "what_to_do": [
+        "Phone vet or Animal Poison Line",
+        "Bring the source (cup, packet, can) for identification",
+        "Treatment: induced vomiting if recent, activated charcoal, IV fluids, heart monitoring"
+      ],
+      "prognosis": "Good with prompt treatment.",
+      "sources": ["Animal Poison Line", "PDSA", "VCA Hospitals"]
+    },
+    {
+      "id": "tox_dog_008",
+      "name": "Bread dough (raw yeast dough)",
+      "category": "Food",
+      "severity": "HIGH",
+      "active_ingredient": "Yeast fermentation produces ethanol and CO2 in the warm stomach",
+      "why_toxic": "Two problems: dough expands rapidly in the stomach causing painful bloating that can lead to gastric dilatation-volvulus (GDV), and yeast fermentation produces ethanol causing alcohol poisoning.",
+      "common_sources": [
+        "Homemade bread / pizza dough left to rise",
+        "Christmas baking",
+        "Sourdough starter"
+      ],
+      "rough_toxic_dose": "Any amount can be dangerous in small dogs. Even small amounts in larger dogs may cause symptoms.",
+      "symptoms_onset": "Within 30 minutes to 2 hours",
+      "symptoms": [
+        "Distended, painful abdomen",
+        "Unproductive retching (trying to vomit but nothing comes up)",
+        "Drunk-like behaviour from the ethanol",
+        "Restlessness, pacing",
+        "Drooling",
+        "Collapse"
+      ],
+      "what_to_do": [
+        "EMERGENCY - phone vet immediately",
+        "Do NOT induce vomiting at home - dough mass can block the throat",
+        "Treatment: gastric lavage or surgery to remove the dough, plus alcohol toxicity treatment"
+      ],
+      "prognosis": "Good with prompt vet treatment. Delayed cases can develop GDV which is life-threatening.",
+      "sources": ["Animal Poison Line", "PDSA", "ASPCA"]
+    },
+    {
+      "id": "tox_dog_009",
+      "name": "Cooked bones",
+      "category": "Food / mechanical",
+      "severity": "MEDIUM-HIGH - mechanical injury rather than toxic",
+      "why_dangerous": "Cooked bones (especially chicken, turkey, pork chop, fish) splinter into sharp shards that can perforate the gut, get stuck in the throat, or cause severe constipation. Raw bones are safer (though still risky) - cooked bones are particularly dangerous.",
+      "common_sources": [
+        "Christmas turkey carcass",
+        "Sunday roast leftovers",
+        "Chicken wings / drumsticks",
+        "Lamb chops",
+        "Fish bones"
+      ],
+      "symptoms": [
+        "Choking or gagging immediately after eating",
+        "Drooling or pawing at the mouth",
+        "Vomiting (sometimes with blood)",
+        "Straining to pass stool",
+        "Bloody or black tarry stool",
+        "Abdominal pain",
+        "Refusing food",
+        "Lethargy (later, if perforation occurs)"
+      ],
+      "what_to_do": [
+        "If choking - emergency vet immediately",
+        "If swallowed without choking - phone vet for advice (X-rays may be needed)",
+        "Do NOT induce vomiting - bone fragments can re-damage the throat",
+        "Monitor stools for several days - blood or no passing of stool requires vet attention"
+      ],
+      "prognosis": "Most dogs pass small bone fragments without issue. Perforation or obstruction requires surgery.",
+      "sources": ["PDSA", "RSPCA", "VCA Hospitals"]
+    },
+    {
+      "id": "tox_dog_010",
+      "name": "Cannabis / THC",
+      "category": "Drug",
+      "severity": "MEDIUM-HIGH",
+      "active_ingredient": "THC (tetrahydrocannabinol)",
+      "why_toxic": "Dogs are much more sensitive than humans. Most exposures are accidental - eating an owner's edibles or finding discarded joints.",
+      "common_sources": [
+        "Cannabis edibles (often contain chocolate too - double toxicity)",
+        "Discarded joints found on walks",
+        "Cannabis oil / butter for cooking",
+        "Owner's stash"
+      ],
+      "symptoms_onset": "30 minutes to a few hours",
+      "symptoms": [
+        "Wobbling, swaying, loss of balance",
+        "Dribbling urine while standing (very characteristic sign)",
+        "Hypersensitivity to sound and touch",
+        "Dilated pupils",
+        "Slow heart rate",
+        "Low body temperature",
+        "Vomiting",
+        "Drowsiness or rarely agitation"
+      ],
+      "what_to_do": [
+        "Phone vet - be honest about the exposure (no legal consequences for telling the vet, and honesty speeds treatment)",
+        "Keep the dog warm and in a calm environment",
+        "Treatment is supportive: IV fluids, anti-nausea medication, monitoring"
+      ],
+      "prognosis": "Generally good. Most dogs recover within 24-72 hours. Edibles with chocolate are higher risk.",
+      "sources": ["Animal Poison Line", "PDSA", "VCA Hospitals"]
+    },
+    {
+      "id": "tox_dog_011",
+      "name": "Mouldy food / blue cheese",
+      "category": "Food",
+      "severity": "MEDIUM-HIGH",
+      "active_ingredient": "Tremorgenic mycotoxins (especially roquefortine C)",
+      "why_toxic": "Mouldy food and blue cheeses contain mycotoxins that cause severe tremors and seizures.",
+      "common_sources": [
+        "Mouldy bread, cheese, or fruit from the bin",
+        "Compost heaps",
+        "Stilton, Roquefort, Gorgonzola, Danish Blue",
+        "Mouldy walnuts on the ground"
+      ],
+      "rough_toxic_dose": "Variable but blue cheese in any quantity warrants advice. Compost ingestion is often serious.",
+      "symptoms_onset": "30 minutes to a few hours",
+      "symptoms": [
+        "Muscle tremors (often whole body)",
+        "Restlessness, agitation",
+        "Vomiting",
+        "Rapid heart rate",
+        "High body temperature",
+        "Seizures (severe cases)"
+      ],
+      "what_to_do": [
+        "EMERGENCY - phone vet immediately if tremors present",
+        "Keep cool and calm",
+        "Treatment: induced vomiting (if recent), activated charcoal, muscle relaxants, IV fluids"
+      ],
+      "prognosis": "Good with prompt treatment.",
+      "sources": ["Animal Poison Line", "PDSA", "VCA Hospitals"]
+    },
+    {
+      "id": "tox_dog_012",
+      "name": "Common toxic plants (dog)",
+      "category": "Plant",
+      "severity": "Variable by plant",
+      "highest_risk_plants_uk": [
+        {"plant": "Yew (Taxus)", "risk": "VERY HIGH - sudden death possible from cardiac toxin"},
+        {"plant": "Foxglove", "risk": "VERY HIGH - heart toxin"},
+        {"plant": "Oleander", "risk": "VERY HIGH - heart toxin"},
+        {"plant": "Daffodil bulbs", "risk": "HIGH - especially bulbs, severe GI signs"},
+        {"plant": "Tulip bulbs", "risk": "MEDIUM-HIGH - GI signs"},
+        {"plant": "Azalea / Rhododendron", "risk": "HIGH - vomiting, weakness, heart effects"},
+        {"plant": "Acorns / Oak", "risk": "MEDIUM - kidney damage if eaten in quantity"},
+        {"plant": "Conkers (horse chestnut)", "risk": "MEDIUM - GI obstruction more than toxicity"},
+        {"plant": "Sago palm", "risk": "VERY HIGH - liver failure"},
+        {"plant": "Spring bulbs in general", "risk": "MEDIUM-HIGH - bulbs more toxic than leaves"}
+      ],
+      "symptoms": [
+        "Vomiting and diarrhoea (almost universal)",
+        "Drooling",
+        "Lethargy",
+        "Tremors or seizures (neurological plants)",
+        "Heart rhythm changes (yew, foxglove, oleander)",
+        "Collapse"
+      ],
+      "what_to_do": [
+        "Phone vet or Animal Poison Line - identify the plant if possible",
+        "Bring a leaf / flower / bulb sample to the vet",
+        "Treatment depends on the plant - some require very specific antidotes",
+        "Do not assume garden plants are safe - many UK garden plants are toxic"
+      ],
+      "prevention": [
+        "Check the RHS or Dogs Trust toxic plants list before planting",
+        "Supervise dogs around spring bulbs",
+        "Remove fallen yew berries, acorns, conkers from areas where dogs roam"
+      ],
+      "sources": ["Animal Poison Line", "PDSA", "Dogs Trust", "RHS"]
+    }
+  ],
+  "cat_toxins": [
+    {
+      "id": "tox_cat_001",
+      "name": "Lilies",
+      "category": "Plant",
+      "severity": "EXTREMELY HIGH - cats only - rapid kidney failure",
+      "active_ingredient": "Unknown nephrotoxin",
+      "why_toxic": "ALL parts of true lilies (Lilium and Hemerocallis species) are highly toxic to cats. Pollen alone, brushed onto fur and then licked off during grooming, can cause fatal kidney failure. Cats are uniquely sensitive - dogs are not affected the same way.",
+      "highly_toxic_species": [
+        "Easter lily (Lilium longiflorum)",
+        "Tiger lily (Lilium tigrinum)",
+        "Asiatic lilies (any Lilium hybrid)",
+        "Stargazer lily",
+        "Day lily (Hemerocallis)",
+        "Oriental lilies"
+      ],
+      "less_toxic_lily_like_plants": [
+        "Peace lily (Spathiphyllum) - causes mouth irritation but not kidney failure",
+        "Calla lily - similar to peace lily",
+        "Lily of the valley - DIFFERENT toxin (heart, not kidney) but also dangerous"
+      ],
+      "exposure_routes": [
+        "Eating any part of the plant",
+        "Drinking water from the vase",
+        "Pollen on fur licked off during grooming",
+        "Chewing fallen leaves or petals"
+      ],
+      "symptoms_onset": "Vomiting within hours, kidney failure within 24-72 hours",
+      "symptoms": [
+        "Vomiting (often the first sign, within 2-6 hours)",
+        "Drooling",
+        "Loss of appetite",
+        "Lethargy",
+        "Yellow pollen visible on fur or in vomit (diagnostic clue)",
+        "Reduced or no urination (kidney shutdown - usually 24-72 hours after exposure)",
+        "Dehydration",
+        "Seizures (late stage)"
+      ],
+      "what_to_do": [
+        "EMERGENCY - phone vet IMMEDIATELY, do not wait for symptoms",
+        "Bring the plant or a photo for identification",
+        "Treatment must start within 18 hours of exposure for best outcomes",
+        "Standard treatment: induced vomiting (if recent), activated charcoal, aggressive IV fluids for 48-72 hours, kidney function monitoring"
+      ],
+      "prevention": [
+        "NEVER bring lilies into a home with cats - including bouquets",
+        "Warn florists - many bouquets contain lily species without obvious labels",
+        "Remove lilies from gardens cats can access",
+        "Wash any pollen off a cat's fur immediately if exposure suspected"
+      ],
+      "prognosis": "Excellent if treated within 18 hours of ingestion. Once kidney failure is established, mortality is very high.",
+      "sources": ["Animal Poison Line", "International Cat Care", "Cats Protection", "ASPCA", "VCA Hospitals"]
+    },
+    {
+      "id": "tox_cat_002",
+      "name": "Paracetamol (acetaminophen / Calpol / Tylenol)",
+      "category": "Human medicine",
+      "severity": "EXTREMELY HIGH - cats lack the enzyme to process it - tiny doses are fatal",
+      "active_ingredient": "Paracetamol",
+      "why_toxic": "Cats lack the liver enzyme (glucuronyl transferase) needed to safely metabolise paracetamol. Even a single regular-strength tablet can be fatal. Causes liver failure and damages red blood cells (methaemoglobinaemia).",
+      "common_accidental_exposures": [
+        "Owner gives paracetamol thinking it's safe for pain (it is NOT)",
+        "Cat finds and chews tablets left out",
+        "Children's liquid paracetamol spilled and licked up",
+        "Combination cold remedies containing paracetamol"
+      ],
+      "rough_toxic_dose": "As little as 10mg/kg can cause toxicity. A single 500mg adult tablet is enough to kill an average 4-5kg cat.",
+      "symptoms_onset": "1-4 hours",
+      "symptoms": [
+        "Drooling and vomiting (early)",
+        "Brown or chocolate-coloured gums (methaemoglobinaemia - very characteristic)",
+        "Swelling of the face and paws (very characteristic)",
+        "Difficulty breathing",
+        "Lethargy, weakness",
+        "Yellowing of the eyes or gums (liver damage)",
+        "Collapse"
+      ],
+      "what_to_do": [
+        "EMERGENCY - phone vet IMMEDIATELY, this is one of the most urgent poisonings in cats",
+        "Treatment includes induced vomiting (if very recent), activated charcoal, IV fluids, and specific antidotes (N-acetylcysteine)",
+        "NEVER give human painkillers to cats unless prescribed by a vet"
+      ],
+      "prognosis": "Guarded even with treatment. Best outcomes when treated within 2 hours of ingestion.",
+      "sources": ["Animal Poison Line", "International Cat Care", "Cats Protection", "VCA Hospitals"]
+    },
+    {
+      "id": "tox_cat_003",
+      "name": "Permethrin (dog flea treatment used on cats)",
+      "category": "Insecticide / wrong medication",
+      "severity": "EXTREMELY HIGH - common preventable killer of cats",
+      "active_ingredient": "Permethrin (a synthetic pyrethroid)",
+      "why_toxic": "Cats cannot metabolise permethrin and concentrated spot-on dog flea treatments are extremely toxic. One of the most common preventable poisoning deaths in cats. Even cats living with treated dogs can be poisoned by close contact or grooming.",
+      "common_accidental_exposures": [
+        "Owner applies a dog flea spot-on to their cat by mistake",
+        "Cat grooms a recently treated dog",
+        "Cat sleeps where a treated dog has been",
+        "Household insecticide sprays at high concentration",
+        "Plug-in mosquito repellents with high permethrin content"
+      ],
+      "symptoms_onset": "Within a few hours of exposure",
+      "symptoms": [
+        "Severe muscle tremors (often whole body)",
+        "Twitching or jerking, especially ears, face, tail",
+        "Drooling",
+        "Walking unsteadily",
+        "Seizures (often severe and prolonged)",
+        "High body temperature",
+        "Vomiting"
+      ],
+      "what_to_do": [
+        "EMERGENCY - go straight to the vet, phone ahead",
+        "If applied to skin: wash the cat thoroughly with lukewarm water and washing-up liquid (Fairy Liquid) before transport to the vet - this removes much of the chemical",
+        "Keep the cat warm but not hot",
+        "Treatment: aggressive seizure control, IV fluids, cooling, and lipid emulsion therapy in severe cases"
+      ],
+      "prevention": [
+        "Only use cat-specific flea treatments on cats",
+        "Read every label carefully - permethrin products clearly state 'do not use on cats'",
+        "Keep cats away from treated dogs for at least 24-48 hours after spot-on application",
+        "Stick to vet-prescribed products"
+      ],
+      "prognosis": "Variable - mild cases recover well with treatment, severe seizures can be fatal.",
+      "sources": ["Animal Poison Line", "International Cat Care", "Cats Protection", "PDSA"]
+    },
+    {
+      "id": "tox_cat_004",
+      "name": "Antifreeze (ethylene glycol)",
+      "category": "Household chemical",
+      "severity": "EXTREMELY HIGH - sweet taste attracts cats - fatal without rapid treatment",
+      "active_ingredient": "Ethylene glycol",
+      "why_toxic": "Sweet tasting so cats and dogs are attracted to it. Even a teaspoon can kill a cat. Metabolised into compounds that destroy the kidneys.",
+      "common_sources": [
+        "Car radiator coolant spills on driveways",
+        "Screen wash and de-icer (some products)",
+        "Garden water features with antifreeze",
+        "Garage spills"
+      ],
+      "rough_toxic_dose": "As little as 1.5ml/kg is potentially fatal in cats - a teaspoon for a small cat.",
+      "symptoms_onset": "Phase 1: 30 mins - 12 hours. Phase 2 (kidney failure): 24-72 hours.",
+      "symptoms": [
+        "Phase 1: appears drunk, wobbly, vomiting, excessive thirst, excessive urination",
+        "Phase 2: appearing better briefly (DECEPTIVE - poisoning is ongoing)",
+        "Phase 3: severe lethargy, vomiting, reduced urination, seizures, death"
+      ],
+      "what_to_do": [
+        "EMERGENCY - immediate vet treatment, this is time-critical",
+        "Treatment must start within 3 hours for best outcomes",
+        "Antidote (ethanol or fomepizole) plus aggressive IV fluids and kidney support"
+      ],
+      "prevention": [
+        "Clean up driveway and garage spills immediately",
+        "Use propylene glycol antifreeze (less toxic) where available",
+        "Keep cats indoors during winter if you cannot control neighbourhood spills",
+        "Check garden water features"
+      ],
+      "prognosis": "Excellent if treated within 3 hours. Poor once kidney failure develops.",
+      "sources": ["Animal Poison Line", "International Cat Care", "Cats Protection", "VCA Hospitals"]
+    },
+    {
+      "id": "tox_cat_005",
+      "name": "Ibuprofen, aspirin, and other NSAIDs",
+      "category": "Human medicine",
+      "severity": "VERY HIGH - cats far more sensitive than dogs",
+      "active_ingredient": "Ibuprofen, aspirin, naproxen, diclofenac",
+      "why_toxic": "Cats metabolise NSAIDs extremely slowly. A single ibuprofen tablet can cause stomach ulcers and kidney failure.",
+      "rough_toxic_dose": "Ibuprofen: as low as 50mg/kg causes signs. A single 200mg tablet in a 4kg cat exceeds this.",
+      "symptoms_onset": "2-6 hours",
+      "symptoms": [
+        "Vomiting (often with blood - coffee-ground appearance)",
+        "Loss of appetite",
+        "Black tarry stools (digested blood from stomach ulcers)",
+        "Abdominal pain",
+        "Lethargy",
+        "Reduced urination (kidney damage)",
+        "Pale gums"
+      ],
+      "what_to_do": [
+        "EMERGENCY - phone vet immediately, even a single tablet warrants treatment",
+        "NEVER give human painkillers to cats",
+        "Treatment: induced vomiting (if recent), activated charcoal, IV fluids, stomach protectants, kidney support"
+      ],
+      "prognosis": "Good with prompt treatment. Guarded if kidney failure or perforated ulcer develops.",
+      "sources": ["Animal Poison Line", "International Cat Care", "PDSA"]
+    },
+    {
+      "id": "tox_cat_006",
+      "name": "Essential oils",
+      "category": "Household / aromatherapy",
+      "severity": "MEDIUM-HIGH - cats uniquely sensitive",
+      "active_ingredient": "Various - phenols and monoterpenes particularly problematic",
+      "why_toxic": "Cats lack key liver enzymes (glucuronyl transferase) to safely metabolise many essential oil compounds. Both direct contact and inhalation can cause toxicity.",
+      "most_dangerous_oils": [
+        "Tea tree (melaleuca) - especially concentrated forms",
+        "Peppermint",
+        "Eucalyptus",
+        "Cinnamon",
+        "Citrus (limonene)",
+        "Pine, fir, spruce",
+        "Wintergreen",
+        "Pennyroyal",
+        "Ylang ylang",
+        "Sweet birch"
+      ],
+      "exposure_routes": [
+        "Diffusers (especially in small enclosed rooms)",
+        "Direct application to skin / fur",
+        "Cat licking oil residue off surfaces or paws",
+        "Liquid potpourri",
+        "Reed diffusers knocked over and spilled"
+      ],
+      "symptoms_onset": "Variable - hours to days for skin absorption, minutes for ingestion",
+      "symptoms": [
+        "Drooling",
+        "Vomiting",
+        "Wobbling / unsteady on feet",
+        "Difficulty breathing or coughing (inhaled exposure)",
+        "Tremors",
+        "Low body temperature",
+        "Red or irritated skin where oil touched"
+      ],
+      "what_to_do": [
+        "Move the cat to fresh air immediately if diffuser exposure",
+        "Wash off any skin contact with lukewarm water and gentle pet shampoo (NOT human soap)",
+        "Phone vet or Animal Poison Line",
+        "Bring the oil bottle / packaging for identification"
+      ],
+      "prevention": [
+        "Avoid essential oil diffusers in homes with cats, or use only in rooms cats cannot access",
+        "Never apply essential oils directly to cats",
+        "Keep all bottles tightly closed and out of reach"
+      ],
+      "sources": ["Animal Poison Line", "International Cat Care", "ASPCA"]
+    },
+    {
+      "id": "tox_cat_007",
+      "name": "Onions, garlic, leeks, chives",
+      "category": "Food",
+      "severity": "HIGH - cats more sensitive than dogs",
+      "active_ingredient": "N-propyl disulfide",
+      "why_toxic": "Damage red blood cells causing anaemia. Cats are roughly 4x more sensitive than dogs. Powdered and cooked forms still toxic.",
+      "rough_toxic_dose": "As little as 5g/kg can cause toxicity. A 4kg cat eating 20g of onion (a single ring of fried onion) can be at risk.",
+      "common_exposures": [
+        "Baby food or jarred meat with onion (a common accidental poisoning)",
+        "Leftover takeaway",
+        "Onion gravy",
+        "Garlic supplements wrongly given to cats",
+        "Garlic-flavoured cat treats from unreliable sources"
+      ],
+      "symptoms_onset": "1-3 days (delayed)",
+      "symptoms": [
+        "Vomiting and diarrhoea",
+        "Lethargy and weakness",
+        "Pale or yellow gums",
+        "Rapid breathing",
+        "Dark or red-tinged urine",
+        "Loss of appetite"
+      ],
+      "what_to_do": [
+        "Phone vet or Animal Poison Line",
+        "Bring packaging if relevant",
+        "Treatment: induced vomiting (if recent), supportive care, possibly blood transfusion in severe cases"
+      ],
+      "prognosis": "Good with prompt treatment.",
+      "sources": ["Animal Poison Line", "International Cat Care", "Cats Protection"]
+    },
+    {
+      "id": "tox_cat_008",
+      "name": "Chocolate (cats)",
+      "category": "Food",
+      "severity": "HIGH but cats less likely to eat it than dogs",
+      "active_ingredient": "Theobromine and caffeine",
+      "why_toxic": "Same mechanism as in dogs - cats cannot metabolise theobromine quickly. Cats rarely seek out chocolate (they cannot taste sweetness) but accidental exposures still occur with chocolate ice cream, milk drinks, or owners feeding chocolate.",
+      "rough_toxic_dose": "Similar to dogs: ~20mg/kg theobromine causes signs. A 4kg cat can be poisoned by 10-15g of dark chocolate.",
+      "symptoms": [
+        "Vomiting and diarrhoea",
+        "Restlessness, hyperactivity",
+        "Rapid heart rate",
+        "Tremors",
+        "Seizures (severe cases)"
+      ],
+      "what_to_do": [
+        "Phone vet or Animal Poison Line with: cat's weight, type of chocolate, amount eaten",
+        "Bring the packaging",
+        "Treatment as for dogs - induced vomiting, activated charcoal, supportive care"
+      ],
+      "sources": ["Animal Poison Line", "International Cat Care"]
+    },
+    {
+      "id": "tox_cat_009",
+      "name": "Raisins, grapes, sultanas (cats)",
+      "category": "Food",
+      "severity": "HIGH - same kidney risk as in dogs",
+      "active_ingredient": "Unknown (suspected tartaric acid)",
+      "why_toxic": "Less commonly eaten by cats but still potentially cause acute kidney failure. As in dogs, no safe dose is established.",
+      "common_exposures": [
+        "Cake or biscuits with raisins or sultanas",
+        "Christmas pudding",
+        "Cereal bars",
+        "Hot cross buns"
+      ],
+      "symptoms_onset": "Vomiting within 6-12 hours, kidney signs 24-72 hours",
+      "symptoms": [
+        "Vomiting",
+        "Loss of appetite",
+        "Lethargy",
+        "Reduced urination (kidney shutdown)"
+      ],
+      "what_to_do": [
+        "EMERGENCY - phone vet regardless of amount",
+        "Treatment most effective within 2 hours: induced vomiting, activated charcoal, IV fluids for 48-72 hours"
+      ],
+      "sources": ["Animal Poison Line", "International Cat Care", "ASPCA"]
+    },
+    {
+      "id": "tox_cat_010",
+      "name": "Xylitol (cats - emerging risk)",
+      "category": "Sweetener",
+      "severity": "Uncertain - traditionally thought safer for cats than dogs, but newer evidence suggests caution",
+      "active_ingredient": "Xylitol",
+      "why_toxic": "Historically thought to be only a problem in dogs. Recent veterinary opinion suggests cats may also be affected at high doses, though they rarely eat sweet foods. Always treat any sugar-free product exposure as potentially toxic.",
+      "common_sources": [
+        "Sugar-free chewing gum",
+        "Sugar-free peanut butter",
+        "Some toothpastes accidentally licked off"
+      ],
+      "what_to_do": [
+        "Phone vet or Animal Poison Line for current guidance",
+        "Bring packaging",
+        "Better to assume toxicity than dismiss"
+      ],
+      "sources": ["Animal Poison Line", "International Cat Care"]
+    },
+    {
+      "id": "tox_cat_011",
+      "name": "Raw fish (regular consumption)",
+      "category": "Food",
+      "severity": "MEDIUM - chronic concern rather than acute",
+      "active_ingredient": "Thiaminase enzyme",
+      "why_toxic": "Some raw fish contain an enzyme that destroys thiamine (vitamin B1) in the cat's body. Long-term consumption causes thiamine deficiency leading to neurological problems. Single small exposures are not dangerous.",
+      "fish_with_thiaminase": [
+        "Raw tuna (though most concerning is regular feeding)",
+        "Raw herring, mackerel, sardines",
+        "Raw freshwater fish"
+      ],
+      "symptoms_of_thiamine_deficiency": [
+        "Loss of appetite",
+        "Weakness",
+        "Head tilt or loss of balance",
+        "Dilated pupils",
+        "Seizures",
+        "Coma (severe cases)"
+      ],
+      "what_to_do": [
+        "Switch to cooked fish (heat destroys the enzyme) or commercial cat food",
+        "If neurological signs present, urgent vet visit - thiamine supplementation reverses signs quickly if caught early",
+        "Tuna in particular should be a rare treat, not a staple"
+      ],
+      "sources": ["International Cat Care", "Cats Protection", "PDSA"]
+    },
+    {
+      "id": "tox_cat_012",
+      "name": "Other common toxic plants (cats)",
+      "category": "Plant",
+      "severity": "Variable",
+      "highest_risk_plants": [
+        {"plant": "All true lilies (Lilium and Hemerocallis)", "risk": "EXTREMELY HIGH - kidney failure (see separate entry)"},
+        {"plant": "Sago palm", "risk": "VERY HIGH - liver failure"},
+        {"plant": "Azalea / Rhododendron", "risk": "HIGH"},
+        {"plant": "Oleander", "risk": "VERY HIGH - heart toxin"},
+        {"plant": "Cyclamen", "risk": "MEDIUM-HIGH - especially tubers"},
+        {"plant": "Dieffenbachia", "risk": "MEDIUM - mouth irritation, drooling"},
+        {"plant": "Pothos / Devil's Ivy", "risk": "MEDIUM - mouth irritation"},
+        {"plant": "Spring bulbs (daffodils, tulips, hyacinths)", "risk": "MEDIUM-HIGH"},
+        {"plant": "Mistletoe", "risk": "MEDIUM"},
+        {"plant": "Poinsettia", "risk": "LOW - mainly oral irritation, often over-stated"}
+      ],
+      "symptoms": [
+        "Drooling",
+        "Vomiting",
+        "Loss of appetite",
+        "Pawing at the mouth (oral irritation plants)",
+        "Lethargy",
+        "Neurological signs (some plants)"
+      ],
+      "what_to_do": [
+        "Phone vet or Animal Poison Line with the plant identified",
+        "Photo and a leaf sample help with identification",
+        "Treatment is plant-specific"
+      ],
+      "prevention": [
+        "Check the International Cat Care safe plants list before bringing greenery into the home",
+        "Never have lilies in a cat household",
+        "Be especially careful with bouquets - check ingredients with the florist"
+      ],
+      "sources": ["Animal Poison Line", "International Cat Care", "ASPCA", "Cats Protection"]
+    }
+  ]
+}

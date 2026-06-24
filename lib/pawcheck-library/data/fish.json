@@ -1,0 +1,482 @@
+{
+  "pet": "fish",
+  "display_name": "Fish",
+  "emoji": "🐠",
+  "version": "1.0.0",
+  "total_symptoms": 12,
+  "sources_summary": ["Practical Fishkeeping", "RSPCA", "PDSA", "PetMD", "Tetra Aquatics"],
+  "notes": "The vast majority of fish health problems trace back to water quality. Before any other treatment, test the water (ammonia, nitrite, nitrate, pH, temperature). A water change is often the single most effective immediate intervention.",
+  "symptoms": [
+    {
+      "id": "fish_001",
+      "symptom": "White spots on body (Ich)",
+      "aliases": ["white spot", "ich", "ick", "ichthyophthirius", "salt grains"],
+      "category": "Parasitic",
+      "description": "Small white spots that look like grains of salt or sugar scattered across the body, fins, or gills. Caused by the parasite Ichthyophthirius multifiliis, one of the most common fish diseases.",
+      "possible_causes": [
+        {"condition": "Ich / White spot disease", "likelihood": "very common", "brief": "Parasitic infection triggered by stress, new fish, or temperature drops"},
+        {"condition": "Epistylis (related parasite)", "likelihood": "occasional", "brief": "Looks similar but spots are slightly fuzzier"},
+        {"condition": "Lymphocystis (viral)", "likelihood": "occasional", "brief": "Larger pearly nodules rather than fine spots"}
+      ],
+      "home_care": [
+        "Test water immediately - ammonia and nitrite must be 0, nitrate under 40ppm",
+        "Slowly raise tank temperature by 2-3°C over 24 hours (within species tolerance) to speed parasite life cycle",
+        "Perform a 25% water change, gravel vacuum thoroughly",
+        "Treat with a proprietary ich treatment from an aquatic shop, following dose instructions",
+        "Remove activated carbon from the filter during treatment (it removes medication)",
+        "Continue treatment for the full course even after spots vanish - parasites in gravel can re-infect"
+      ],
+      "vet_urgency": {
+        "low": "A few spots, fish still active and eating - treat with shop-bought ich medication immediately",
+        "medium": "Spots spreading rapidly, fish becoming lethargic - treat plus daily water changes, consider aquatic vet advice",
+        "high": "Heavy infestation, fish gasping or clamping fins, multiple species affected - urgent aquatic vet or specialist advice"
+      },
+      "red_flags": [
+        "Spots covering most of the body",
+        "Fish gasping at the surface (gill infestation)",
+        "Fish refusing food",
+        "Multiple deaths in the tank",
+        "New fish recently added without quarantine"
+      ],
+      "combinations": [
+        {"with": ["clamped_fins", "rapid_gill_movement"], "concern": "Advanced ich, gill involvement - urgent treatment"},
+        {"with": ["loss_of_colour", "hiding"], "concern": "Significant stress and disease load - intensive treatment and water management"}
+      ],
+      "sources": ["Practical Fishkeeping", "RSPCA", "PetMD"]
+    },
+    {
+      "id": "fish_002",
+      "symptom": "Fin rot",
+      "aliases": ["ragged fins", "frayed fins", "tail rot", "fin disease"],
+      "category": "Bacterial / Fungal",
+      "description": "Fins appear ragged, frayed, or shortened, often with white or black edges. Tissue progressively dies and may extend back to the body if untreated.",
+      "possible_causes": [
+        {"condition": "Bacterial infection (often Aeromonas or Pseudomonas)", "likelihood": "very common", "brief": "Opportunistic infection in poor water"},
+        {"condition": "Fungal secondary infection", "likelihood": "common", "brief": "Cottony growth on damaged fins"},
+        {"condition": "Fin-nipping tank mates", "likelihood": "common", "brief": "Initial damage allows infection to take hold"},
+        {"condition": "Poor water quality", "likelihood": "very common", "brief": "Ammonia, nitrite, or high nitrate weakens the immune system"},
+        {"condition": "Stress (overcrowding, bullying, sudden parameter changes)", "likelihood": "common", "brief": "Lowers disease resistance"}
+      ],
+      "home_care": [
+        "Test water - any ammonia or nitrite means an urgent 50% water change and daily checks",
+        "Improve water quality with frequent partial water changes (25% twice weekly)",
+        "Check tank mates for aggression - remove fin-nippers if present",
+        "Treat with a fin rot medication or broad-spectrum antibacterial from an aquatic shop",
+        "Add aquarium salt if the species tolerates it (NOT for catfish, scaleless fish, or live plants)",
+        "Ensure the filter is mature and not over-cleaned"
+      ],
+      "vet_urgency": {
+        "low": "Slight fin fraying, otherwise healthy fish - water change and improve husbandry",
+        "medium": "Visibly ragged fins, possible discolouration at edges - over-the-counter treatment plus water management",
+        "high": "Rot extending to the body, fish lethargic, multiple fish affected - aquatic vet or specialist needed"
+      },
+      "red_flags": [
+        "Rot reaching the body / base of fins",
+        "Red or bloody edges to fins",
+        "Cottony white growth (secondary fungal infection)",
+        "Multiple fish affected simultaneously",
+        "Lethargy or loss of appetite"
+      ],
+      "combinations": [
+        {"with": ["fungal_patches"], "concern": "Combined bacterial and fungal infection - treat both"},
+        {"with": ["clamped_fins", "hiding"], "concern": "Significant illness - intensive care needed"}
+      ],
+      "sources": ["Practical Fishkeeping", "RSPCA", "Tetra Aquatics"]
+    },
+    {
+      "id": "fish_003",
+      "symptom": "Swim bladder problems / floating sideways",
+      "aliases": ["floating", "sinking", "swim bladder disease", "upside down"],
+      "category": "Internal / Buoyancy",
+      "description": "Fish struggles to maintain a normal upright position - floats at the surface, sinks to the bottom, swims at an odd angle, or rolls onto its side. Common in fancy goldfish and bettas.",
+      "possible_causes": [
+        {"condition": "Overfeeding / constipation", "likelihood": "very common", "brief": "Gas-producing food, especially dry flakes, presses on the swim bladder"},
+        {"condition": "Gulping air with floating food", "likelihood": "common", "brief": "Common in fancy goldfish and bettas"},
+        {"condition": "Bacterial infection of swim bladder", "likelihood": "common", "brief": "Often follows poor water quality"},
+        {"condition": "Birth defect", "likelihood": "occasional", "brief": "Common in selectively bred fancy goldfish"},
+        {"condition": "Temperature shock", "likelihood": "occasional", "brief": "Sudden temperature changes affect buoyancy"},
+        {"condition": "Tumour pressing on swim bladder", "likelihood": "rare", "brief": "Older fish"}
+      ],
+      "home_care": [
+        "Skip feeding for 48-72 hours to allow constipation to clear",
+        "Offer one cooked, deshelled pea (soft inside) - a mild laxative for fish",
+        "Soak dry food before feeding to reduce air ingestion",
+        "Switch to sinking pellets if the fish swallows air at the surface",
+        "Check water temperature - sudden cold can trigger buoyancy issues",
+        "Lower water level if the fish struggles to reach the surface for air"
+      ],
+      "vet_urgency": {
+        "low": "Brief floating after a meal, corrects itself - reduce feeding and offer pea",
+        "medium": "Persistent buoyancy issues for several days - try fasting and pea, then bacterial swim bladder treatment",
+        "high": "Fish stuck on side, unable to swim, refusing food, getting weaker - aquatic vet for assessment"
+      },
+      "red_flags": [
+        "Permanently stuck on side or upside down",
+        "Cannot reach food at the surface",
+        "Sores developing on exposed skin (from rubbing on substrate)",
+        "Refusing food for more than 4-5 days",
+        "Other fish bullying the affected fish"
+      ],
+      "combinations": [
+        {"with": ["bloating", "not_eating"], "concern": "Possible internal organ disease or severe constipation"},
+        {"with": ["clamped_fins", "loss_of_colour"], "concern": "Systemic illness, not just buoyancy"}
+      ],
+      "sources": ["Practical Fishkeeping", "PDSA", "PetMD"]
+    },
+    {
+      "id": "fish_004",
+      "symptom": "Gasping at surface",
+      "aliases": ["surface gulping", "piping", "gasping for air"],
+      "category": "Respiratory / Water quality",
+      "description": "Fish stays near the surface gulping water, even when there is no food. Almost always indicates oxygen problems or gill damage. A critical sign requiring immediate action.",
+      "possible_causes": [
+        {"condition": "Low dissolved oxygen", "likelihood": "very common", "brief": "Overcrowded tank, no aeration, high temperature"},
+        {"condition": "Ammonia or nitrite poisoning", "likelihood": "very common", "brief": "Damages gills - check water immediately"},
+        {"condition": "Gill parasites (flukes, ich)", "likelihood": "common", "brief": "Affect gas exchange in the gills"},
+        {"condition": "High temperature", "likelihood": "common", "brief": "Warm water holds less oxygen"},
+        {"condition": "Bacterial gill disease", "likelihood": "occasional", "brief": "Inflammation reduces oxygen uptake"},
+        {"condition": "Carbon dioxide overdose (planted tanks)", "likelihood": "occasional", "brief": "CO2 injection set too high"}
+      ],
+      "home_care": [
+        "Test water immediately - any ammonia/nitrite means a 50% water change now",
+        "Increase aeration immediately - add an air stone, increase filter flow, surface agitation",
+        "Lower temperature gradually if above species range",
+        "Reduce CO2 injection if applicable",
+        "Move some fish to a separate tank if overcrowded",
+        "Do not feed for 24-48 hours - reduces ammonia production"
+      ],
+      "vet_urgency": {
+        "low": "Not applicable - all surface gasping is urgent",
+        "medium": "Brief gasping after feeding or in early morning - test water, increase aeration",
+        "high": "Multiple fish gasping at surface, lethargy, deaths - EMERGENCY water change and aeration, then specialist advice"
+      },
+      "red_flags": [
+        "Multiple fish gasping",
+        "Red or pale gills (visible when looking at fish from side)",
+        "Fish deaths in the tank",
+        "Tank smells off",
+        "Recent tank changes (new fish, large water change, filter clean)"
+      ],
+      "combinations": [
+        {"with": ["rapid_gill_movement"], "concern": "Severe gill stress or damage - emergency"},
+        {"with": ["clamped_fins", "lethargy"], "concern": "Critical water quality crisis"}
+      ],
+      "sources": ["Practical Fishkeeping", "RSPCA", "Tetra Aquatics"]
+    },
+    {
+      "id": "fish_005",
+      "symptom": "Loss of colour",
+      "aliases": ["pale fish", "faded colour", "washed out"],
+      "category": "Stress / General illness",
+      "description": "Fish appears noticeably duller or paler than normal. Colour changes are one of the earliest signs of stress or illness in fish.",
+      "possible_causes": [
+        {"condition": "Stress", "likelihood": "very common", "brief": "New tank, transport, bullying, water changes"},
+        {"condition": "Poor water quality", "likelihood": "very common", "brief": "Chronic exposure to ammonia/nitrite dulls colour"},
+        {"condition": "Poor diet", "likelihood": "common", "brief": "Lack of colour-enhancing nutrients"},
+        {"condition": "Aging (natural)", "likelihood": "common", "brief": "Older fish naturally lose some intensity"},
+        {"condition": "Illness onset", "likelihood": "common", "brief": "Often the first sign of underlying disease"},
+        {"condition": "Sleep / night colours", "likelihood": "occasional", "brief": "Some species fade naturally at night"}
+      ],
+      "home_care": [
+        "Test water quality - even slight ammonia or nitrite causes chronic stress",
+        "Check for bullying or aggression from tank mates",
+        "Improve diet with varied, quality foods including colour-enhancing options",
+        "Reduce stress: stable temperature, regular maintenance, hiding places",
+        "Photograph weekly to track colour changes objectively",
+        "Note time of day - some species are paler in the morning or at night"
+      ],
+      "vet_urgency": {
+        "low": "Slight fade, no other symptoms - improve husbandry and monitor",
+        "medium": "Noticeable pale appearance with mild lethargy or hiding - water test and intervention",
+        "high": "Very pale plus other symptoms (gasping, fin clamping, spots) - treat underlying cause and consider aquatic vet"
+      },
+      "red_flags": [
+        "Sudden dramatic colour loss",
+        "Combined with hiding or appetite loss",
+        "White patches (different from overall paling - may be fungus)",
+        "Multiple fish becoming pale at the same time"
+      ],
+      "combinations": [
+        {"with": ["clamped_fins", "hiding"], "concern": "Significant stress or illness - investigate water and tank mates"},
+        {"with": ["white_spots"], "concern": "Likely ich or parasitic infection - treat"}
+      ],
+      "sources": ["Practical Fishkeeping", "PetMD"]
+    },
+    {
+      "id": "fish_006",
+      "symptom": "Clamped fins",
+      "aliases": ["folded fins", "tight fins", "fins held close"],
+      "category": "Stress / General illness",
+      "description": "Fish holds its fins tightly against the body rather than fanned out and relaxed. A general distress sign indicating discomfort.",
+      "possible_causes": [
+        {"condition": "Poor water quality", "likelihood": "very common", "brief": "Most common single cause"},
+        {"condition": "Parasitic infection (ich, flukes, velvet)", "likelihood": "common", "brief": "Irritation causes fin clamping"},
+        {"condition": "Temperature wrong for species", "likelihood": "common", "brief": "Too cold or fluctuating"},
+        {"condition": "Bacterial infection onset", "likelihood": "common", "brief": "Generalised malaise"},
+        {"condition": "Bullying", "likelihood": "occasional", "brief": "Submissive posture in stressed fish"},
+        {"condition": "Acidic or alkaline shock", "likelihood": "occasional", "brief": "Recent water change with mismatched pH"}
+      ],
+      "home_care": [
+        "Test water - check ammonia, nitrite, nitrate, pH, temperature",
+        "Perform a 25% water change with dechlorinated water at the same temperature",
+        "Check temperature is correct for the species",
+        "Look closely for parasites, spots, or fin damage",
+        "Reduce stressors: dim lights, quiet area, hiding spots",
+        "Do not add new fish or change conditions further while diagnosing"
+      ],
+      "vet_urgency": {
+        "low": "Brief clamping after a water change, returns to normal - monitor",
+        "medium": "Persistent clamping with mild appetite loss - water management and treat any visible parasites",
+        "high": "Clamped fins with gasping, hiding, multiple fish affected - intensive water management and possibly specialist advice"
+      },
+      "red_flags": [
+        "Combined with gasping or rapid gill movement",
+        "Visible parasites or spots",
+        "Multiple fish clamping together",
+        "No improvement after water change"
+      ],
+      "combinations": [
+        {"with": ["white_spots"], "concern": "Ich infection - treat immediately"},
+        {"with": ["gasping_surface"], "concern": "Water quality crisis - emergency change and aeration"}
+      ],
+      "sources": ["Practical Fishkeeping", "RSPCA"]
+    },
+    {
+      "id": "fish_007",
+      "symptom": "Dropsy / pinecone scales",
+      "aliases": ["bloated body", "scales sticking out", "pinecone appearance"],
+      "category": "Internal / Systemic",
+      "description": "Body swells dramatically and scales lift outward giving a pinecone appearance when viewed from above. This is a symptom (not a disease) indicating severe internal illness, usually advanced.",
+      "possible_causes": [
+        {"condition": "Bacterial infection (internal)", "likelihood": "very common", "brief": "Often Aeromonas - causes organ failure and fluid retention"},
+        {"condition": "Kidney failure", "likelihood": "common", "brief": "Cannot regulate body fluids"},
+        {"condition": "Tumour or cyst", "likelihood": "occasional", "brief": "Older fish"},
+        {"condition": "Egg-binding (female fish)", "likelihood": "occasional", "brief": "Resembles dropsy but treatable"},
+        {"condition": "Viral infection", "likelihood": "occasional", "brief": "Less common but possible"}
+      ],
+      "home_care": [
+        "Isolate the fish in a quarantine tank with matched water parameters",
+        "Add aquarium salt (1 tsp per 5L) for species that tolerate it - helps reduce fluid retention",
+        "Treat with a broad-spectrum bacterial medication from an aquatic shop",
+        "Keep water pristine - daily small water changes",
+        "Offer easy-to-eat food but do not overfeed",
+        "Be aware: full dropsy has a poor prognosis - seek aquatic vet advice"
+      ],
+      "vet_urgency": {
+        "low": "Not applicable",
+        "medium": "Early bloating without scale lifting - antibacterial treatment and intensive water management",
+        "high": "Full pinecone scales, lethargy, poor prognosis - aquatic vet consultation, prepare to discuss humane endpoint"
+      },
+      "red_flags": [
+        "Pinecone appearance (scales lifted)",
+        "Severe lethargy, lying on bottom",
+        "Bulging eyes (pop-eye - common alongside dropsy)",
+        "Refusing food entirely",
+        "Multiple fish in tank showing signs"
+      ],
+      "combinations": [
+        {"with": ["bulging_eyes"], "concern": "Advanced systemic infection - poor prognosis"},
+        {"with": ["loss_of_colour", "hiding"], "concern": "Critical illness - aquatic vet"}
+      ],
+      "sources": ["Practical Fishkeeping", "PetMD", "RSPCA"]
+    },
+    {
+      "id": "fish_008",
+      "symptom": "Not eating",
+      "aliases": ["loss of appetite", "refusing food", "spitting food out"],
+      "category": "General illness",
+      "description": "Fish ignores food, spits it out, or eats noticeably less. Healthy fish should respond promptly at feeding time.",
+      "possible_causes": [
+        {"condition": "Stress (new tank, new fish, water change)", "likelihood": "very common", "brief": "Common in newly introduced fish"},
+        {"condition": "Poor water quality", "likelihood": "very common", "brief": "Suppresses appetite quickly"},
+        {"condition": "Wrong temperature for species", "likelihood": "common", "brief": "Cold-blooded fish digest poorly at wrong temperatures"},
+        {"condition": "Internal parasites or infection", "likelihood": "common", "brief": "Causes nausea-like behaviour"},
+        {"condition": "Bullying or competition", "likelihood": "common", "brief": "Some fish hide and miss food"},
+        {"condition": "Bored of food / stale food", "likelihood": "occasional", "brief": "Try varied foods"},
+        {"condition": "Constipation", "likelihood": "occasional", "brief": "Common in fancy goldfish, bettas"}
+      ],
+      "home_care": [
+        "Test water immediately - any ammonia/nitrite is a likely cause",
+        "Check temperature is in the correct range for the species",
+        "Offer favourite foods or live/frozen alternatives",
+        "Observe feeding to check whether bullying is preventing access",
+        "Reduce feeding for a few days if recently overfed",
+        "Quarantine if suspected disease - allows direct feeding without competition"
+      ],
+      "vet_urgency": {
+        "low": "Skipped one meal but otherwise active - monitor",
+        "medium": "Not eating for 3-5 days, mild lethargy - water management and dietary changes",
+        "high": "Not eating for over a week, weight loss, other symptoms - aquatic vet or specialist"
+      },
+      "red_flags": [
+        "Combined with weight loss (visible sunken body)",
+        "Hiding constantly",
+        "Other illness signs (spots, fin damage, clamping)",
+        "Multiple fish stopping eating",
+        "Bloating or constipation alongside"
+      ],
+      "combinations": [
+        {"with": ["lethargy", "loss_of_colour"], "concern": "Underlying illness - investigate water and disease"},
+        {"with": ["bloating"], "concern": "Constipation or internal disease - treat with pea/medication"}
+      ],
+      "sources": ["Practical Fishkeeping", "RSPCA", "PDSA"]
+    },
+    {
+      "id": "fish_009",
+      "symptom": "Hiding / unusual behaviour",
+      "aliases": ["hiding constantly", "behaviour change", "lethargy", "lying on bottom"],
+      "category": "Behavioural / General illness",
+      "description": "Fish hides much more than normal, spends most time motionless, or lies on the bottom. Most fish should be active during the day (with species-specific exceptions like nocturnal catfish).",
+      "possible_causes": [
+        {"condition": "Stress (new fish, new tank, water change)", "likelihood": "very common", "brief": "Common adjustment behaviour"},
+        {"condition": "Bullying from tank mates", "likelihood": "very common", "brief": "Submissive fish retreat"},
+        {"condition": "Poor water quality", "likelihood": "common", "brief": "Toxin levels making fish unwell"},
+        {"condition": "Illness onset", "likelihood": "common", "brief": "Sick fish withdraw from the group"},
+        {"condition": "Temperature wrong for species", "likelihood": "common", "brief": "Cold fish become very lethargic"},
+        {"condition": "Pregnancy / breeding behaviour", "likelihood": "occasional", "brief": "Females can hide near birth"}
+      ],
+      "home_care": [
+        "Observe tank dynamics quietly - is bullying happening?",
+        "Test water for ammonia, nitrite, nitrate, pH, temperature",
+        "Check for visible illness signs (spots, fin damage, colour change)",
+        "Provide more hiding spots so timid fish feel secure",
+        "Consider rehoming aggressive tank mates",
+        "If new arrival - allow 1-2 weeks to settle before worrying"
+      ],
+      "vet_urgency": {
+        "low": "Brief hiding after a disturbance, otherwise normal - monitor",
+        "medium": "Persistent hiding for several days, eating reduced - investigate water and tank dynamics",
+        "high": "Lying on bottom, gasping, unresponsive - serious illness, urgent intervention"
+      },
+      "red_flags": [
+        "Lying on the bottom on its side",
+        "Combined with not eating",
+        "Visible illness signs",
+        "Other fish in the tank also affected",
+        "Sudden onset (hours)"
+      ],
+      "combinations": [
+        {"with": ["clamped_fins", "loss_of_colour"], "concern": "Generalised stress or illness - investigate"},
+        {"with": ["not_eating", "weight_loss"], "concern": "Chronic illness - aquatic vet"}
+      ],
+      "sources": ["Practical Fishkeeping", "RSPCA"]
+    },
+    {
+      "id": "fish_010",
+      "symptom": "Rapid gill movement",
+      "aliases": ["fast breathing", "panting", "heavy breathing"],
+      "category": "Respiratory / Water quality",
+      "description": "Gills (the flaps just behind the eyes) move much faster than normal. Healthy fish breathe steadily; rapid movement signals respiratory or water quality stress.",
+      "possible_causes": [
+        {"condition": "Low oxygen / high temperature", "likelihood": "very common", "brief": "Tank too warm or undersaturated with air"},
+        {"condition": "Ammonia or nitrite toxicity", "likelihood": "very common", "brief": "Damages gills and forces compensatory breathing"},
+        {"condition": "Gill parasites (flukes)", "likelihood": "common", "brief": "Irritate gill tissue"},
+        {"condition": "Gill bacterial infection", "likelihood": "common", "brief": "Inflammation"},
+        {"condition": "Recent feeding (mild, transient)", "likelihood": "common", "brief": "Brief increase after eating is normal"},
+        {"condition": "Stress event (handling, transport)", "likelihood": "occasional", "brief": "Should settle within minutes"}
+      ],
+      "home_care": [
+        "Test water immediately - check ammonia, nitrite, temperature",
+        "Increase aeration (air stone, surface movement) immediately",
+        "Reduce temperature gradually if too warm",
+        "Perform 25-50% water change with dechlorinated, temperature-matched water",
+        "Look at gills - are they red, swollen, pale, or producing extra mucus?",
+        "Quarantine if parasites suspected and treat appropriately"
+      ],
+      "vet_urgency": {
+        "low": "Brief increase after feeding, returns to normal - monitor",
+        "medium": "Sustained rapid breathing with mild lethargy - water management and parasite check",
+        "high": "Rapid breathing plus gasping at surface, multiple fish affected, deaths - EMERGENCY"
+      },
+      "red_flags": [
+        "Gasping at surface alongside",
+        "Red, pale, or swollen-looking gills",
+        "Multiple fish affected",
+        "Tank deaths"
+      ],
+      "combinations": [
+        {"with": ["gasping_surface"], "concern": "Severe oxygen or toxin crisis - emergency"},
+        {"with": ["white_spots", "clamped_fins"], "concern": "Parasitic infection with gill involvement"}
+      ],
+      "sources": ["Practical Fishkeeping", "RSPCA", "Tetra Aquatics"]
+    },
+    {
+      "id": "fish_011",
+      "symptom": "Cloudy or bulging eyes",
+      "aliases": ["pop-eye", "cloudy eye", "white eyes", "swollen eye"],
+      "category": "Eye / Systemic",
+      "description": "Eyes appear cloudy white, hazy, or bulging outward (pop-eye / exophthalmia). Can affect one or both eyes and may indicate local injury or systemic illness.",
+      "possible_causes": [
+        {"condition": "Poor water quality", "likelihood": "very common", "brief": "Most common single cause of cloudy eyes"},
+        {"condition": "Bacterial infection", "likelihood": "common", "brief": "Local or systemic"},
+        {"condition": "Physical injury (scratching on decor, fight)", "likelihood": "common", "brief": "Especially in one eye only"},
+        {"condition": "Systemic illness (often alongside dropsy)", "likelihood": "common", "brief": "Both eyes bulging suggests internal disease"},
+        {"condition": "Tuberculosis (mycobacterium)", "likelihood": "occasional", "brief": "Chronic wasting disease"},
+        {"condition": "Vitamin deficiency", "likelihood": "occasional", "brief": "Poor diet over time"}
+      ],
+      "home_care": [
+        "Test water and perform a 25% water change with dechlorinated water",
+        "Check decor for sharp edges if one eye affected - smooth or remove",
+        "Add aquarium salt for species that tolerate it",
+        "Treat with antibacterial medication if infection suspected",
+        "Improve diet variety and quality",
+        "Isolate affected fish to monitor and reduce competition for food"
+      ],
+      "vet_urgency": {
+        "low": "Slight cloudiness, one eye, clear injury cause - improve husbandry and monitor",
+        "medium": "Cloudy eye persisting beyond a few days, mild bulging - antibacterial treatment and water management",
+        "high": "Both eyes bulging dramatically, combined with bloating or lethargy - urgent treatment, consider aquatic vet"
+      },
+      "red_flags": [
+        "Both eyes affected simultaneously",
+        "Severe bulging (eye looks ready to detach)",
+        "Combined with body bloating (dropsy)",
+        "Multiple fish affected",
+        "Weight loss"
+      ],
+      "combinations": [
+        {"with": ["bloating", "loss_of_colour"], "concern": "Possible dropsy / systemic infection - serious"},
+        {"with": ["weight_loss"], "concern": "Chronic disease - aquatic vet assessment"}
+      ],
+      "sources": ["Practical Fishkeeping", "PetMD"]
+    },
+    {
+      "id": "fish_012",
+      "symptom": "Fungal patches",
+      "aliases": ["cotton wool growth", "fuzzy patches", "fungus"],
+      "category": "Fungal",
+      "description": "White, grey, or off-white cotton-wool-like growths on skin, fins, or mouth. Usually a secondary infection following injury or poor water quality.",
+      "possible_causes": [
+        {"condition": "Saprolegnia fungus", "likelihood": "very common", "brief": "Most common aquarium fungus, secondary to injury or stress"},
+        {"condition": "Mouth fungus (Columnaris - actually bacterial)", "likelihood": "common", "brief": "Looks fungal but is bacterial - needs antibacterial treatment"},
+        {"condition": "Secondary fungal infection on wounds", "likelihood": "common", "brief": "Develops where skin has been damaged"},
+        {"condition": "Egg fungus (in breeding tanks)", "likelihood": "occasional", "brief": "Affects unfertilised eggs"}
+      ],
+      "home_care": [
+        "Test water and perform a 25% water change",
+        "Identify and remove the underlying cause (sharp decor, bullying, poor parameters)",
+        "Treat with antifungal medication from an aquatic shop",
+        "If mouth/lips affected, treat as Columnaris (bacterial) too",
+        "Add aquarium salt for species that tolerate it (helps recovery)",
+        "Quarantine if multiple fish unaffected - reduces spread risk"
+      ],
+      "vet_urgency": {
+        "low": "Small isolated patch on a fin, fish otherwise well - shop-bought antifungal and water management",
+        "medium": "Spreading patches, multiple sites - combined antifungal/antibacterial treatment",
+        "high": "Extensive fungus, mouth or gill involvement, lethargy - urgent treatment and possibly specialist input"
+      },
+      "red_flags": [
+        "Mouth or jaw fungus (often Columnaris, fast-progressing)",
+        "Patches on gills (interferes with breathing)",
+        "Multiple fish affected",
+        "Weight loss or lethargy alongside",
+        "Patches spreading rapidly (24-48h)"
+      ],
+      "combinations": [
+        {"with": ["fin_rot"], "concern": "Combined bacterial/fungal infection - treat both"},
+        {"with": ["clamped_fins", "lethargy"], "concern": "Systemic illness alongside skin disease"}
+      ],
+      "sources": ["Practical Fishkeeping", "Tetra Aquatics", "RSPCA"]
+    }
+  ]
+}

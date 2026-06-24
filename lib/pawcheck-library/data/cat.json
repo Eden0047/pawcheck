@@ -1,0 +1,1112 @@
+{
+  "pet": "cat",
+  "display_name": "Cat",
+  "emoji": "🐱",
+  "version": "1.0",
+  "total_symptoms": 25,
+  "sources_summary": ["PDSA", "RSPCA", "CatsProtection", "ICatCare", "ASPCA", "Cornell", "VCA", "AMC"],
+  "general_note": "Cats are masters at hiding illness as they are both predator and prey in the wild. By the time symptoms appear they may be more unwell than they look. Any sudden behaviour change warrants attention.",
+  "symptoms": [
+    {
+      "id": "cat_001",
+      "symptom": "Loss of appetite",
+      "aliases": ["not eating", "anorexia", "fussy eating", "refusing food"],
+      "category": "General / Systemic - URGENT",
+      "description": "A cat refusing food for more than 24 hours is a medical concern. Cats cannot safely fast like dogs - even 2-3 days without eating can trigger hepatic lipidosis (fatty liver disease).",
+      "possible_causes": [
+        {"condition": "Dental pain", "likelihood": "very common", "brief": "Tooth resorption, gingivitis - very painful"},
+        {"condition": "Kidney disease", "likelihood": "very common in older cats", "brief": "Top cause in seniors"},
+        {"condition": "Upper respiratory infection (cat flu)", "likelihood": "common", "brief": "Loss of smell = loss of appetite"},
+        {"condition": "Gastrointestinal disease", "likelihood": "common", "brief": "IBD, foreign body, infection"},
+        {"condition": "Hyperthyroidism", "likelihood": "occasional", "brief": "Usually causes increased appetite but can swing"},
+        {"condition": "Cancer", "likelihood": "occasional in older cats", "brief": "Various types"},
+        {"condition": "Stress / environmental change", "likelihood": "common", "brief": "New pet, moving, building work"},
+        {"condition": "Pancreatitis", "likelihood": "occasional", "brief": "More subtle than in dogs"}
+      ],
+      "home_care": [
+        "Try warming food slightly to release aromas",
+        "Offer strongly-smelling favourites (tuna, sardines, chicken)",
+        "Hand-feed small portions",
+        "Ensure quiet, safe eating environment away from other pets",
+        "Check mouth for ulcers, broken teeth, or red gums",
+        "Keep water fresh and try different bowl/fountain"
+      ],
+      "vet_urgency": {
+        "low": "One missed meal but eating treats and acting normal - monitor",
+        "medium": "Reduced appetite for 24 hours - phone vet for advice",
+        "high": "Not eating for 24+ hours, especially overweight cat - vet within 24h (hepatic lipidosis risk)"
+      },
+      "red_flags": [
+        "Complete refusal of food for 24+ hours",
+        "Combined with vomiting or weight loss",
+        "Yellow tinge to skin/gums (jaundice)",
+        "Lethargy and hiding",
+        "Drooling or pawing at mouth",
+        "Overweight cat not eating (high hepatic lipidosis risk)"
+      ],
+      "combinations": [
+        {"with": ["vomiting", "lethargy"], "concern": "Possible serious illness - vet within 24h"},
+        {"with": ["weight_loss", "increased_thirst"], "concern": "Likely kidney disease or diabetes - vet bloods"},
+        {"with": ["yellow_gums"], "concern": "Jaundice / liver disease - urgent vet"}
+      ],
+      "sources": ["PDSA", "ICatCare", "VCA", "Cornell"]
+    },
+
+    {
+      "id": "cat_002",
+      "symptom": "Vomiting",
+      "aliases": ["throwing up", "being sick", "sick"],
+      "category": "Gastrointestinal",
+      "description": "Forceful ejection of stomach contents. Occasional vomiting (e.g. hairballs) is common in cats but frequent or persistent vomiting is not normal.",
+      "possible_causes": [
+        {"condition": "Hairballs (trichobezoars)", "likelihood": "very common", "brief": "Especially in long-haired cats"},
+        {"condition": "Eating too fast", "likelihood": "common", "brief": "Regurgitation rather than true vomiting"},
+        {"condition": "Dietary intolerance", "likelihood": "common", "brief": "New food, dairy"},
+        {"condition": "Inflammatory bowel disease", "likelihood": "common", "brief": "Chronic vomiting"},
+        {"condition": "Hyperthyroidism", "likelihood": "common in older cats", "brief": "Especially with weight loss"},
+        {"condition": "Kidney disease", "likelihood": "common in older cats", "brief": "Toxins build up cause nausea"},
+        {"condition": "Foreign body / linear foreign body (string!)", "likelihood": "occasional", "brief": "String swallowing is dangerous"},
+        {"condition": "Pancreatitis", "likelihood": "occasional", "brief": "Often with lethargy and appetite loss"},
+        {"condition": "Cancer (especially GI lymphoma)", "likelihood": "occasional", "brief": "Older cats, chronic vomiting"}
+      ],
+      "home_care": [
+        "Withhold food for 6-12 hours (NOT longer - cats need food)",
+        "Offer small amounts of water frequently",
+        "Reintroduce bland diet: plain boiled chicken, white fish",
+        "Small frequent meals rather than one large",
+        "Use hairball remedy paste if appropriate",
+        "Groom regularly to reduce hair ingestion"
+      ],
+      "vet_urgency": {
+        "low": "Occasional hairball or single vomit, cat otherwise well - monitor",
+        "medium": "More than 2-3 vomits in a day, or persistent over multiple days - vet appointment",
+        "high": "Continuous vomiting, blood, suspected string ingestion, lethargy, or 24+ hours without keeping food/water down - urgent vet"
+      },
+      "red_flags": [
+        "Blood in vomit (red or coffee-grounds appearance)",
+        "Continuous unproductive retching",
+        "String/thread visible from mouth or anus (NEVER PULL - go to vet)",
+        "Severe lethargy or collapse",
+        "Distended, painful abdomen",
+        "Vomiting with breathing difficulty",
+        "Yellow gums (jaundice)"
+      ],
+      "combinations": [
+        {"with": ["weight_loss", "increased_appetite"], "concern": "Likely hyperthyroidism - vet bloods"},
+        {"with": ["increased_thirst", "weight_loss"], "concern": "Likely kidney disease or diabetes - vet"},
+        {"with": ["loss_of_appetite", "lethargy"], "concern": "Possible pancreatitis or serious illness - urgent vet"}
+      ],
+      "sources": ["PDSA", "ICatCare", "VCA"]
+    },
+
+    {
+      "id": "cat_003",
+      "symptom": "Diarrhoea",
+      "aliases": ["loose stool", "runny poo"],
+      "category": "Gastrointestinal",
+      "description": "Frequent, loose, or watery bowel movements. Can quickly cause dehydration in cats.",
+      "possible_causes": [
+        {"condition": "Dietary change or intolerance", "likelihood": "very common", "brief": "Sudden food change, dairy"},
+        {"condition": "Intestinal parasites", "likelihood": "common", "brief": "Worms, giardia"},
+        {"condition": "Stress (new home, pet, baby)", "likelihood": "common", "brief": "Triggers colitis"},
+        {"condition": "Inflammatory bowel disease", "likelihood": "common", "brief": "Chronic, often with vomiting"},
+        {"condition": "Hyperthyroidism", "likelihood": "common in older cats", "brief": "Plus weight loss"},
+        {"condition": "Bacterial / viral infection", "likelihood": "occasional", "brief": "Including FPV (cat parvo)"},
+        {"condition": "Toxin or medication", "likelihood": "occasional", "brief": "Many human meds toxic to cats"},
+        {"condition": "Lymphoma", "likelihood": "occasional", "brief": "Especially in older cats"}
+      ],
+      "home_care": [
+        "Continue offering small frequent meals of bland food (chicken)",
+        "Do NOT fast cats with diarrhoea for long",
+        "Ensure constant fresh water access",
+        "Use probiotic paste (vet-approved)",
+        "Check faeces sample for vet if persistent",
+        "Worm with appropriate product if overdue"
+      ],
+      "vet_urgency": {
+        "low": "Single soft stool, cat eating normally - monitor 24h",
+        "medium": "Persistent for 24-48 hours - phone vet for advice",
+        "high": "Bloody diarrhoea, severe dehydration, kitten with diarrhoea - urgent vet"
+      },
+      "red_flags": [
+        "Blood (red or black) in stool",
+        "Combined with severe lethargy",
+        "Sunken eyes, tacky gums (dehydration)",
+        "Combined with vomiting (rapid dehydration)",
+        "Kitten with diarrhoea (life-threatening dehydration risk)",
+        "Smelly, watery diarrhoea (possible parvovirus)"
+      ],
+      "combinations": [
+        {"with": ["vomiting"], "concern": "Rapid dehydration risk - vet within 24h"},
+        {"with": ["weight_loss"], "concern": "IBD, lymphoma, hyperthyroidism - vet investigation"},
+        {"with": ["lethargy", "loss_of_appetite"], "concern": "Serious illness - vet within 24h"}
+      ],
+      "sources": ["PDSA", "ICatCare", "CatsProtection"]
+    },
+
+    {
+      "id": "cat_004",
+      "symptom": "Lethargy",
+      "aliases": ["low energy", "sleeping more", "withdrawn"],
+      "category": "General / Systemic",
+      "description": "Reduced activity, less interaction, sleeping more than normal. In cats this is often a key early sign of illness.",
+      "possible_causes": [
+        {"condition": "Mild viral illness", "likelihood": "common", "brief": "Cat flu, mild infections"},
+        {"condition": "Pain (dental, joint, internal)", "likelihood": "common", "brief": "Cats hide pain as inactivity"},
+        {"condition": "Kidney disease", "likelihood": "very common in older cats", "brief": "Top cause in seniors"},
+        {"condition": "Hyperthyroidism (paradoxical lethargy)", "likelihood": "occasional", "brief": "Usually energetic but can swing"},
+        {"condition": "Diabetes", "likelihood": "common", "brief": "Plus increased thirst"},
+        {"condition": "Anaemia", "likelihood": "occasional", "brief": "Check gum colour"},
+        {"condition": "Heart disease (HCM)", "likelihood": "occasional", "brief": "Often hidden until severe"},
+        {"condition": "Cancer", "likelihood": "occasional", "brief": "Various types"}
+      ],
+      "home_care": [
+        "Provide quiet, warm, comfortable resting area",
+        "Ensure water and food are easily accessible",
+        "Note specific changes: hiding more? not jumping?",
+        "Check gum colour (should be pink and moist)",
+        "Monitor breathing rate (normal 20-30 at rest)",
+        "Keep stress and other pets at bay"
+      ],
+      "vet_urgency": {
+        "low": "Slightly more sleepy after busy day, eating well - monitor",
+        "medium": "Persistent lethargy over 24 hours with reduced appetite - vet appointment",
+        "high": "Severe lethargy, collapse, pale gums, breathing difficulty - urgent vet"
+      },
+      "red_flags": [
+        "Hiding in unusual places",
+        "Sitting hunched, with closed eyes",
+        "Pale, white, blue, or yellow gums",
+        "Combined with not eating or vomiting",
+        "Breathing changes",
+        "Cold to touch"
+      ],
+      "combinations": [
+        {"with": ["loss_of_appetite"], "concern": "Significant illness - vet within 24h"},
+        {"with": ["increased_thirst", "weight_loss"], "concern": "Kidney disease, diabetes, or hyperthyroidism - vet bloods"},
+        {"with": ["breathing_difficulty"], "concern": "Cardiac emergency - urgent vet"}
+      ],
+      "sources": ["PDSA", "ICatCare", "VCA"]
+    },
+
+    {
+      "id": "cat_005",
+      "symptom": "Hiding / withdrawal",
+      "aliases": ["hiding", "withdrawn", "not interactive", "isolating"],
+      "category": "Behavioural / Systemic",
+      "description": "Cat retreating to unusual or hidden spaces, avoiding interaction. Often the first sign of illness in cats.",
+      "possible_causes": [
+        {"condition": "Pain or illness (any cause)", "likelihood": "very common", "brief": "Cats hide when sick"},
+        {"condition": "Stress / fear", "likelihood": "common", "brief": "Visitors, fireworks, new pet"},
+        {"condition": "Recent move or change", "likelihood": "common", "brief": "May hide for days settling in"},
+        {"condition": "Bullying by other pets", "likelihood": "common in multi-cat homes", "brief": "May hide and avoid resources"},
+        {"condition": "Cognitive dysfunction (older cats)", "likelihood": "occasional", "brief": "Senior changes"}
+      ],
+      "home_care": [
+        "Provide safe, accessible hiding places",
+        "Don't force interaction",
+        "Check resources (food, water, litter) are accessible to the hiding cat",
+        "Quiet observation for any other symptoms",
+        "Use Feliway plug-in diffuser if stress-related",
+        "Note timing - sudden hiding more concerning than gradual"
+      ],
+      "vet_urgency": {
+        "low": "Recent change in household and cat hiding briefly - normal",
+        "medium": "Persistent hiding for more than 24 hours - phone vet for advice",
+        "high": "Hiding with not eating, not moving, other illness signs - urgent vet"
+      },
+      "red_flags": [
+        "Hiding in cold or hard places (sign of pain)",
+        "Hiding with reduced eating/drinking",
+        "Aggression when touched (pain)",
+        "Hunched posture",
+        "Unkempt coat",
+        "Hiding with breathing changes"
+      ],
+      "combinations": [
+        {"with": ["loss_of_appetite"], "concern": "Illness - vet within 24h"},
+        {"with": ["hunched_posture"], "concern": "Likely pain - vet visit"},
+        {"with": ["breathing_difficulty"], "concern": "Serious illness - urgent vet"}
+      ],
+      "sources": ["ICatCare", "VCA", "CatsProtection"]
+    },
+
+    {
+      "id": "cat_006",
+      "symptom": "Increased thirst",
+      "aliases": ["drinking more", "polydipsia"],
+      "category": "Urinary / Endocrine",
+      "description": "Notable increase in water consumption. Cats normally drink small amounts; visible drinking increase is significant.",
+      "possible_causes": [
+        {"condition": "Kidney disease (CKD)", "likelihood": "very common", "brief": "Top cause in older cats"},
+        {"condition": "Hyperthyroidism", "likelihood": "very common in older cats", "brief": "Plus weight loss and appetite"},
+        {"condition": "Diabetes mellitus", "likelihood": "common", "brief": "Especially in overweight cats"},
+        {"condition": "Liver disease", "likelihood": "occasional", "brief": "Including hepatic lipidosis"},
+        {"condition": "Pyometra (intact females)", "likelihood": "occasional", "brief": "Womb infection - urgent"},
+        {"condition": "Dietary (dry food only)", "likelihood": "common", "brief": "Normal increase"}
+      ],
+      "home_care": [
+        "Measure water intake daily",
+        "Track urination frequency and clumping size",
+        "Weigh cat weekly",
+        "Encourage drinking with water fountains",
+        "Consider mixing wet food into diet",
+        "Note other symptoms (appetite, energy)"
+      ],
+      "vet_urgency": {
+        "low": "Slight increase with dry diet or warm weather - monitor",
+        "medium": "Sustained increase over days/weeks with no clear cause - vet for bloods/urine",
+        "high": "Drinking and urinating excessively with weight loss, vomiting, lethargy - urgent vet"
+      },
+      "red_flags": [
+        "Combined with weight loss",
+        "Combined with vomiting",
+        "Combined with severe lethargy",
+        "Vaginal discharge in unspayed female",
+        "Sweet or unusual breath (diabetic ketoacidosis)"
+      ],
+      "combinations": [
+        {"with": ["weight_loss", "increased_appetite"], "concern": "Likely hyperthyroidism or diabetes - vet bloods"},
+        {"with": ["weight_loss", "loss_of_appetite"], "concern": "Likely kidney disease - vet bloods"},
+        {"with": ["vomiting", "lethargy"], "concern": "Diabetic ketoacidosis possible - urgent vet"}
+      ],
+      "sources": ["PDSA", "ICatCare", "Cornell"]
+    },
+
+    {
+      "id": "cat_007",
+      "symptom": "Increased urination",
+      "aliases": ["peeing a lot", "polyuria", "large clumps"],
+      "category": "Urinary / Endocrine",
+      "description": "Larger or more frequent urination. Usually accompanies increased thirst.",
+      "possible_causes": [
+        {"condition": "Kidney disease", "likelihood": "very common", "brief": "Most common cause in older cats"},
+        {"condition": "Diabetes", "likelihood": "common", "brief": "Plus increased thirst, weight loss"},
+        {"condition": "Hyperthyroidism", "likelihood": "common in older cats", "brief": "Plus weight loss, increased appetite"},
+        {"condition": "Urinary tract infection", "likelihood": "less common in cats", "brief": "More common in older cats"},
+        {"condition": "Feline lower urinary tract disease (FLUTD)", "likelihood": "common", "brief": "Usually small frequent attempts"}
+      ],
+      "home_care": [
+        "Provide multiple litter trays (one per cat + one extra)",
+        "Keep litter trays clean and accessible",
+        "Track clump size and frequency",
+        "Encourage water intake",
+        "Collect urine sample if possible (non-absorbent litter)",
+        "Watch for any straining or signs of pain"
+      ],
+      "vet_urgency": {
+        "low": "Mild increase with no other symptoms - monitor",
+        "medium": "Persistent increase with weight changes or thirst - vet for tests",
+        "high": "Straining with no output (URGENT especially in males), blood in urine - emergency vet"
+      },
+      "red_flags": [
+        "Straining in litter tray with no/little urine (URGENT)",
+        "Crying when urinating",
+        "Blood in urine",
+        "Inappropriate urination",
+        "Vomiting with increased urination"
+      ],
+      "combinations": [
+        {"with": ["straining", "no_urine"], "concern": "URINARY BLOCKAGE - emergency, especially males"},
+        {"with": ["increased_thirst", "weight_loss"], "concern": "Kidney disease, diabetes, hyperthyroidism - vet bloods"},
+        {"with": ["blood_in_urine"], "concern": "FLUTD, infection, or stones - vet within 24h"}
+      ],
+      "sources": ["PDSA", "ICatCare", "Cornell"]
+    },
+
+    {
+      "id": "cat_008",
+      "symptom": "Litter box issues",
+      "aliases": ["peeing outside box", "inappropriate urination", "house soiling"],
+      "category": "Urinary / Behavioural",
+      "description": "Urinating or defaecating outside the litter tray, especially in a previously trained cat. NEVER just behavioural - always rule out medical causes first.",
+      "possible_causes": [
+        {"condition": "Feline lower urinary tract disease (FLUTD)", "likelihood": "very common", "brief": "Painful urination drives avoidance"},
+        {"condition": "Urinary blockage (males - EMERGENCY)", "likelihood": "occasional but critical", "brief": "Cannot urinate, will try frequently"},
+        {"condition": "Kidney disease or diabetes (increased volume)", "likelihood": "common", "brief": "Tray fills too fast"},
+        {"condition": "Stress / FIC (feline idiopathic cystitis)", "likelihood": "common", "brief": "Stress-triggered bladder inflammation"},
+        {"condition": "Arthritis", "likelihood": "common in older cats", "brief": "Difficulty getting in/out of tray"},
+        {"condition": "Litter tray issues", "likelihood": "common", "brief": "Type of litter, location, cleanliness, size"},
+        {"condition": "Bullying by other cats", "likelihood": "common", "brief": "Cannot access tray safely"}
+      ],
+      "home_care": [
+        "Take to vet first to rule out medical causes (always)",
+        "Provide one litter tray per cat plus one extra",
+        "Place trays in quiet, accessible locations",
+        "Clean trays at least daily",
+        "Use unscented, fine clumping litter",
+        "Try low-sided tray for older or arthritic cats",
+        "Reduce stressors (Feliway diffusers)",
+        "Do not punish - causes worse stress"
+      ],
+      "vet_urgency": {
+        "low": "(no low - always investigate)",
+        "medium": "New issue with no obvious distress - vet appointment within days",
+        "high": "Straining with no urine (especially males), blood, crying in tray - EMERGENCY"
+      },
+      "red_flags": [
+        "Male cat straining with no urine output (BLOCKAGE - 24h to fatal)",
+        "Crying or vocalising in tray",
+        "Blood-tinged urine",
+        "Licking genital area excessively",
+        "Vomiting with urinary signs (toxin build-up)"
+      ],
+      "combinations": [
+        {"with": ["straining", "no_urine_output"], "concern": "BLOCKED CAT - emergency in males"},
+        {"with": ["blood_in_urine"], "concern": "FLUTD or cystitis - vet within 24h"},
+        {"with": ["increased_thirst"], "concern": "Possible diabetes or kidney disease - vet"}
+      ],
+      "sources": ["PDSA", "ICatCare", "Cornell", "CatsProtection"]
+    },
+
+    {
+      "id": "cat_009",
+      "symptom": "Straining to urinate",
+      "aliases": ["dysuria", "stranguria", "trying to pee"],
+      "category": "Urinary - EMERGENCY (especially males)",
+      "description": "Repeated attempts to urinate with little or no output. In male cats, urinary blockage can be fatal within 24-48 hours.",
+      "possible_causes": [
+        {"condition": "Urethral obstruction (blocked cat) - MALES", "likelihood": "common in males", "brief": "EMERGENCY - kidney failure within 24h if untreated"},
+        {"condition": "Feline idiopathic cystitis (FIC)", "likelihood": "very common", "brief": "Stress-related; painful but not blocked"},
+        {"condition": "Urinary stones / crystals", "likelihood": "common", "brief": "Struvite, calcium oxalate"},
+        {"condition": "Urinary tract infection", "likelihood": "less common in cats", "brief": "Especially older cats"},
+        {"condition": "Tumour", "likelihood": "rare", "brief": "Older cats"}
+      ],
+      "home_care": [
+        "STRAINING WITH NO OUTPUT = EMERGENCY (especially males) - go to vet NOW",
+        "Do not try home remedies",
+        "Note when last successful urination was",
+        "Check abdomen gently - hard bladder is critical sign",
+        "Keep cat as calm as possible during transport"
+      ],
+      "vet_urgency": {
+        "low": "(no low category for true straining)",
+        "medium": "Female cat with mild straining, some output - vet within 24h",
+        "high": "Male cat straining with no output, distressed cat crying - EMERGENCY vet IMMEDIATELY (life-threatening)"
+      },
+      "red_flags": [
+        "Any male cat unable to produce urine",
+        "Crying in litter tray",
+        "Hard, large bladder palpable in abdomen",
+        "Repeated visits to tray with no result",
+        "Lethargy and vomiting with urinary signs",
+        "Cold, weak - signs of impending collapse"
+      ],
+      "combinations": [
+        {"with": ["male_cat"], "concern": "Blocked cat possible - EMERGENCY"},
+        {"with": ["vomiting", "lethargy"], "concern": "Uraemia from blockage - critical emergency"},
+        {"with": ["distressed_crying"], "concern": "Severe urinary pain - urgent vet"}
+      ],
+      "sources": ["PDSA", "ICatCare", "Cornell"]
+    },
+
+    {
+      "id": "cat_010",
+      "symptom": "Sneezing",
+      "aliases": ["sneezing", "snuffling"],
+      "category": "Respiratory",
+      "description": "Frequent or persistent sneezing, often a sign of upper respiratory infection (cat flu).",
+      "possible_causes": [
+        {"condition": "Cat flu (FHV-1, calicivirus)", "likelihood": "very common", "brief": "Viral; common in unvaccinated cats"},
+        {"condition": "Bacterial infection (Chlamydophila, Bordetella)", "likelihood": "common", "brief": "Often secondary to viral"},
+        {"condition": "Allergies (rare in cats)", "likelihood": "occasional", "brief": "Less common than dogs"},
+        {"condition": "Foreign body in nose", "likelihood": "occasional", "brief": "Grass seed - sudden onset, one nostril"},
+        {"condition": "Dental disease (root abscess)", "likelihood": "occasional", "brief": "Can extend into nasal cavity"},
+        {"condition": "Nasal tumour or polyp", "likelihood": "rare", "brief": "Older cats, persistent"},
+        {"condition": "Fungal infection", "likelihood": "rare", "brief": "Cryptococcus, Aspergillus"}
+      ],
+      "home_care": [
+        "Keep cat warm and stress-free",
+        "Steam therapy: sit cat in steamy bathroom (NOT a hot bath)",
+        "Wipe discharge gently with damp cloth",
+        "Warm food to enhance smell and encourage eating",
+        "Ensure hydration",
+        "Isolate from other cats if multi-cat household"
+      ],
+      "vet_urgency": {
+        "low": "Occasional sneeze, otherwise well - monitor",
+        "medium": "Persistent sneezing for more than 3 days with discharge - vet appointment",
+        "high": "Cat not eating, severe lethargy, breathing difficulty, kitten with severe symptoms - urgent vet"
+      },
+      "red_flags": [
+        "Thick yellow/green nasal discharge",
+        "Eye discharge with sneezing (cat flu)",
+        "Not eating (loss of smell prevents appetite)",
+        "Severe breathing difficulty",
+        "Blood in nasal discharge",
+        "Kitten with sneezing - dangerous"
+      ],
+      "combinations": [
+        {"with": ["eye_discharge"], "concern": "Cat flu - vet for treatment"},
+        {"with": ["loss_of_appetite"], "concern": "Likely cat flu - vet within 24h"},
+        {"with": ["bloody_discharge"], "concern": "Possible tumour, severe infection - vet"}
+      ],
+      "sources": ["PDSA", "ICatCare", "ASPCA"]
+    },
+
+    {
+      "id": "cat_011",
+      "symptom": "Eye discharge",
+      "aliases": ["weepy eye", "squinting", "red eye", "conjunctivitis"],
+      "category": "Eye",
+      "description": "Discharge from one or both eyes, ranging from clear watering to thick discharge with squinting or redness.",
+      "possible_causes": [
+        {"condition": "Cat flu (FHV-1)", "likelihood": "very common", "brief": "Viral; bilateral discharge, sneezing"},
+        {"condition": "Conjunctivitis (Chlamydophila, bacterial)", "likelihood": "common", "brief": "Pink eye with discharge"},
+        {"condition": "Corneal ulcer", "likelihood": "common", "brief": "Painful; from FHV-1 or trauma"},
+        {"condition": "Foreign body", "likelihood": "occasional", "brief": "Grass seed, hair"},
+        {"condition": "Allergies", "likelihood": "occasional", "brief": "Less common in cats"},
+        {"condition": "Glaucoma or uveitis", "likelihood": "occasional", "brief": "Painful, can be from FeLV/FIV"}
+      ],
+      "home_care": [
+        "Wipe gently with cooled boiled water and gauze",
+        "Use separate gauze for each eye",
+        "Do not use any human eye drops",
+        "Prevent rubbing (Elizabethan collar if needed)",
+        "Keep cat indoors if outdoor cat",
+        "Quarantine from other cats (contagious)"
+      ],
+      "vet_urgency": {
+        "low": "Slight tearing, eye comfortable - clean and monitor",
+        "medium": "Persistent discharge with redness - vet appointment within 24-48h",
+        "high": "Eye held closed, cloudy eye, severe pain, blood in eye - urgent vet"
+      },
+      "red_flags": [
+        "Eye held tightly closed (severe pain)",
+        "Cloudy or blue cornea (ulcer)",
+        "Bulging eye",
+        "Vision loss / bumping into things",
+        "Blood in the eye",
+        "Combined with cat flu signs and not eating"
+      ],
+      "combinations": [
+        {"with": ["sneezing", "nasal_discharge"], "concern": "Cat flu - vet for treatment"},
+        {"with": ["squinting", "tearing"], "concern": "Corneal ulcer - urgent vet (can rupture)"},
+        {"with": ["closed_eye", "pain"], "concern": "Painful eye condition - urgent vet"}
+      ],
+      "sources": ["PDSA", "ICatCare", "Cornell"]
+    },
+
+    {
+      "id": "cat_012",
+      "symptom": "Coughing",
+      "aliases": ["cough", "hacking", "wheezing"],
+      "category": "Respiratory",
+      "description": "Coughing is much less common in cats than dogs. Often confused with hairball retching, but real coughing is concerning.",
+      "possible_causes": [
+        {"condition": "Asthma (feline bronchial disease)", "likelihood": "common", "brief": "Wheezing cough, may mimic hairball retching"},
+        {"condition": "Heartworm", "likelihood": "regional", "brief": "Where prevalent (US, parts of Europe)"},
+        {"condition": "Lungworm", "likelihood": "occasional", "brief": "Increasing in UK"},
+        {"condition": "Respiratory infection", "likelihood": "occasional", "brief": "Pneumonia, bronchitis"},
+        {"condition": "Foreign body in airway", "likelihood": "occasional", "brief": "Grass seed especially"},
+        {"condition": "Tumour", "likelihood": "occasional in older cats", "brief": "Especially lymphoma"},
+        {"condition": "Heart disease", "likelihood": "occasional", "brief": "Often presents as breathing difficulty rather than cough"}
+      ],
+      "home_care": [
+        "Note pattern: episodic? After exercise? Continuous?",
+        "Reduce environmental triggers (smoke, perfumes, dust, scented litters)",
+        "Use HEPA air purifier if asthma suspected",
+        "Video the cough for the vet to see",
+        "Reduce stress",
+        "Keep up parasite prevention"
+      ],
+      "vet_urgency": {
+        "low": "Occasional cough, otherwise well - monitor",
+        "medium": "Recurring cough over days - vet appointment",
+        "high": "Cough with breathing difficulty, open-mouth breathing, blue gums - EMERGENCY"
+      },
+      "red_flags": [
+        "Open-mouth breathing (very serious in cats)",
+        "Blue or grey gums",
+        "Coughing with weakness/collapse",
+        "Coughing fits lasting minutes",
+        "Coughing up blood",
+        "Significant weight loss with cough"
+      ],
+      "combinations": [
+        {"with": ["breathing_difficulty"], "concern": "Asthma attack or heart failure - EMERGENCY"},
+        {"with": ["weight_loss"], "concern": "Possible heartworm, lungworm, or cancer - vet"},
+        {"with": ["lethargy"], "concern": "Pneumonia or systemic illness - vet within 24h"}
+      ],
+      "sources": ["ICatCare", "VCA", "Cornell"]
+    },
+
+    {
+      "id": "cat_013",
+      "symptom": "Weight loss",
+      "aliases": ["losing weight", "thinning"],
+      "category": "General / Systemic",
+      "description": "Unintentional reduction in body weight. Significant in cats given their small frame.",
+      "possible_causes": [
+        {"condition": "Hyperthyroidism", "likelihood": "very common in older cats", "brief": "Despite increased appetite"},
+        {"condition": "Kidney disease (CKD)", "likelihood": "very common in older cats", "brief": "Plus increased thirst"},
+        {"condition": "Diabetes mellitus", "likelihood": "common", "brief": "Plus increased thirst and appetite"},
+        {"condition": "Inflammatory bowel disease", "likelihood": "common", "brief": "Often with vomiting/diarrhoea"},
+        {"condition": "Cancer (lymphoma especially)", "likelihood": "common in older cats", "brief": "Various forms"},
+        {"condition": "Dental disease", "likelihood": "common", "brief": "Pain reduces eating"},
+        {"condition": "Parasites", "likelihood": "common in young cats", "brief": "Worms, giardia"},
+        {"condition": "FIV/FeLV", "likelihood": "occasional", "brief": "Especially outdoor cats"}
+      ],
+      "home_care": [
+        "Weigh weekly on kitchen scales",
+        "Track food intake carefully",
+        "Note water consumption",
+        "Photograph from above and side",
+        "Check mouth for dental issues",
+        "Bring fresh faeces sample to vet"
+      ],
+      "vet_urgency": {
+        "low": "Slight loss with diet change - monitor",
+        "medium": "Unexplained loss over weeks - vet for full workup",
+        "high": "Rapid loss with other symptoms - vet within 24h"
+      },
+      "red_flags": [
+        "Visible spine, hip bones, or ribs",
+        "Loss combined with vomiting/diarrhoea",
+        "Loss with increased thirst (kidney, diabetes, thyroid)",
+        "Loss with increased appetite (thyroid, diabetes, GI issues)",
+        "Severe lethargy",
+        "Yellow gums (liver disease)"
+      ],
+      "combinations": [
+        {"with": ["increased_appetite", "increased_thirst"], "concern": "Likely hyperthyroidism - vet bloods"},
+        {"with": ["increased_thirst", "loss_of_appetite"], "concern": "Likely kidney disease - vet bloods"},
+        {"with": ["chronic_diarrhoea"], "concern": "Possible IBD or lymphoma - vet"}
+      ],
+      "sources": ["PDSA", "ICatCare", "AMC"]
+    },
+
+    {
+      "id": "cat_014",
+      "symptom": "Excessive grooming",
+      "aliases": ["over-grooming", "bald patches", "licking too much"],
+      "category": "Skin / Behavioural",
+      "description": "Grooming so frequently or intensely that hair is being removed, leaving bald or thinning patches.",
+      "possible_causes": [
+        {"condition": "Allergies (atopy, food, flea)", "likelihood": "very common", "brief": "Itchy skin drives grooming"},
+        {"condition": "Fleas", "likelihood": "very common", "brief": "Even one bite triggers cats with flea allergy"},
+        {"condition": "Stress / anxiety (psychogenic alopecia)", "likelihood": "common", "brief": "Stressed cats over-groom"},
+        {"condition": "Pain (referred grooming)", "likelihood": "common", "brief": "E.g. bladder pain causes belly licking"},
+        {"condition": "Mites or ringworm", "likelihood": "occasional", "brief": "Contagious to humans"},
+        {"condition": "Hyperthyroidism", "likelihood": "occasional", "brief": "Restlessness and grooming"}
+      ],
+      "home_care": [
+        "Check thoroughly for fleas with flea comb",
+        "Apply spot-on flea treatment (vet-approved)",
+        "Note location: symmetric? Belly only? Back?",
+        "Identify and reduce stressors",
+        "Provide enrichment (puzzle feeders, climbing, play)",
+        "Try Feliway diffuser for stress"
+      ],
+      "vet_urgency": {
+        "low": "Mild grooming, no bald patches - normal",
+        "medium": "Bald patches developing or skin damage - vet appointment",
+        "high": "Open wounds, severe self-trauma, infected skin - urgent vet"
+      },
+      "red_flags": [
+        "Open sores or wounds",
+        "Infected skin (red, pus, smell)",
+        "Belly-only grooming (often urinary/abdominal pain)",
+        "Combined with urinary signs",
+        "Multiple pets affected (mites/ringworm)",
+        "Combined with weight loss (thyroid)"
+      ],
+      "combinations": [
+        {"with": ["urinary_signs"], "concern": "FLUTD - vet for cystitis"},
+        {"with": ["weight_loss", "increased_thirst"], "concern": "Hyperthyroidism - vet bloods"},
+        {"with": ["multiple_pets_affected"], "concern": "Possible mange/ringworm - vet"}
+      ],
+      "sources": ["ICatCare", "PDSA", "VCA"]
+    },
+
+    {
+      "id": "cat_015",
+      "symptom": "Poor grooming / matted coat",
+      "aliases": ["unkempt", "greasy coat", "matted fur", "scruffy"],
+      "category": "General / Systemic",
+      "description": "A previously well-groomed cat becoming messy, with mats, dandruff, greasy patches, or clumps of loose fur. A sign cats are unwell as they normally groom meticulously.",
+      "possible_causes": [
+        {"condition": "Arthritis", "likelihood": "very common in older cats", "brief": "Painful to twist for grooming"},
+        {"condition": "Obesity", "likelihood": "common", "brief": "Cannot reach back/rear"},
+        {"condition": "Dental disease", "likelihood": "common", "brief": "Painful to lick"},
+        {"condition": "Systemic illness", "likelihood": "common", "brief": "Cats stop grooming when unwell"},
+        {"condition": "Kidney disease", "likelihood": "common in older", "brief": "Dehydration and lethargy"},
+        {"condition": "Depression / stress", "likelihood": "occasional", "brief": "After loss of companion etc."}
+      ],
+      "home_care": [
+        "Gentle daily brushing to remove mats",
+        "Trust a professional groomer for severe matting",
+        "Help reach difficult areas",
+        "Wipe with damp cloth gently",
+        "Note when grooming declined and any other changes",
+        "Check mouth and joints for pain"
+      ],
+      "vet_urgency": {
+        "low": "Slight messiness after illness recovery - monitor",
+        "medium": "New persistent decline in grooming - vet appointment",
+        "high": "Combined with severe lethargy, not eating - vet within 24h"
+      },
+      "red_flags": [
+        "Combined with not eating or vomiting",
+        "Reluctance to jump or move",
+        "Severe lethargy",
+        "Yellow tinge to skin/gums",
+        "Sudden complete cessation of grooming"
+      ],
+      "combinations": [
+        {"with": ["reluctance_to_jump"], "concern": "Arthritis - vet for pain relief"},
+        {"with": ["weight_loss", "loss_of_appetite"], "concern": "Serious illness - vet within 24h"},
+        {"with": ["dental_signs"], "concern": "Dental disease - vet for dental check"}
+      ],
+      "sources": ["ICatCare", "VCA", "AMC"]
+    },
+
+    {
+      "id": "cat_016",
+      "symptom": "Limping",
+      "aliases": ["lameness", "favouring leg", "limping"],
+      "category": "Musculoskeletal",
+      "description": "Favouring one or more limbs or reluctance to put weight on a leg.",
+      "possible_causes": [
+        {"condition": "Cat fight injury / bite wound", "likelihood": "very common", "brief": "Especially outdoor cats - can abscess"},
+        {"condition": "Soft tissue injury", "likelihood": "common", "brief": "Sprain or strain from jump"},
+        {"condition": "Torn nail", "likelihood": "common", "brief": "Often from catching on carpet"},
+        {"condition": "Arthritis", "likelihood": "very common in older cats", "brief": "Often underdiagnosed"},
+        {"condition": "Fracture", "likelihood": "occasional", "brief": "Falls, road traffic accident"},
+        {"condition": "Aortic thromboembolism (saddle thrombus)", "likelihood": "occasional but critical", "brief": "Sudden hind-leg paralysis - EMERGENCY"},
+        {"condition": "Bone tumour", "likelihood": "rare", "brief": "Persistent lameness in older cats"}
+      ],
+      "home_care": [
+        "Restrict to indoor area, no jumping",
+        "Examine paws gently for cuts, wounds, swelling",
+        "Look for puncture wounds (cat bites)",
+        "Cold compress for fresh injuries",
+        "NEVER give paracetamol or ibuprofen (deadly to cats)",
+        "Allow rest in soft bed"
+      ],
+      "vet_urgency": {
+        "low": "Mild limp after activity, improving - monitor 24h",
+        "medium": "Persistent limp, swelling, or fight wound - vet appointment",
+        "high": "Cannot bear weight, hind legs paralysed, severe pain - urgent vet"
+      },
+      "red_flags": [
+        "Sudden complete paralysis of hind legs (saddle thrombus EMERGENCY)",
+        "Cold, blue paws",
+        "Crying with pain",
+        "Visible fracture or wound",
+        "Combined with collapse",
+        "After road traffic incident (internal injuries possible)"
+      ],
+      "combinations": [
+        {"with": ["hind_leg_paralysis", "cold_paws"], "concern": "Saddle thrombus - EMERGENCY"},
+        {"with": ["puncture_wound", "swelling"], "concern": "Cat bite abscess - vet within 24-48h"},
+        {"with": ["lethargy", "fever"], "concern": "Infected wound - vet"}
+      ],
+      "sources": ["PDSA", "ICatCare", "VCA"]
+    },
+
+    {
+      "id": "cat_017",
+      "symptom": "Drooling",
+      "aliases": ["hypersalivation", "wet chin", "ptyalism"],
+      "category": "Dental / Oral / Systemic",
+      "description": "Excessive saliva production. Cats normally do not drool noticeably; persistent drooling is usually abnormal.",
+      "possible_causes": [
+        {"condition": "Dental disease", "likelihood": "very common", "brief": "Especially tooth resorption, gingivitis"},
+        {"condition": "Oral ulcers (from kidney disease or stomatitis)", "likelihood": "common", "brief": "Painful sores in mouth"},
+        {"condition": "Foreign body in mouth (string, bone)", "likelihood": "common", "brief": "Sudden onset, pawing at mouth"},
+        {"condition": "Nausea", "likelihood": "common", "brief": "From any cause"},
+        {"condition": "Toxin ingestion", "likelihood": "occasional", "brief": "Plants (lilies!), chemicals"},
+        {"condition": "Oral tumour", "likelihood": "occasional in older cats", "brief": "Squamous cell carcinoma"},
+        {"condition": "Heatstroke", "likelihood": "occasional", "brief": "With panting and distress"},
+        {"condition": "Happy drooling (uncommon in cats)", "likelihood": "rare", "brief": "Some cats drool when content - usually normal"}
+      ],
+      "home_care": [
+        "Check mouth carefully (with care, cats can bite when in pain)",
+        "Look under tongue for string or foreign body",
+        "Note any smell from mouth",
+        "Don't pull at any visible string - go to vet",
+        "Remove possible toxins from area",
+        "Encourage gentle hydration"
+      ],
+      "vet_urgency": {
+        "low": "Happy drooling when petted - usually fine",
+        "medium": "Persistent drooling for hours - vet appointment",
+        "high": "Drooling with distress, pawing at mouth, suspected toxin - urgent vet"
+      },
+      "red_flags": [
+        "Suspected lily ingestion (deadly to cats - kidneys)",
+        "Foreign body visible in mouth",
+        "String under tongue or hanging from mouth (NEVER PULL)",
+        "Blood-tinged saliva",
+        "Severe pawing at mouth",
+        "Combined with vomiting or collapse",
+        "Oral mass visible"
+      ],
+      "combinations": [
+        {"with": ["pawing_at_mouth"], "concern": "Foreign body or oral pain - urgent vet"},
+        {"with": ["suspected_toxin"], "concern": "Toxicity - emergency vet (especially lilies for cats)"},
+        {"with": ["bad_breath", "reduced_eating"], "concern": "Dental disease - vet for dental check"}
+      ],
+      "sources": ["PDSA", "ICatCare", "VCA"]
+    },
+
+    {
+      "id": "cat_018",
+      "symptom": "Bad breath",
+      "aliases": ["halitosis", "smelly breath"],
+      "category": "Dental / Systemic",
+      "description": "Foul-smelling breath beyond normal. Often indicates dental problems, but can signal systemic disease.",
+      "possible_causes": [
+        {"condition": "Periodontal disease", "likelihood": "very common", "brief": "Most common; over 70% of cats by age 3"},
+        {"condition": "Tooth resorption (FORL)", "likelihood": "very common", "brief": "Painful; cat-specific dental issue"},
+        {"condition": "Stomatitis", "likelihood": "common", "brief": "Severe gum inflammation - very painful"},
+        {"condition": "Oral tumour", "likelihood": "occasional in older cats", "brief": "Especially squamous cell carcinoma"},
+        {"condition": "Kidney disease (uraemia)", "likelihood": "common in older cats", "brief": "Ammonia-like breath"},
+        {"condition": "Diabetes (ketoacidosis)", "likelihood": "occasional", "brief": "Sweet or acetone smell"},
+        {"condition": "Foreign body lodged in mouth", "likelihood": "occasional", "brief": "Bone, plastic"}
+      ],
+      "home_care": [
+        "Examine teeth and gums (carefully)",
+        "Note any red/swollen gums, broken teeth, brown tartar",
+        "Try dental treats or chews designed for cats (VOHC approved)",
+        "Toothbrushing if cat tolerates (cat toothpaste only)",
+        "Water additives can help",
+        "Book dental check at vet"
+      ],
+      "vet_urgency": {
+        "low": "Mild bad breath, no other symptoms - mention at next check-up",
+        "medium": "Persistent bad smell with visible tartar/redness - vet for dental assessment",
+        "high": "Foul breath with reduced eating, drooling, or systemic illness - urgent vet"
+      },
+      "red_flags": [
+        "Ammonia or urine-like smell (kidney disease)",
+        "Sweet/fruity smell (diabetes/ketoacidosis)",
+        "Visible growths or ulcers in mouth",
+        "Refusing to eat",
+        "Drooling with blood",
+        "Pawing at mouth"
+      ],
+      "combinations": [
+        {"with": ["drooling", "reduced_eating"], "concern": "Dental disease - vet for dental"},
+        {"with": ["increased_thirst", "weight_loss"], "concern": "Kidney disease or diabetes - vet bloods"},
+        {"with": ["weight_loss", "reduced_eating"], "concern": "Possible oral cancer - vet examination"}
+      ],
+      "sources": ["PDSA", "ICatCare", "Cornell"]
+    },
+
+    {
+      "id": "cat_019",
+      "symptom": "Lumps or swellings",
+      "aliases": ["mass", "growth", "bump", "tumour"],
+      "category": "Skin / Systemic",
+      "description": "Any new growth or swelling under or on the skin.",
+      "possible_causes": [
+        {"condition": "Abscess (from cat fight)", "likelihood": "very common", "brief": "Hot, painful, may burst - typical of outdoor cats"},
+        {"condition": "Cyst", "likelihood": "common", "brief": "Sebaceous, fluid-filled"},
+        {"condition": "Lipoma (less common in cats)", "likelihood": "occasional", "brief": "Soft, mobile fat tumour"},
+        {"condition": "Mammary tumour", "likelihood": "occasional", "brief": "85% malignant in cats - urgent"},
+        {"condition": "Mast cell tumour", "likelihood": "occasional", "brief": "Can vary in appearance"},
+        {"condition": "Injection-site sarcoma", "likelihood": "rare but serious", "brief": "Lumps at vaccine sites need investigation"},
+        {"condition": "Enlarged lymph node", "likelihood": "occasional", "brief": "Sign of infection or lymphoma"},
+        {"condition": "Insect bite", "likelihood": "occasional", "brief": "Often facial swelling, sudden"}
+      ],
+      "home_care": [
+        "Photograph and measure lump",
+        "Note location, size, mobility, pain",
+        "Check for other lumps",
+        "Do NOT squeeze or pop (especially abscesses)",
+        "Keep cat from licking (E-collar if needed)",
+        "Note any vaccine history at that site"
+      ],
+      "vet_urgency": {
+        "low": "Small lipoma in older cat - mention at next check",
+        "medium": "Any new lump - vet for examination and likely needle sample",
+        "high": "Hot painful swelling, rapid growth, breast lump, ulcerated/bleeding lump - vet within 24-48h"
+      },
+      "red_flags": [
+        "Rapid growth",
+        "Bleeding, ulcerated, or weeping",
+        "Hard, fixed to underlying tissue",
+        "Mammary lumps (high malignancy rate)",
+        "Lumps at vaccine sites (especially shoulder)",
+        "Combined with weight loss or lethargy",
+        "Multiple lumps"
+      ],
+      "combinations": [
+        {"with": ["hot_painful_swelling"], "concern": "Likely abscess - vet within 24-48h"},
+        {"with": ["weight_loss", "lethargy"], "concern": "Possible malignancy - vet investigation"},
+        {"with": ["multiple_lumps"], "concern": "Possible lymphoma - vet workup"}
+      ],
+      "sources": ["PDSA", "ICatCare", "AMC", "VCA"]
+    },
+
+    {
+      "id": "cat_020",
+      "symptom": "Difficulty breathing",
+      "aliases": ["laboured breathing", "panting", "open mouth breathing", "dyspnoea"],
+      "category": "Respiratory - EMERGENCY",
+      "description": "Visible effort breathing in a cat is ALWAYS an emergency. Cats are obligate nasal breathers and rarely pant - open-mouth breathing is critical.",
+      "possible_causes": [
+        {"condition": "Asthma attack", "likelihood": "common", "brief": "Wheezing, sudden onset"},
+        {"condition": "Heart failure (HCM most common)", "likelihood": "common", "brief": "Often hidden until acute crisis"},
+        {"condition": "Pleural effusion (fluid in chest)", "likelihood": "occasional", "brief": "From cancer, FIP, heart"},
+        {"condition": "Pneumonia", "likelihood": "occasional", "brief": "Often with infection signs"},
+        {"condition": "Saddle thrombus", "likelihood": "occasional", "brief": "Hind leg paralysis plus breathing"},
+        {"condition": "Anaphylaxis", "likelihood": "occasional", "brief": "Bee sting, vaccine reaction"},
+        {"condition": "Trauma", "likelihood": "occasional", "brief": "Falls, RTA - diaphragmatic rupture"},
+        {"condition": "Tumour in chest", "likelihood": "occasional in older", "brief": "Lymphoma especially"}
+      ],
+      "home_care": [
+        "DIFFICULTY BREATHING IN A CAT = EMERGENCY",
+        "Place in carrier without forcing into position",
+        "Keep stress to absolute minimum",
+        "Cool, well-ventilated environment",
+        "Do not give any food or water",
+        "Do not give human medications",
+        "Transport to emergency vet IMMEDIATELY"
+      ],
+      "vet_urgency": {
+        "low": "(no low - all true breathing difficulty is urgent)",
+        "medium": "(very limited - any breathing difficulty in cat needs vet)",
+        "high": "Open-mouth breathing, blue gums, exaggerated chest movement, hind legs cold - IMMEDIATE EMERGENCY"
+      },
+      "red_flags": [
+        "Open-mouth breathing (almost always emergency in cats)",
+        "Blue or grey gums and tongue",
+        "Exaggerated chest or abdominal movement",
+        "Head and neck stretched out",
+        "Inability to lie down comfortably",
+        "Hind legs cold/paralysed (saddle thrombus)",
+        "Distressed crying"
+      ],
+      "combinations": [
+        {"with": ["hind_leg_paralysis"], "concern": "Saddle thrombus from heart disease - EMERGENCY"},
+        {"with": ["sudden_facial_swelling"], "concern": "Anaphylaxis - EMERGENCY"},
+        {"with": ["coughing"], "concern": "Asthma attack or heart failure - EMERGENCY"}
+      ],
+      "sources": ["ICatCare", "Cornell", "VCA", "AMC"]
+    },
+
+    {
+      "id": "cat_021",
+      "symptom": "Open-mouth breathing",
+      "aliases": ["panting", "mouth breathing"],
+      "category": "Respiratory - EMERGENCY",
+      "description": "Cats rarely breathe with their mouths open. When they do, it almost always indicates significant respiratory distress.",
+      "possible_causes": [
+        {"condition": "Severe stress (e.g. vet visit, fight)", "likelihood": "occasional", "brief": "Should resolve within minutes"},
+        {"condition": "Heatstroke", "likelihood": "occasional", "brief": "Especially in extreme heat"},
+        {"condition": "Heart failure / pulmonary oedema", "likelihood": "common cause of mouth breathing", "brief": "EMERGENCY"},
+        {"condition": "Pleural effusion", "likelihood": "common", "brief": "Fluid stops lung expansion"},
+        {"condition": "Asthma attack", "likelihood": "common", "brief": "Bronchospasm"},
+        {"condition": "Pneumonia", "likelihood": "occasional", "brief": "Severe lung infection"}
+      ],
+      "home_care": [
+        "Open-mouth breathing in a cat = EMERGENCY (unless clearly stress that resolves)",
+        "Do not handle excessively",
+        "Cool, calm environment",
+        "Place in carrier if needed for transport",
+        "Do not delay - immediate vet"
+      ],
+      "vet_urgency": {
+        "low": "(no low)",
+        "medium": "Brief mouth breathing during high stress that resolves rapidly - monitor",
+        "high": "Any persistent mouth breathing - EMERGENCY vet"
+      },
+      "red_flags": [
+        "Mouth breathing at rest",
+        "Blue/grey gums",
+        "Inability to lie down",
+        "Crying with breathing effort",
+        "Pale or white gums",
+        "Limp/weak after breathing changes"
+      ],
+      "combinations": [
+        {"with": ["coughing"], "concern": "Asthma or heart failure - EMERGENCY"},
+        {"with": ["hind_leg_paralysis"], "concern": "Saddle thrombus - EMERGENCY"},
+        {"with": ["lethargy"], "concern": "Severe illness - EMERGENCY"}
+      ],
+      "sources": ["ICatCare", "Cornell", "VCA"]
+    },
+
+    {
+      "id": "cat_022",
+      "symptom": "Constipation",
+      "aliases": ["unable to poo", "straining", "no defaecation"],
+      "category": "Gastrointestinal",
+      "description": "Difficulty or inability to pass stool, or absence of bowel movements for more than 48 hours.",
+      "possible_causes": [
+        {"condition": "Dehydration", "likelihood": "very common", "brief": "Hard, dry stool"},
+        {"condition": "Hairball impaction", "likelihood": "common", "brief": "Especially long-haired cats"},
+        {"condition": "Low-fibre diet", "likelihood": "common", "brief": "All-dry food, especially"},
+        {"condition": "Megacolon", "likelihood": "occasional", "brief": "Stretched, weak colon"},
+        {"condition": "Pelvic injury (old)", "likelihood": "occasional", "brief": "Narrowed pelvic canal"},
+        {"condition": "Kidney disease", "likelihood": "common in older cats", "brief": "Causes dehydration"},
+        {"condition": "Foreign body / obstruction", "likelihood": "occasional", "brief": "String, bone"},
+        {"condition": "Tumour", "likelihood": "occasional in older cats", "brief": "Colonic tumour"}
+      ],
+      "home_care": [
+        "Increase wet food, reduce dry",
+        "Add water to food",
+        "Provide cat water fountain to encourage drinking",
+        "Add a teaspoon of plain pumpkin to meals",
+        "Encourage exercise/play",
+        "Try psyllium husk (very small amounts) if vet approved",
+        "Do not give human laxatives"
+      ],
+      "vet_urgency": {
+        "low": "Single missed bowel movement, cat otherwise normal - monitor",
+        "medium": "No movement 48+ hours or persistent straining - vet within 24h",
+        "high": "Vomiting with constipation, distressed cat, bloated abdomen, blood - urgent vet"
+      },
+      "red_flags": [
+        "Vomiting with constipation",
+        "Bloated, painful abdomen",
+        "Straining without result",
+        "Blood near anus",
+        "Severe lethargy",
+        "More than 72 hours without defaecation",
+        "Straining could be urinary blockage - check"
+      ],
+      "combinations": [
+        {"with": ["vomiting"], "concern": "Possible obstruction - urgent vet"},
+        {"with": ["increased_thirst"], "concern": "Likely dehydration from kidney disease - vet"},
+        {"with": ["urinary_straining"], "concern": "Differentiate from blocked cat - urgent if male"}
+      ],
+      "sources": ["PDSA", "ICatCare", "VCA"]
+    },
+
+    {
+      "id": "cat_023",
+      "symptom": "Excessive hairballs",
+      "aliases": ["frequent hairballs", "vomiting hair", "trichobezoars"],
+      "category": "Gastrointestinal",
+      "description": "Frequent vomiting of hair clumps. Occasional hairballs are normal, but more than once or twice a month may signal a problem.",
+      "possible_causes": [
+        {"condition": "Long coat, normal grooming", "likelihood": "very common", "brief": "Persians, Maine Coons especially"},
+        {"condition": "Over-grooming (allergies, stress, fleas)", "likelihood": "common", "brief": "Excess hair ingestion"},
+        {"condition": "Slow GI transit (IBD)", "likelihood": "common", "brief": "Hair builds up; can be cause not effect"},
+        {"condition": "Hairball impaction", "likelihood": "occasional but serious", "brief": "Cannot pass - blockage"},
+        {"condition": "Asthma (mimics hairball retching)", "likelihood": "occasional", "brief": "Coughing mistaken for hairball"}
+      ],
+      "home_care": [
+        "Brush daily, especially long-haired cats",
+        "Hairball-control diet or treats",
+        "Petroleum-based hairball remedies (vet-approved)",
+        "Address fleas and over-grooming causes",
+        "Provide good hydration (wet food, fountain)",
+        "Video any 'hairball' episode - may actually be asthma"
+      ],
+      "vet_urgency": {
+        "low": "Occasional hairball (every few months) - normal",
+        "medium": "Frequent hairballs (weekly+) or distressing - vet appointment",
+        "high": "Repeatedly retching with no production, lethargy, not eating, distressed - urgent vet"
+      },
+      "red_flags": [
+        "Repeated unproductive retching",
+        "Combined with not eating",
+        "Combined with lethargy",
+        "Abdominal pain",
+        "Vomiting other than hair (food, bile, fluid)",
+        "Difficulty breathing (asthma mimicking hairball)"
+      ],
+      "combinations": [
+        {"with": ["loss_of_appetite", "lethargy"], "concern": "Possible hairball impaction - vet"},
+        {"with": ["over_grooming"], "concern": "Address underlying skin issue"},
+        {"with": ["wheezing"], "concern": "Actually asthma - vet for proper diagnosis"}
+      ],
+      "sources": ["ICatCare", "PDSA", "VCA"]
+    },
+
+    {
+      "id": "cat_024",
+      "symptom": "Aggression / behavioural change",
+      "aliases": ["biting", "scratching", "hissing", "personality change"],
+      "category": "Behavioural / Systemic",
+      "description": "Sudden or progressive change in behaviour, especially new aggression, fear, or withdrawal.",
+      "possible_causes": [
+        {"condition": "Pain (anywhere in body)", "likelihood": "very common", "brief": "Most common cause of new aggression"},
+        {"condition": "Hyperthyroidism", "likelihood": "common in older cats", "brief": "Causes restlessness, irritability"},
+        {"condition": "Fear/territorial (new pet, visitor)", "likelihood": "common", "brief": "Environmental triggers"},
+        {"condition": "Cognitive dysfunction (older cats)", "likelihood": "common in seniors", "brief": "Disorientation, night yowling"},
+        {"condition": "Hypertension", "likelihood": "occasional", "brief": "Often secondary to kidney/thyroid disease"},
+        {"condition": "Brain tumour", "likelihood": "rare", "brief": "Older cats with progressive change"},
+        {"condition": "Rabies (regional)", "likelihood": "rare in UK", "brief": "Where present"}
+      ],
+      "home_care": [
+        "Note triggers and patterns",
+        "Provide hiding places and safe spaces",
+        "Don't punish - increases stress",
+        "Use Feliway diffuser",
+        "Separate cats if multi-cat conflict",
+        "Document any other changes (eating, drinking, weight)",
+        "Note when behaviour started"
+      ],
+      "vet_urgency": {
+        "low": "Brief reaction to specific stressor that resolves - monitor",
+        "medium": "Persistent new aggression or behaviour change - vet for health check",
+        "high": "Severe aggression, disorientation, with other illness signs - urgent vet"
+      },
+      "red_flags": [
+        "Severe sudden aggression with no clear trigger",
+        "Disorientation or confusion",
+        "Combined with weight loss",
+        "Restlessness with increased thirst (thyroid)",
+        "Aggression when specific body area touched (pain)",
+        "Night-time yowling (cognitive dysfunction or hypertension)"
+      ],
+      "combinations": [
+        {"with": ["weight_loss", "increased_thirst"], "concern": "Hyperthyroidism - vet bloods"},
+        {"with": ["night_yowling", "disorientation"], "concern": "Cognitive dysfunction or hypertension - vet"},
+        {"with": ["pain_when_touched"], "concern": "Pain-related aggression - vet examination"}
+      ],
+      "sources": ["ICatCare", "PDSA", "VCA"]
+    },
+
+    {
+      "id": "cat_025",
+      "symptom": "Excessive vocalisation",
+      "aliases": ["yowling", "crying", "meowing constantly"],
+      "category": "Behavioural / Systemic",
+      "description": "Significantly increased meowing, crying, yowling, or other vocalisation, especially in a previously quiet cat.",
+      "possible_causes": [
+        {"condition": "Hyperthyroidism", "likelihood": "very common in older cats", "brief": "Restlessness and yowling, especially at night"},
+        {"condition": "Cognitive dysfunction (dementia)", "likelihood": "common in seniors", "brief": "Confused night yowling"},
+        {"condition": "Pain", "likelihood": "common", "brief": "Cats vocalise pain"},
+        {"condition": "Hypertension", "likelihood": "common in older", "brief": "Often with kidney/thyroid disease"},
+        {"condition": "Hunger or attention seeking", "likelihood": "common", "brief": "Trained behaviour"},
+        {"condition": "Female in heat", "likelihood": "if unspayed", "brief": "Loud, persistent yowling"},
+        {"condition": "Urinary blockage / FLUTD", "likelihood": "occasional", "brief": "Crying in tray"},
+        {"condition": "Hearing loss", "likelihood": "common in older", "brief": "Cat doesn't hear own voice"}
+      ],
+      "home_care": [
+        "Note time of day and triggers",
+        "Ensure resources accessible (food, water, tray) especially at night",
+        "Night lights for older cats",
+        "Increase enrichment if boredom-related",
+        "Don't reward (feeding) attention-seeking vocalisation",
+        "Routine vet check for older cats with new yowling"
+      ],
+      "vet_urgency": {
+        "low": "Greeting, hunger, or seasonal heat - normal",
+        "medium": "New or increased yowling especially in older cats - vet for health check",
+        "high": "Yowling in distress, in litter tray, with other illness signs - urgent vet"
+      },
+      "red_flags": [
+        "Older cat with new persistent yowling",
+        "Yowling in litter tray (urinary blockage)",
+        "Combined with weight loss",
+        "Combined with disorientation",
+        "Restlessness with hunger (thyroid)",
+        "Night-time yowling (hypertension or dementia)"
+      ],
+      "combinations": [
+        {"with": ["weight_loss", "increased_appetite"], "concern": "Hyperthyroidism - vet bloods"},
+        {"with": ["litter_tray", "straining"], "concern": "Urinary blockage - EMERGENCY if male"},
+        {"with": ["disorientation", "night_changes"], "concern": "Cognitive dysfunction - vet"}
+      ],
+      "sources": ["ICatCare", "PDSA", "AMC"]
+    }
+  ]
+}

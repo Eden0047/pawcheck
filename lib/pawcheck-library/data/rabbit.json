@@ -1,0 +1,654 @@
+{
+  "pet": "rabbit",
+  "display_name": "Rabbit",
+  "emoji": "🐰",
+  "version": "1.0",
+  "total_symptoms": 15,
+  "sources_summary": ["RWAF", "HouseRabbit", "PDSA", "RSPCA", "VCA", "MSD"],
+  "general_note": "Rabbits are prey animals and hide illness exceptionally well. Any change from normal behaviour should be taken seriously. A rabbit not eating for 12+ hours is a medical emergency. Rabbits cannot vomit, so toxin ingestion or GI issues can be especially serious.",
+  "symptoms": [
+    {
+      "id": "rabbit_001",
+      "symptom": "Not eating (GI stasis)",
+      "aliases": ["anorexia", "refusing food", "not interested in food"],
+      "category": "Gastrointestinal - EMERGENCY",
+      "description": "A rabbit refusing food or showing reduced appetite is a TRUE EMERGENCY. Rabbits' digestive systems require constant movement; without food, gut bacteria balance changes within hours, causing potentially fatal GI stasis.",
+      "possible_causes": [
+        {"condition": "Gastrointestinal stasis (GI stasis / ileus)", "likelihood": "very common", "brief": "Gut slows or stops - life-threatening"},
+        {"condition": "Dental disease / overgrown teeth", "likelihood": "very common", "brief": "Painful to eat; molar spurs common"},
+        {"condition": "Pain (from any cause)", "likelihood": "common", "brief": "Rabbits stop eating when in pain"},
+        {"condition": "Hairball / trichobezoar", "likelihood": "common", "brief": "Usually a symptom of stasis, not cause"},
+        {"condition": "Stress (rehoming, predator scare)", "likelihood": "common", "brief": "Can trigger stasis"},
+        {"condition": "Sudden diet change", "likelihood": "common", "brief": "Especially new pellets"},
+        {"condition": "Bloat / gut blockage", "likelihood": "occasional but critical", "brief": "Hard distended abdomen - emergency"},
+        {"condition": "Underlying illness", "likelihood": "common", "brief": "Stasis is often secondary to other problem"}
+      ],
+      "home_care": [
+        "NOT EATING FOR 12+ HOURS = EMERGENCY VET",
+        "Offer favourite fresh herbs (coriander, basil, dill) and leafy greens",
+        "Keep rabbit warm",
+        "Monitor for any droppings produced",
+        "Encourage water intake (syringe water if needed, gently)",
+        "Gentle abdominal massage MAY help if approved by vet",
+        "Do NOT force-feed without vet guidance - aspiration risk"
+      ],
+      "vet_urgency": {
+        "low": "(no low - any rabbit not eating needs prompt vet)",
+        "medium": "Reduced appetite for less than 12 hours, otherwise normal - phone vet for advice",
+        "high": "Not eating for 12+ hours, no droppings, hunched, cold - EMERGENCY VET IMMEDIATELY"
+      },
+      "red_flags": [
+        "No food intake for 12+ hours",
+        "No droppings for 12+ hours",
+        "Hunched, immobile posture",
+        "Teeth grinding (loud)",
+        "Cold ears or body",
+        "Bloated, hard abdomen",
+        "Lethargy and unresponsiveness"
+      ],
+      "combinations": [
+        {"with": ["reduced_droppings", "lethargy"], "concern": "Classic GI stasis - EMERGENCY vet"},
+        {"with": ["teeth_grinding"], "concern": "Pain - urgent vet"},
+        {"with": ["bloated_abdomen"], "concern": "Bloat or blockage - critical emergency"},
+        {"with": ["overgrown_teeth", "drooling"], "concern": "Dental disease - vet"}
+      ],
+      "sources": ["RWAF", "HouseRabbit", "PDSA", "MSD"]
+    },
+
+    {
+      "id": "rabbit_002",
+      "symptom": "Reduced or no droppings",
+      "aliases": ["not pooping", "small droppings", "fewer poos"],
+      "category": "Gastrointestinal - URGENT",
+      "description": "A healthy rabbit produces a constant stream of round, fibrous droppings (often hundreds per day). Smaller, fewer, or no droppings is an EMERGENCY sign.",
+      "possible_causes": [
+        {"condition": "GI stasis", "likelihood": "very common", "brief": "Most common cause - life-threatening"},
+        {"condition": "Dehydration", "likelihood": "common", "brief": "Reduced water access or hot weather"},
+        {"condition": "Pain / illness elsewhere", "likelihood": "common", "brief": "Anything that stops eating"},
+        {"condition": "Intestinal blockage", "likelihood": "occasional but critical", "brief": "Foreign body, severe hairball"},
+        {"condition": "Low fibre diet", "likelihood": "common", "brief": "Too many pellets, not enough hay"}
+      ],
+      "home_care": [
+        "Count droppings and note size",
+        "Ensure unlimited hay access (80% of diet should be hay)",
+        "Encourage water intake",
+        "Provide fresh leafy greens",
+        "Encourage gentle exercise",
+        "Contact vet if no droppings for 12+ hours"
+      ],
+      "vet_urgency": {
+        "low": "(no low - small reduction warrants observation only briefly)",
+        "medium": "Slight reduction in droppings, still eating - monitor closely, vet if persists",
+        "high": "No droppings for 12+ hours - EMERGENCY VET"
+      },
+      "red_flags": [
+        "Complete absence of droppings",
+        "Small misshapen droppings on strings (hair)",
+        "Combined with not eating",
+        "Hunched posture",
+        "Lethargy",
+        "Bloated abdomen"
+      ],
+      "combinations": [
+        {"with": ["not_eating", "hunched"], "concern": "GI stasis - EMERGENCY"},
+        {"with": ["bloated_abdomen"], "concern": "Blockage - critical emergency"},
+        {"with": ["lethargy"], "concern": "Serious illness - urgent vet"}
+      ],
+      "sources": ["RWAF", "HouseRabbit", "PDSA"]
+    },
+
+    {
+      "id": "rabbit_003",
+      "symptom": "Lethargy",
+      "aliases": ["low energy", "not moving", "depressed", "still"],
+      "category": "General / Systemic - URGENT",
+      "description": "A rabbit sitting still, unresponsive, or showing reduced interest in surroundings. In rabbits this often indicates serious illness.",
+      "possible_causes": [
+        {"condition": "GI stasis", "likelihood": "very common", "brief": "Often presents as lethargy + not eating"},
+        {"condition": "Pain (any cause)", "likelihood": "very common", "brief": "Hunching and stillness"},
+        {"condition": "Infection / fever", "likelihood": "common", "brief": "Pasteurellosis, abscesses"},
+        {"condition": "E. cuniculi", "likelihood": "common", "brief": "Parasitic; head tilt, weakness"},
+        {"condition": "Heatstroke", "likelihood": "common in summer", "brief": "Over 25°C dangerous; emergency"},
+        {"condition": "Severe dental disease", "likelihood": "common", "brief": "Pain-related lethargy"},
+        {"condition": "Myxomatosis (unvaccinated)", "likelihood": "occasional", "brief": "Often fatal viral disease"},
+        {"condition": "RHD (rabbit haemorrhagic disease)", "likelihood": "occasional", "brief": "Often sudden death"}
+      ],
+      "home_care": [
+        "Move to quiet, warm (but cool in summer) area",
+        "Check ears - cold = shock, hot = fever",
+        "Offer favourite food and water",
+        "Note any other symptoms",
+        "If overheated, cool with damp ears (NOT immersion)",
+        "Vet immediately if no improvement in 2-4 hours"
+      ],
+      "vet_urgency": {
+        "low": "(no low - rabbits being lethargic is serious)",
+        "medium": "Mild reduction in activity, still eating - vet appointment",
+        "high": "Severe lethargy, not eating, hunched - EMERGENCY VET"
+      },
+      "red_flags": [
+        "Combined with not eating or no droppings",
+        "Hunched, painful posture",
+        "Cold extremities",
+        "Hot extremities and rapid breathing (heatstroke)",
+        "Pale gums",
+        "Eyes closed or partially closed",
+        "Not responsive to stimuli"
+      ],
+      "combinations": [
+        {"with": ["not_eating"], "concern": "GI stasis - EMERGENCY"},
+        {"with": ["hot_weather"], "concern": "Heatstroke - cool slowly, emergency vet"},
+        {"with": ["head_tilt"], "concern": "E. cuniculi or ear infection - urgent vet"}
+      ],
+      "sources": ["RWAF", "HouseRabbit", "PDSA", "MSD"]
+    },
+
+    {
+      "id": "rabbit_004",
+      "symptom": "Head tilt",
+      "aliases": ["wry neck", "torticollis", "tilted head"],
+      "category": "Neurological - URGENT",
+      "description": "Rabbit's head is held to one side persistently, often with loss of balance, rolling, or rapid eye movements.",
+      "possible_causes": [
+        {"condition": "E. cuniculi (Encephalitozoon)", "likelihood": "very common", "brief": "Parasitic; common cause in pet rabbits"},
+        {"condition": "Middle/inner ear infection", "likelihood": "common", "brief": "Pasteurella often involved"},
+        {"condition": "Stroke", "likelihood": "occasional", "brief": "Older rabbits, sudden onset"},
+        {"condition": "Toxicity", "likelihood": "occasional", "brief": "Some plants, fly strike chemicals"},
+        {"condition": "Brain abscess", "likelihood": "occasional", "brief": "From dental disease spread"},
+        {"condition": "Trauma", "likelihood": "occasional", "brief": "Recent fall or shake"}
+      ],
+      "home_care": [
+        "Confine to small, padded area with no edges to fall from",
+        "Provide hay and water within easy reach",
+        "Keep environment quiet and dim",
+        "Support with rolled towels to keep upright",
+        "Do not allow free roaming - injury risk",
+        "Hand-feed if needed (vet guided)"
+      ],
+      "vet_urgency": {
+        "low": "(no low - head tilt needs prompt diagnosis)",
+        "medium": "Mild tilt, rabbit eating - vet within 24h",
+        "high": "Severe tilt with rolling, not eating, distress - urgent vet"
+      },
+      "red_flags": [
+        "Severe rolling (cannot stay upright)",
+        "Rapid eye movements (nystagmus)",
+        "Not eating",
+        "Combined with seizures",
+        "Cannot stand at all",
+        "Sudden onset after trauma"
+      ],
+      "combinations": [
+        {"with": ["not_eating"], "concern": "Serious illness - urgent vet"},
+        {"with": ["rolling"], "concern": "Severe vestibular - urgent treatment"},
+        {"with": ["seizures"], "concern": "E. cuniculi advanced - urgent vet"}
+      ],
+      "sources": ["RWAF", "MSD", "VCA"]
+    },
+
+    {
+      "id": "rabbit_005",
+      "symptom": "Teeth grinding (loud)",
+      "aliases": ["bruxism", "loud tooth grinding"],
+      "category": "Pain Indicator - URGENT",
+      "description": "Loud, audible teeth grinding (distinct from quiet, happy 'tooth purring') is a classic sign of pain in rabbits.",
+      "possible_causes": [
+        {"condition": "Gastrointestinal pain (GI stasis, bloat)", "likelihood": "very common", "brief": "Most common cause"},
+        {"condition": "Dental disease pain", "likelihood": "common", "brief": "Molar spurs, abscess"},
+        {"condition": "Urinary issues (sludge, stones)", "likelihood": "common", "brief": "Sludgy or bloody urine"},
+        {"condition": "Post-surgical or injury pain", "likelihood": "occasional", "brief": "Recent procedure or trauma"},
+        {"condition": "Severe ear infection", "likelihood": "occasional", "brief": "Often with head tilt"}
+      ],
+      "home_care": [
+        "Loud grinding = significant pain - urgent vet",
+        "Note other symptoms",
+        "Check droppings, eating, urine",
+        "Examine for obvious injury or swelling",
+        "Keep warm and comfortable",
+        "Do not give human painkillers (toxic)"
+      ],
+      "vet_urgency": {
+        "low": "Soft tooth purring while being stroked - normal/happy",
+        "medium": "(no medium - loud grinding always urgent)",
+        "high": "Audible loud grinding - urgent vet (likely GI or dental pain)"
+      },
+      "red_flags": [
+        "Combined with not eating",
+        "Combined with no droppings",
+        "Hunched, immobile",
+        "Combined with bloated abdomen",
+        "Cold ears or body",
+        "Eye closed in pain"
+      ],
+      "combinations": [
+        {"with": ["not_eating", "no_droppings"], "concern": "GI stasis - EMERGENCY"},
+        {"with": ["drooling"], "concern": "Dental disease - urgent vet"},
+        {"with": ["abnormal_urine"], "concern": "Urinary problem - urgent vet"}
+      ],
+      "sources": ["RWAF", "HouseRabbit", "MSD"]
+    },
+
+    {
+      "id": "rabbit_006",
+      "symptom": "Runny nose / discharge",
+      "aliases": ["snuffles", "nasal discharge", "wet nose"],
+      "category": "Respiratory",
+      "description": "Discharge from one or both nostrils, often with sneezing. Often called 'snuffles'.",
+      "possible_causes": [
+        {"condition": "Pasteurellosis (snuffles)", "likelihood": "very common", "brief": "Bacterial infection - lifelong carriage common"},
+        {"condition": "Bordetella infection", "likelihood": "common", "brief": "Can spread from guinea pigs"},
+        {"condition": "Dental disease (tooth root abscess)", "likelihood": "common", "brief": "Roots extend near nasal cavity"},
+        {"condition": "Allergies / irritants", "likelihood": "occasional", "brief": "Dusty hay, perfumes"},
+        {"condition": "Foreign body", "likelihood": "rare", "brief": "Hay seed in nose"}
+      ],
+      "home_care": [
+        "Check forelegs - matted fur from wiping = snuffles sign",
+        "Provide clean, dust-free environment",
+        "Use low-dust hay",
+        "Wipe discharge gently",
+        "Isolate from other rabbits (contagious)",
+        "Note discharge colour and consistency"
+      ],
+      "vet_urgency": {
+        "low": "Brief clear discharge after exposure to irritant - monitor",
+        "medium": "Persistent discharge with sneezing - vet for antibiotics",
+        "high": "Thick coloured discharge with not eating or breathing difficulty - urgent vet"
+      },
+      "red_flags": [
+        "Thick yellow/green discharge",
+        "Combined with not eating",
+        "Breathing difficulty",
+        "Eye discharge as well (combined infection)",
+        "Matted forelegs from constant wiping",
+        "Spread to multiple rabbits"
+      ],
+      "combinations": [
+        {"with": ["eye_discharge"], "concern": "Combined respiratory infection - vet"},
+        {"with": ["not_eating"], "concern": "Severe illness - urgent vet"},
+        {"with": ["breathing_difficulty"], "concern": "Pneumonia - urgent vet"}
+      ],
+      "sources": ["RWAF", "PDSA", "MSD"]
+    },
+
+    {
+      "id": "rabbit_007",
+      "symptom": "Eye discharge",
+      "aliases": ["weepy eye", "wet eye", "stained fur around eye"],
+      "category": "Eye",
+      "description": "Watering or discharge from one or both eyes, often staining fur below.",
+      "possible_causes": [
+        {"condition": "Dacryocystitis (blocked tear duct)", "likelihood": "very common", "brief": "Often from dental disease compressing duct"},
+        {"condition": "Conjunctivitis", "likelihood": "common", "brief": "Bacterial or environmental"},
+        {"condition": "Tooth root abscess", "likelihood": "common", "brief": "Bulging eye possible"},
+        {"condition": "Corneal ulcer", "likelihood": "occasional", "brief": "From hay or scratch"},
+        {"condition": "Myxomatosis", "likelihood": "occasional", "brief": "Swollen eyes, life-threatening"},
+        {"condition": "E. cuniculi", "likelihood": "occasional", "brief": "Can cause uveitis/cataracts"}
+      ],
+      "home_care": [
+        "Clean discharge with cooled boiled water and cotton pad",
+        "Separate pad for each eye",
+        "Check for hay/debris in eye",
+        "Reduce dust in environment",
+        "Note discharge colour",
+        "Examine teeth (carefully) for problems"
+      ],
+      "vet_urgency": {
+        "low": "Small amount of clear discharge - clean and monitor",
+        "medium": "Persistent or thick discharge - vet appointment",
+        "high": "Swollen eyes (myxomatosis sign), cloudy eye, severe discharge - urgent vet"
+      },
+      "red_flags": [
+        "Swollen eyelids or eye area (possible myxomatosis)",
+        "Eye held shut",
+        "Cloudy cornea",
+        "Bulging eye (possible abscess)",
+        "Combined with respiratory signs",
+        "Blood in discharge"
+      ],
+      "combinations": [
+        {"with": ["runny_nose"], "concern": "Respiratory infection - vet"},
+        {"with": ["swollen_face"], "concern": "Possible myxomatosis - urgent vet"},
+        {"with": ["not_eating"], "concern": "Serious illness - urgent vet"}
+      ],
+      "sources": ["RWAF", "PDSA", "MSD"]
+    },
+
+    {
+      "id": "rabbit_008",
+      "symptom": "Diarrhoea / soft stools",
+      "aliases": ["runny poo", "soft droppings", "watery stool"],
+      "category": "Gastrointestinal - URGENT",
+      "description": "True diarrhoea (watery stool) is rare in adult rabbits but always serious. Note: rabbits produce caecotrophs (soft 'night faeces') normally - these are not diarrhoea.",
+      "possible_causes": [
+        {"condition": "Dysbiosis (gut bacteria imbalance)", "likelihood": "common", "brief": "From diet change, antibiotics"},
+        {"condition": "Enteritis", "likelihood": "common", "brief": "Inflammation of the gut"},
+        {"condition": "Coccidiosis", "likelihood": "common in young rabbits", "brief": "Parasitic; can be fatal"},
+        {"condition": "Excessive caecotrophs (uneaten)", "likelihood": "common", "brief": "Often diet too rich or rabbit overweight"},
+        {"condition": "E. coli or Clostridium infection", "likelihood": "occasional but serious", "brief": "Can be fatal quickly"},
+        {"condition": "Mucoid enteropathy", "likelihood": "occasional", "brief": "Jelly-like stools - serious"}
+      ],
+      "home_care": [
+        "Differentiate true diarrhoea from uneaten caecotrophs (caecotrophs are clumped grape-like)",
+        "Provide unlimited grass hay",
+        "Remove pellets and treats temporarily",
+        "Encourage water intake",
+        "Keep rear end clean to prevent flystrike",
+        "True diarrhoea = same-day vet"
+      ],
+      "vet_urgency": {
+        "low": "Occasional sticky caecotrophs on bottom - dietary review",
+        "medium": "Some soft droppings, rabbit eating well - vet within 24-48h",
+        "high": "Watery diarrhoea, lethargy, not eating, young rabbit - EMERGENCY"
+      },
+      "red_flags": [
+        "Watery, profuse diarrhoea",
+        "Blood or mucus in stool",
+        "Young rabbit (under 4 months) with diarrhoea",
+        "Combined with severe lethargy",
+        "Soiled bottom (flystrike risk)",
+        "Refusing food and water"
+      ],
+      "combinations": [
+        {"with": ["lethargy"], "concern": "Serious illness, possible enteritis - urgent vet"},
+        {"with": ["young_rabbit"], "concern": "Possibly fatal - emergency vet"},
+        {"with": ["soiled_rear"], "concern": "Flystrike risk - urgent cleaning and vet"}
+      ],
+      "sources": ["RWAF", "HouseRabbit", "PDSA"]
+    },
+
+    {
+      "id": "rabbit_009",
+      "symptom": "Sneezing",
+      "aliases": ["snorting"],
+      "category": "Respiratory",
+      "description": "Frequent sneezing, often with nasal discharge.",
+      "possible_causes": [
+        {"condition": "Pasteurellosis (snuffles)", "likelihood": "very common", "brief": "Most common cause"},
+        {"condition": "Dust or irritants", "likelihood": "common", "brief": "Dusty hay, perfumes, smoke"},
+        {"condition": "Other bacterial infection", "likelihood": "common", "brief": "Bordetella, staph"},
+        {"condition": "Dental disease", "likelihood": "occasional", "brief": "Abscess affecting nasal passages"},
+        {"condition": "Allergies", "likelihood": "occasional", "brief": "Less common than infections"}
+      ],
+      "home_care": [
+        "Switch to low-dust hay (e.g. timothy)",
+        "Avoid scented bedding, candles, sprays",
+        "Improve ventilation",
+        "Keep environment clean",
+        "Isolate from other rabbits if infection suspected",
+        "Wipe nose gently if discharge"
+      ],
+      "vet_urgency": {
+        "low": "Occasional sneeze from dust - environmental change",
+        "medium": "Persistent sneezing with mild discharge - vet appointment",
+        "high": "Thick discharge, breathing difficulty, not eating - urgent vet"
+      },
+      "red_flags": [
+        "Combined with not eating",
+        "Thick coloured nasal discharge",
+        "Breathing difficulty",
+        "Eye involvement",
+        "Multiple rabbits affected"
+      ],
+      "combinations": [
+        {"with": ["nasal_discharge"], "concern": "Snuffles - vet for antibiotics"},
+        {"with": ["breathing_difficulty"], "concern": "Pneumonia - urgent vet"},
+        {"with": ["not_eating"], "concern": "Serious illness - urgent vet"}
+      ],
+      "sources": ["RWAF", "PDSA"]
+    },
+
+    {
+      "id": "rabbit_010",
+      "symptom": "Bloated abdomen",
+      "aliases": ["swollen belly", "distended abdomen", "gas"],
+      "category": "Gastrointestinal - EMERGENCY",
+      "description": "Visibly enlarged or hard abdomen. ALWAYS an emergency in rabbits.",
+      "possible_causes": [
+        {"condition": "Gas / bloat", "likelihood": "common", "brief": "Often from stasis or fermentation"},
+        {"condition": "Intestinal obstruction", "likelihood": "occasional but critical", "brief": "Foreign body, hair impaction"},
+        {"condition": "Gastric dilation", "likelihood": "occasional", "brief": "Stomach fills with fluid"},
+        {"condition": "Ascites (fluid in abdomen)", "likelihood": "rare", "brief": "Heart, liver, or kidney disease"},
+        {"condition": "Tumour (uterine in unspayed females)", "likelihood": "common in unspayed", "brief": "Uterine cancer common"}
+      ],
+      "home_care": [
+        "BLOAT = EMERGENCY VET IMMEDIATELY",
+        "Do not feed",
+        "Do not give Gas-X or human remedies without vet advice",
+        "Keep warm and comfortable during transport",
+        "Note any droppings, eating, behaviour changes"
+      ],
+      "vet_urgency": {
+        "low": "(no low - bloat is always emergency)",
+        "medium": "(no medium)",
+        "high": "Any visible abdominal distension - EMERGENCY VET IMMEDIATELY"
+      },
+      "red_flags": [
+        "Hard, tense abdomen",
+        "Visible distension",
+        "Teeth grinding",
+        "Not eating",
+        "Lethargy",
+        "Rapid breathing",
+        "Cold ears (shock)"
+      ],
+      "combinations": [
+        {"with": ["not_eating", "teeth_grinding"], "concern": "Severe bloat/obstruction - EMERGENCY"},
+        {"with": ["cold_ears"], "concern": "Shock - critical emergency"},
+        {"with": ["rapid_breathing"], "concern": "Pain or fluid - emergency"}
+      ],
+      "sources": ["RWAF", "HouseRabbit", "MSD"]
+    },
+
+    {
+      "id": "rabbit_011",
+      "symptom": "Hunched posture",
+      "aliases": ["sitting hunched", "loaf position with face tucked"],
+      "category": "Pain Indicator - URGENT",
+      "description": "Sitting in a tight, hunched posture with the face tucked, eyes half-closed, or pressed against the ground. A classic rabbit pain signal.",
+      "possible_causes": [
+        {"condition": "Gastrointestinal pain (stasis, bloat)", "likelihood": "very common", "brief": "Most common cause"},
+        {"condition": "Dental pain", "likelihood": "common", "brief": "Molar spurs"},
+        {"condition": "Urinary pain", "likelihood": "common", "brief": "Sludge, stones, infection"},
+        {"condition": "Internal abscess", "likelihood": "occasional", "brief": "Pasteurella"},
+        {"condition": "Liver disease", "likelihood": "occasional", "brief": "Especially e. cuniculi or hepatic lipidosis"}
+      ],
+      "home_care": [
+        "Hunched posture = significant pain - urgent vet",
+        "Provide warm, soft, quiet space",
+        "Note other symptoms",
+        "Check droppings and food intake",
+        "Do not handle excessively",
+        "Do not give human painkillers"
+      ],
+      "vet_urgency": {
+        "low": "(no low - hunched posture in rabbit always concerning)",
+        "medium": "Brief hunching, rabbit otherwise eating - vet appointment",
+        "high": "Persistent hunching with not eating - EMERGENCY"
+      },
+      "red_flags": [
+        "Combined with not eating",
+        "No droppings",
+        "Teeth grinding",
+        "Cold ears",
+        "Eyes squeezed shut",
+        "Unresponsive to surroundings"
+      ],
+      "combinations": [
+        {"with": ["not_eating", "no_droppings"], "concern": "GI stasis - EMERGENCY"},
+        {"with": ["teeth_grinding"], "concern": "Severe pain - urgent vet"},
+        {"with": ["bloated_abdomen"], "concern": "Bloat - emergency"}
+      ],
+      "sources": ["RWAF", "HouseRabbit", "PDSA"]
+    },
+
+    {
+      "id": "rabbit_012",
+      "symptom": "Overgrown teeth / drooling",
+      "aliases": ["wet chin", "slobbers", "long teeth"],
+      "category": "Dental",
+      "description": "Visible long front teeth (incisors), drooling causing wet chin and forelegs, or difficulty eating. Rabbits' teeth grow continuously and must be worn by chewing hay.",
+      "possible_causes": [
+        {"condition": "Malocclusion (genetic)", "likelihood": "common in some breeds", "brief": "Especially dwarf and lop breeds"},
+        {"condition": "Low-fibre diet (not enough hay)", "likelihood": "very common", "brief": "Teeth don't wear properly"},
+        {"condition": "Trauma to face/teeth", "likelihood": "occasional", "brief": "Fall or cage bite"},
+        {"condition": "Molar spurs", "likelihood": "very common", "brief": "Inside teeth grow points causing tongue/cheek injury"},
+        {"condition": "Tooth root abscess", "likelihood": "common", "brief": "Often visible jaw swelling"}
+      ],
+      "home_care": [
+        "Ensure unlimited grass hay (timothy, meadow) - 80% of diet",
+        "Reduce pellets and treats",
+        "Provide safe wood chews",
+        "Note any difficulty eating particular foods",
+        "Check for facial swelling",
+        "Schedule dental check at vet (likely needs anaesthetic dental)"
+      ],
+      "vet_urgency": {
+        "low": "Slightly long incisors with no eating problems - vet appointment for trim",
+        "medium": "Drooling, dropping food, eating less - vet within 1 week",
+        "high": "Not eating, severe drooling, facial swelling - urgent vet"
+      },
+      "red_flags": [
+        "Not eating",
+        "Facial swelling (abscess)",
+        "Severe drooling causing skin issues",
+        "Visible mass in mouth",
+        "Weight loss",
+        "Combined with eye discharge (root extending)"
+      ],
+      "combinations": [
+        {"with": ["not_eating"], "concern": "Severe dental issue - urgent vet"},
+        {"with": ["facial_swelling"], "concern": "Tooth root abscess - vet within days"},
+        {"with": ["weight_loss"], "concern": "Chronic dental pain - vet"}
+      ],
+      "sources": ["RWAF", "PDSA", "MSD"]
+    },
+
+    {
+      "id": "rabbit_013",
+      "symptom": "Sore hocks (pododermatitis)",
+      "aliases": ["red feet", "scabby feet", "hutch foot"],
+      "category": "Skin / Foot",
+      "description": "Red, sore, or ulcerated areas on the underside of the hocks (back feet). Common in rabbits on wire floors or hard surfaces.",
+      "possible_causes": [
+        {"condition": "Hard or wire flooring", "likelihood": "very common", "brief": "Pressure on hocks"},
+        {"condition": "Obesity", "likelihood": "common", "brief": "Excess pressure"},
+        {"condition": "Wet/dirty bedding", "likelihood": "common", "brief": "Maceration of skin"},
+        {"condition": "Inactivity from arthritis or pain", "likelihood": "common", "brief": "Sitting in one spot"},
+        {"condition": "Rex breed (less foot fur)", "likelihood": "common", "brief": "Genetic predisposition"}
+      ],
+      "home_care": [
+        "Provide soft, clean bedding (deep hay, vet bed)",
+        "Remove wire floors immediately",
+        "Keep area clean and dry",
+        "Encourage gentle exercise",
+        "Weight loss if overweight (slow, vet guided)",
+        "Avoid abrasive surfaces"
+      ],
+      "vet_urgency": {
+        "low": "Slight redness, no open wounds - improve housing",
+        "medium": "Open sores or scabs - vet appointment for treatment",
+        "high": "Severe infection, deep wounds, abscess - urgent vet"
+      },
+      "red_flags": [
+        "Open wounds or pus",
+        "Foul smell",
+        "Reluctance to put weight on feet",
+        "Combined with lethargy or not eating",
+        "Multiple feet affected",
+        "Spreading swelling up leg"
+      ],
+      "combinations": [
+        {"with": ["lameness"], "concern": "Serious infection - vet"},
+        {"with": ["lethargy"], "concern": "Systemic infection - vet within 24h"}
+      ],
+      "sources": ["RWAF", "PDSA", "HouseRabbit"]
+    },
+
+    {
+      "id": "rabbit_014",
+      "symptom": "Fur loss / bald patches",
+      "aliases": ["hair loss", "alopecia", "thinning fur"],
+      "category": "Skin",
+      "description": "Patches of missing fur, thinning coat, or excess shedding.",
+      "possible_causes": [
+        {"condition": "Normal moult", "likelihood": "very common", "brief": "Seasonal; can be patchy"},
+        {"condition": "Mites (fur mites, ear mites)", "likelihood": "common", "brief": "Dandruff, itching"},
+        {"condition": "Ringworm (fungal)", "likelihood": "common", "brief": "Circular bald patches; contagious to humans"},
+        {"condition": "Barbering (over-grooming)", "likelihood": "common", "brief": "By self or companion"},
+        {"condition": "False pregnancy (unspayed females)", "likelihood": "occasional", "brief": "Plucking fur for nest"},
+        {"condition": "Bacterial skin infection", "likelihood": "occasional", "brief": "Usually secondary to other issue"},
+        {"condition": "Urine scald (bottom)", "likelihood": "common", "brief": "Soiled rear area"}
+      ],
+      "home_care": [
+        "Brush regularly to remove loose fur",
+        "Check for parasites with hand lens",
+        "Note location and pattern (symmetric? Spreading?)",
+        "Keep environment clean",
+        "Examine companion for signs of barbering",
+        "Quarantine if ringworm suspected"
+      ],
+      "vet_urgency": {
+        "low": "Seasonal moult, rabbit otherwise well - normal",
+        "medium": "Persistent or spreading patches - vet appointment",
+        "high": "Combined with severe itching, skin damage, or systemic signs - urgent vet"
+      },
+      "red_flags": [
+        "Crusty, scaly skin",
+        "Open wounds from scratching",
+        "Foul smell",
+        "Combined with weight loss",
+        "Family members developing skin lesions (ringworm)",
+        "Multiple rabbits affected"
+      ],
+      "combinations": [
+        {"with": ["itching"], "concern": "Mites or fungal - vet"},
+        {"with": ["wet_bottom"], "concern": "Urine scald - dental/urinary check, flystrike risk"},
+        {"with": ["dandruff"], "concern": "Likely Cheyletiella mites - vet treatment"}
+      ],
+      "sources": ["RWAF", "PDSA", "MSD"]
+    },
+
+    {
+      "id": "rabbit_015",
+      "symptom": "Flystrike",
+      "aliases": ["myiasis", "maggots on rabbit"],
+      "category": "Skin - CRITICAL EMERGENCY",
+      "description": "Maggots feeding on a rabbit's skin, usually around a soiled rear area. THIS IS A LIFE-THREATENING EMERGENCY. Rabbits can die within hours.",
+      "possible_causes": [
+        {"condition": "Soiled/wet fur (urine, faeces)", "likelihood": "very common", "brief": "Flies attracted to wet rear"},
+        {"condition": "Obesity (cannot clean self)", "likelihood": "common", "brief": "Cannot reach rear"},
+        {"condition": "Dental disease (uneaten caecotrophs)", "likelihood": "common", "brief": "Sticky bottom"},
+        {"condition": "Arthritis", "likelihood": "common in older", "brief": "Reduced grooming"},
+        {"condition": "Open wounds anywhere", "likelihood": "occasional", "brief": "Flies lay eggs in wounds"},
+        {"condition": "Hot, fly-prone weather", "likelihood": "seasonal", "brief": "Highest risk in summer"}
+      ],
+      "home_care": [
+        "FLYSTRIKE = EMERGENCY VET IMMEDIATELY (within hours)",
+        "Do NOT delay to clean - get to vet first",
+        "If transport time is significant, gently rinse with warm water and remove visible maggots with tweezers",
+        "Do not submerge rabbit",
+        "Keep rabbit warm and supported during transport",
+        "PREVENTION: check bottom twice daily in summer, keep rear clean, use Rearguard (deters flies for 10 weeks), keep environment fly-free"
+      ],
+      "vet_urgency": {
+        "low": "(no low)",
+        "medium": "(no medium)",
+        "high": "ANY MAGGOTS VISIBLE = IMMEDIATE EMERGENCY VET"
+      },
+      "red_flags": [
+        "Visible maggots on skin",
+        "Eggs (small yellow/white) on fur",
+        "Foul smell from rear",
+        "Lethargy",
+        "Hot skin",
+        "Open sores or wounds with fly eggs",
+        "Any unexplained collapse in warm weather"
+      ],
+      "combinations": [
+        {"with": ["lethargy"], "concern": "Severe systemic toxicity - critical emergency"},
+        {"with": ["collapse"], "concern": "Septicaemia from flystrike - critical, may not survive"}
+      ],
+      "sources": ["RWAF", "RSPCA", "PDSA"]
+    }
+  ]
+}

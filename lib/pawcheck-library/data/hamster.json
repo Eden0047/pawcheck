@@ -1,0 +1,412 @@
+{
+  "pet": "hamster",
+  "display_name": "Hamster",
+  "emoji": "🐹",
+  "version": "1.0.0",
+  "total_symptoms": 10,
+  "sources_summary": ["RSPCA", "PDSA", "VCA Hospitals (exotics)", "Blue Cross", "MSD Vet Manual"],
+  "notes": "Hamsters are small and deteriorate quickly. A hamster that has stopped eating or drinking for more than 12 hours is a true emergency. Find an exotic-experienced vet in advance - not all small animal vets see hamsters confidently.",
+  "symptoms": [
+    {
+      "id": "hamster_001",
+      "symptom": "Wet tail",
+      "aliases": ["wet bottom", "proliferative ileitis", "diarrhoea around tail"],
+      "category": "Gastrointestinal emergency",
+      "description": "Diarrhoea, often watery, with wet matted fur around the tail and bottom. Caused by a bacterial overgrowth (Lawsonia intracellularis) usually triggered by stress. Fatal within 24-48 hours if untreated, especially in young Syrian hamsters.",
+      "possible_causes": [
+        {"condition": "Wet tail (proliferative ileitis)", "likelihood": "very common", "brief": "Stress-triggered bacterial GI infection - EMERGENCY"},
+        {"condition": "Other bacterial GI infection", "likelihood": "common", "brief": "E. coli, salmonella, others"},
+        {"condition": "Dietary upset (too much fresh food)", "likelihood": "common", "brief": "Sudden diet change or excess wet vegetables"},
+        {"condition": "Parasites (giardia, coccidia)", "likelihood": "occasional", "brief": "Especially in newly acquired hamsters"},
+        {"condition": "Antibiotic-induced diarrhoea", "likelihood": "occasional", "brief": "Wrong antibiotics destroy gut flora"}
+      ],
+      "home_care": [
+        "EMERGENCY - phone an exotic vet immediately, this is life-threatening",
+        "Isolate from any other hamsters (highly contagious)",
+        "Keep warm and quiet - stress worsens the condition",
+        "Offer fresh water - dehydration is the immediate killer",
+        "Remove all fresh vegetables and fruit temporarily",
+        "Clean the cage thoroughly after vet treatment begins"
+      ],
+      "vet_urgency": {
+        "low": "Not applicable",
+        "medium": "Not applicable",
+        "high": "EMERGENCY - any hamster with wet bottom, watery diarrhoea, hunched or lethargic - exotic vet within hours, not the next day"
+      },
+      "red_flags": [
+        "Watery diarrhoea (different from soft stools)",
+        "Wet, matted fur around the tail",
+        "Hunched posture, eyes half closed",
+        "Refusing food and water",
+        "Recently bought hamster, recently moved, or recently weaned"
+      ],
+      "combinations": [
+        {"with": ["lethargy", "not_eating"], "concern": "Classic wet tail - EMERGENCY"},
+        {"with": ["weight_loss", "dehydration"], "concern": "Advanced wet tail - critical"}
+      ],
+      "sources": ["RSPCA", "PDSA", "VCA Hospitals", "MSD Vet Manual"]
+    },
+    {
+      "id": "hamster_002",
+      "symptom": "Hair loss / bald patches",
+      "aliases": ["fur loss", "balding", "alopecia", "thinning fur"],
+      "category": "Skin",
+      "description": "Patches of missing fur, thinning coat, or fully bald areas. Can affect any part of the body. Causes range from harmless ageing to mites and hormone-driven disease.",
+      "possible_causes": [
+        {"condition": "Mites (Demodex)", "likelihood": "very common", "brief": "Common in older or stressed hamsters"},
+        {"condition": "Aging", "likelihood": "very common", "brief": "Older hamsters thin naturally, especially around the back end"},
+        {"condition": "Friction rubs (bars, hide entrance, wheel)", "likelihood": "common", "brief": "Bald patches in specific areas matching rubbing points"},
+        {"condition": "Ringworm (fungal)", "likelihood": "common", "brief": "Circular patches, can spread to humans"},
+        {"condition": "Cushing's disease", "likelihood": "occasional", "brief": "Hormone disorder, symmetrical bald areas"},
+        {"condition": "Nutritional deficiency", "likelihood": "occasional", "brief": "Inadequate diet"},
+        {"condition": "Overgrooming (stress)", "likelihood": "occasional", "brief": "Repeatedly licking the same spot"}
+      ],
+      "home_care": [
+        "Check for mites - look closely under bright light, sometimes visible as tiny moving specks",
+        "Identify any rubbing surfaces (wire bars, narrow hide entrances) and remove or modify",
+        "Improve diet variety - quality hamster pellet plus small amount of fresh food",
+        "Reduce stress and check the cage is large enough (RSPCA recommends 100cm x 50cm minimum for Syrians)",
+        "Keep skin checks frequent for spread or worsening",
+        "Wear gloves and wash hands if ringworm suspected"
+      ],
+      "vet_urgency": {
+        "low": "Small bald patch in older hamster, no irritation, fur thinning gradually - monitor",
+        "medium": "Spreading bald patches, possible irritation or scratching - exotic vet within 1-2 weeks",
+        "high": "Rapid hair loss, redness, scabs, weight loss, or multiple animals affected - urgent exotic vet"
+      },
+      "red_flags": [
+        "Red, sore, or crusty skin underneath",
+        "Hamster scratching constantly",
+        "Spreading rapidly",
+        "Lumps under the skin in bald areas",
+        "Multiple hamsters in same area affected"
+      ],
+      "combinations": [
+        {"with": ["scratching", "scabs"], "concern": "Likely mites or skin infection - vet treatment"},
+        {"with": ["weight_loss", "lethargy"], "concern": "Systemic disease (Cushing's, tumour) - vet investigation"}
+      ],
+      "sources": ["RSPCA", "PDSA", "VCA Hospitals"]
+    },
+    {
+      "id": "hamster_003",
+      "symptom": "Lethargy",
+      "aliases": ["weakness", "inactive", "sleeping all the time", "not running on wheel"],
+      "category": "General illness",
+      "description": "Hamster is unusually quiet, sleeping more than normal, or not running on the wheel at night. Important note: hamsters are nocturnal, so daytime sleeping is normal - look for changes from the hamster's own typical activity at night.",
+      "possible_causes": [
+        {"condition": "Illness (any kind)", "likelihood": "very common", "brief": "Lethargy is often the first non-specific sign"},
+        {"condition": "Hibernation attempt (cold room)", "likelihood": "common", "brief": "Pet hamsters can enter dangerous torpor below about 16°C"},
+        {"condition": "Aging", "likelihood": "common", "brief": "Hamsters typically live 2-3 years and slow down toward the end"},
+        {"condition": "Dental problems", "likelihood": "common", "brief": "Causes pain and reduced activity"},
+        {"condition": "Tumours (common in older hamsters)", "likelihood": "common", "brief": "Internal tumours cause progressive weakness"},
+        {"condition": "Heart disease", "likelihood": "occasional", "brief": "More common in older Syrians"}
+      ],
+      "home_care": [
+        "Check the room temperature - it should be 18-22°C (cold rooms cause hibernation-like torpor)",
+        "Warm a torpid hamster slowly with body heat or a warm room - never sudden direct heat",
+        "Check food and water are accessible and bottles are working",
+        "Weigh on a kitchen scale - hamsters should be 100-150g (Syrian) or 30-50g (dwarf)",
+        "Note any other changes (eating, drinking, droppings, posture)",
+        "Reduce stress - quieter location if possible"
+      ],
+      "vet_urgency": {
+        "low": "Quieter than usual but still eating, drinking, moving when needed - monitor 24 hours",
+        "medium": "Notably less active for over 24 hours, mild appetite change - exotic vet within a couple of days",
+        "high": "Hunched, eyes closed, unresponsive, cold to touch, or not eating - urgent exotic vet"
+      },
+      "red_flags": [
+        "Cold to the touch (possible torpor / hypothermia)",
+        "Hunched up with fur fluffed",
+        "Eyes half closed during their active period",
+        "Refusing food and water",
+        "Difficulty moving or wobbly"
+      ],
+      "combinations": [
+        {"with": ["not_eating", "weight_loss"], "concern": "Significant illness - urgent vet"},
+        {"with": ["hunched_posture", "fluffed_fur"], "concern": "Serious illness or pain - urgent care"}
+      ],
+      "sources": ["RSPCA", "PDSA", "Blue Cross"]
+    },
+    {
+      "id": "hamster_004",
+      "symptom": "Not eating",
+      "aliases": ["loss of appetite", "anorexia", "food in pouches still"],
+      "category": "Gastrointestinal / General illness",
+      "description": "Hamster has stopped eating or eating noticeably less. Hamsters should always have food and most actively stockpile in their pouches and around the cage. A genuine appetite loss is a serious sign.",
+      "possible_causes": [
+        {"condition": "Dental disease (overgrown teeth, abscess)", "likelihood": "very common", "brief": "Cannot eat comfortably"},
+        {"condition": "Cheek pouch problems (impaction or abscess)", "likelihood": "common", "brief": "Pouches stuck full or infected"},
+        {"condition": "Wet tail or other GI infection", "likelihood": "common", "brief": "Often combined with lethargy"},
+        {"condition": "Stress (new home, new cage)", "likelihood": "common", "brief": "Newly acquired hamsters can take a few days"},
+        {"condition": "Internal tumour", "likelihood": "occasional", "brief": "Older hamsters, gradual decline"},
+        {"condition": "Liver or kidney disease", "likelihood": "occasional", "brief": "Aged hamsters"}
+      ],
+      "home_care": [
+        "Check the cheek pouches gently - they should be empty when the hamster is resting",
+        "Look at the front teeth - they should be even and not too long",
+        "Offer favourite foods, small pieces of soft fruit or cucumber",
+        "Check water bottle is working (lift up and test)",
+        "Weigh daily - any loss in a hamster of this size is significant",
+        "Provide a soft food option (soaked pellets, baby food) if eating is painful"
+      ],
+      "vet_urgency": {
+        "low": "Skipped a meal but otherwise active and exploring at night - monitor",
+        "medium": "Eating much less for 12-24 hours - exotic vet within a day or two",
+        "high": "Not eating for 24+ hours, or any not eating combined with hunched or lethargic posture - urgent exotic vet"
+      },
+      "red_flags": [
+        "No food taken for 24 hours",
+        "Visible weight loss (prominent hip bones)",
+        "Drooling or wet chin",
+        "Combined with hunched posture or lethargy",
+        "Cheek pouches look full but the hamster has not eaten"
+      ],
+      "combinations": [
+        {"with": ["lethargy", "hunched_posture"], "concern": "Critical illness - emergency"},
+        {"with": ["drooling", "weight_loss"], "concern": "Dental disease - urgent vet"}
+      ],
+      "sources": ["RSPCA", "PDSA", "VCA Hospitals"]
+    },
+    {
+      "id": "hamster_005",
+      "symptom": "Diarrhoea",
+      "aliases": ["loose stools", "soft droppings", "watery droppings"],
+      "category": "Gastrointestinal",
+      "description": "Droppings are unusually soft, loose, or watery. Differs from true wet tail which is dramatic, often watery and with a strong smell, but any diarrhoea is serious in a hamster.",
+      "possible_causes": [
+        {"condition": "Wet tail (proliferative ileitis)", "likelihood": "common", "brief": "Severe form - emergency"},
+        {"condition": "Dietary upset (too much fresh food)", "likelihood": "very common", "brief": "Sudden change or excess wet vegetables"},
+        {"condition": "Bacterial infection", "likelihood": "common", "brief": "Various organisms"},
+        {"condition": "Parasites (giardia, coccidia)", "likelihood": "common", "brief": "Often in newly acquired hamsters"},
+        {"condition": "Stress (move, new owner)", "likelihood": "common", "brief": "Disrupts gut balance"},
+        {"condition": "Inappropriate antibiotic use", "likelihood": "occasional", "brief": "Some antibiotics destroy hamster gut flora"}
+      ],
+      "home_care": [
+        "Remove all fresh vegetables and fruit immediately - return only after recovery",
+        "Provide quality plain hamster pellets and unlimited hay only",
+        "Ensure fresh water at all times - dehydration is the main risk",
+        "Keep warm and quiet to reduce stress",
+        "Clean the cage thoroughly to reduce re-infection",
+        "Phone an exotic vet immediately if any wetness around the tail or hunched posture"
+      ],
+      "vet_urgency": {
+        "low": "Slightly soft droppings after introducing a new food, hamster otherwise well - remove new food and monitor",
+        "medium": "Persistent loose droppings for over 12 hours - exotic vet within a day",
+        "high": "Watery diarrhoea, wet matted fur around tail, lethargy - EMERGENCY (suspected wet tail)"
+      },
+      "red_flags": [
+        "Watery (not just soft) droppings",
+        "Wet, matted fur around the bottom",
+        "Hunched up, eyes half closed",
+        "Refusing food and water",
+        "Smell - wet tail typically has a strong odour"
+      ],
+      "combinations": [
+        {"with": ["lethargy", "hunched_posture"], "concern": "Wet tail - EMERGENCY"},
+        {"with": ["not_eating", "weight_loss"], "concern": "Chronic GI disease - urgent vet"}
+      ],
+      "sources": ["RSPCA", "PDSA", "VCA Hospitals"]
+    },
+    {
+      "id": "hamster_006",
+      "symptom": "Weight loss",
+      "aliases": ["losing weight", "skinny", "prominent hips"],
+      "category": "General illness",
+      "description": "Hamster is visibly thinner, with prominent hip bones or spine. Weight loss of even a few grams matters in such a small animal.",
+      "possible_causes": [
+        {"condition": "Dental disease", "likelihood": "very common", "brief": "Cannot eat properly"},
+        {"condition": "Chronic illness (tumour, organ disease)", "likelihood": "very common", "brief": "Common in older hamsters"},
+        {"condition": "Parasites (internal worms, mites)", "likelihood": "common", "brief": "Drain body condition"},
+        {"condition": "Inadequate diet", "likelihood": "common", "brief": "Low quality food or competition with cagemate"},
+        {"condition": "Stress (constant or repeated)", "likelihood": "occasional", "brief": "Affects eating and absorption"},
+        {"condition": "Diabetes (Campbell's dwarf, Chinese)", "likelihood": "occasional", "brief": "Weight loss despite eating well"}
+      ],
+      "home_care": [
+        "Weigh weekly on a kitchen scale and track",
+        "Provide quality pellets plus varied small portions of suitable fresh food",
+        "Check teeth - overgrown or uneven incisors cause weight loss",
+        "Provide soft food options if eating seems painful",
+        "Separate cagemates if competition for food is suspected",
+        "Note other symptoms (thirst, urine output, appetite, energy)"
+      ],
+      "vet_urgency": {
+        "low": "Small weight fluctuation in an otherwise healthy hamster - monitor",
+        "medium": "Steady weight loss of 5-10% over a couple of weeks - exotic vet within a week",
+        "high": "Rapid loss, very prominent hips/spine, combined with other symptoms - urgent vet"
+      },
+      "red_flags": [
+        "10%+ body weight loss",
+        "Prominent hips, spine, or pelvis",
+        "Reduced appetite alongside",
+        "Drinking much more than normal (diabetes sign)",
+        "Lumps anywhere on the body"
+      ],
+      "combinations": [
+        {"with": ["increased_thirst"], "concern": "Possible diabetes - vet testing"},
+        {"with": ["lumps", "lethargy"], "concern": "Possible tumour - vet assessment"}
+      ],
+      "sources": ["RSPCA", "PDSA", "VCA Hospitals"]
+    },
+    {
+      "id": "hamster_007",
+      "symptom": "Lumps or abscesses",
+      "aliases": ["bumps", "growths", "swelling", "tumours", "cyst"],
+      "category": "Skin / Internal",
+      "description": "Any new lump felt or seen on the body - under the skin, on the face, near the genitals, or in the cheek pouch area. Common in hamsters from middle age onward.",
+      "possible_causes": [
+        {"condition": "Abscess (infected wound)", "likelihood": "common", "brief": "Hot, possibly soft, sometimes leaking pus"},
+        {"condition": "Tumour (benign or malignant)", "likelihood": "very common", "brief": "Hamsters have high rates of tumours, especially after 1 year"},
+        {"condition": "Cyst", "likelihood": "common", "brief": "Fluid-filled, soft, slow growing"},
+        {"condition": "Cheek pouch impaction", "likelihood": "common", "brief": "Stuck food creating a hard lump near the cheek"},
+        {"condition": "Hernia", "likelihood": "occasional", "brief": "Belly lump, usually soft"},
+        {"condition": "Scent gland enlargement (normal)", "likelihood": "occasional", "brief": "Syrians have a scent gland on each hip - can look like a lump"}
+      ],
+      "home_care": [
+        "Note the size, location, texture, and whether it's hot to touch",
+        "Check whether it's the scent gland (Syrians have one on each hip - small, oily, slightly raised)",
+        "Do not try to drain or squeeze - can cause infection or rupture",
+        "Photograph weekly to track growth",
+        "Keep the area clean if the lump is broken or weeping",
+        "Watch for any change in behaviour or appetite"
+      ],
+      "vet_urgency": {
+        "low": "Small, stable, non-painful lump in known location (e.g. scent gland) - photograph monthly",
+        "medium": "New lump, growing slowly, hamster otherwise well - exotic vet within 1-2 weeks",
+        "high": "Rapidly growing, hot, ulcerated, painful, or affecting eating/movement - urgent vet"
+      },
+      "red_flags": [
+        "Rapid growth (visible difference week to week)",
+        "Hot, red, painful when touched",
+        "Leaking pus or blood",
+        "Affecting mobility, eating, or breathing",
+        "Hamster losing weight or becoming lethargic"
+      ],
+      "combinations": [
+        {"with": ["weight_loss", "lethargy"], "concern": "Likely cancer or major abscess - urgent vet"},
+        {"with": ["not_eating"], "concern": "If lump is on face/jaw, dental abscess possible - urgent"}
+      ],
+      "sources": ["RSPCA", "PDSA", "VCA Hospitals"]
+    },
+    {
+      "id": "hamster_008",
+      "symptom": "Eye problems",
+      "aliases": ["closed eye", "watery eye", "bulging eye", "discharge from eye"],
+      "category": "Eye",
+      "description": "Eye is held closed, watering, crusted shut, swollen, or bulging out. Can affect one or both eyes.",
+      "possible_causes": [
+        {"condition": "Bedding irritation (dusty or sharp)", "likelihood": "very common", "brief": "Switch to paper-based or aspen bedding"},
+        {"condition": "Bacterial eye infection", "likelihood": "common", "brief": "Discharge often crusty"},
+        {"condition": "Eye injury (cagemate fight, sharp toy)", "likelihood": "common", "brief": "One eye affected, often with squinting"},
+        {"condition": "Proptosed eye (eye popped out)", "likelihood": "occasional", "brief": "Trauma or compression injury - emergency"},
+        {"condition": "Dental disease causing eye discharge", "likelihood": "occasional", "brief": "Tooth roots near eye sockets"},
+        {"condition": "Tumour behind eye", "likelihood": "occasional", "brief": "Causes bulging in older hamsters"}
+      ],
+      "home_care": [
+        "Switch to paper or aspen bedding - never cedar or pine shavings (toxic) or dusty sawdust",
+        "Gently clean discharge with cotton wool dampened in cooled boiled water",
+        "Check for any sharp objects, cage edges, or aggressive cagemates",
+        "Do not use any human eye drops without vet guidance",
+        "Keep the cage clean and well ventilated",
+        "Take a clear photo of the eye to show the vet"
+      ],
+      "vet_urgency": {
+        "low": "Mild watering, no other symptoms, recent bedding change - try new bedding and monitor",
+        "medium": "Persistent discharge, partly closed eye, mild swelling - exotic vet within a few days",
+        "high": "Bulging or popped out eye, both eyes affected, eye injury, or hamster unwell - urgent vet"
+      },
+      "red_flags": [
+        "Eye visibly out of socket (proptosis)",
+        "Severe bulging",
+        "Bleeding from the eye",
+        "Refusing food (suggests pain)",
+        "Combined with other illness signs"
+      ],
+      "combinations": [
+        {"with": ["not_eating"], "concern": "Eye pain affecting eating - urgent vet"},
+        {"with": ["facial_swelling"], "concern": "Possible dental abscess or tumour - urgent"}
+      ],
+      "sources": ["RSPCA", "PDSA"]
+    },
+    {
+      "id": "hamster_009",
+      "symptom": "Difficulty walking / wobbliness",
+      "aliases": ["wobbly", "circling", "limping", "dragging legs"],
+      "category": "Neurological / Musculoskeletal",
+      "description": "Hamster walks oddly, drags a leg, falls over, tilts to one side, or circles. Can affect just one limb or the whole body.",
+      "possible_causes": [
+        {"condition": "Stroke", "likelihood": "common (older hamsters)", "brief": "Sudden one-sided weakness or head tilt"},
+        {"condition": "Inner ear infection", "likelihood": "common", "brief": "Causes head tilt and circling"},
+        {"condition": "Injury from a fall", "likelihood": "common", "brief": "Hamsters can fall from owners' hands or high cages"},
+        {"condition": "Broken limb", "likelihood": "common", "brief": "Often from a leg caught in wire bars or wheel"},
+        {"condition": "Arthritis (older hamsters)", "likelihood": "occasional", "brief": "Stiffness in older animals"},
+        {"condition": "Vitamin E deficiency / paralysis syndrome", "likelihood": "occasional", "brief": "Poor diet over long periods"},
+        {"condition": "Tumour pressing on nerves", "likelihood": "occasional", "brief": "Progressive weakness"}
+      ],
+      "home_care": [
+        "Remove the wheel and any climbing furniture - prevent further injury",
+        "Place food and water at ground level within easy reach",
+        "Use a single-level cage temporarily with deep, soft bedding",
+        "Switch to solid floors if currently on wire (which can trap limbs)",
+        "Note timing - sudden onset suggests stroke or injury; gradual onset suggests arthritis or tumour",
+        "Keep warm - poorly mobile hamsters lose heat quickly"
+      ],
+      "vet_urgency": {
+        "low": "Mild stiffness in an older hamster, no other symptoms - monitor and reduce climbing opportunities",
+        "medium": "Persistent limp or wobbliness - exotic vet within a few days",
+        "high": "Sudden onset, dragging legs, head tilt, circling, or combined with other symptoms - urgent vet"
+      },
+      "red_flags": [
+        "Sudden onset (hours)",
+        "Head tilt or circling",
+        "Cannot use one or both back legs",
+        "Visible swelling or deformity",
+        "Combined with breathing difficulty or loss of consciousness"
+      ],
+      "combinations": [
+        {"with": ["head_tilt"], "concern": "Inner ear infection or stroke - urgent vet"},
+        {"with": ["lethargy", "not_eating"], "concern": "Serious systemic illness - urgent"}
+      ],
+      "sources": ["RSPCA", "PDSA", "VCA Hospitals"]
+    },
+    {
+      "id": "hamster_010",
+      "symptom": "Excessive thirst / urination",
+      "aliases": ["drinking lots", "wet bedding", "increased urination", "polyuria polydipsia"],
+      "category": "Endocrine / Kidney",
+      "description": "Hamster drinks much more water than normal and produces wetter, more frequent urine patches than usual. Diabetes is particularly common in Campbell's dwarf and Chinese hamsters.",
+      "possible_causes": [
+        {"condition": "Diabetes mellitus", "likelihood": "common (dwarf hamsters)", "brief": "Campbell's and Chinese are especially prone"},
+        {"condition": "Kidney disease", "likelihood": "common (older hamsters)", "brief": "Cannot concentrate urine"},
+        {"condition": "Liver disease", "likelihood": "occasional", "brief": "Can affect water balance"},
+        {"condition": "Urinary tract infection", "likelihood": "occasional", "brief": "Causes more frequent small urinations"},
+        {"condition": "Cushing's disease", "likelihood": "occasional", "brief": "Increased thirst plus hair loss"},
+        {"condition": "Excess sugary food", "likelihood": "occasional", "brief": "Some commercial mixes are high in fruit/sugar"}
+      ],
+      "home_care": [
+        "Measure water intake roughly - mark the bottle and check daily",
+        "Reduce sugary foods (commercial fruit/yoghurt drops, raisins, sweet fruit)",
+        "Provide quality plain pellets and unlimited hay",
+        "Note urination spots and frequency",
+        "Test urine glucose if diabetes is suspected (human diabetic strips work) - bring results to the vet",
+        "Weigh weekly to track changes"
+      ],
+      "vet_urgency": {
+        "low": "Slight increase in drinking with no other symptoms - reduce sugary food and monitor",
+        "medium": "Sustained increased thirst and urination - exotic vet for blood and urine tests",
+        "high": "Combined with weight loss, lethargy, sweet-smelling urine, or sudden onset - urgent vet"
+      },
+      "red_flags": [
+        "Significant weight loss alongside",
+        "Sweet-smelling urine (suggestive of diabetes)",
+        "Bedding constantly wet despite cleaning",
+        "Lethargy and reduced appetite",
+        "Recurrent urinary tract issues"
+      ],
+      "combinations": [
+        {"with": ["weight_loss", "lethargy"], "concern": "Likely diabetes or kidney disease - urgent vet"},
+        {"with": ["hair_loss"], "concern": "Possible Cushing's disease - vet testing"}
+      ],
+      "sources": ["RSPCA", "PDSA", "VCA Hospitals"]
+    }
+  ]
+}

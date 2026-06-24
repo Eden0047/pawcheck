@@ -1,0 +1,1117 @@
+{
+  "pet": "dog",
+  "display_name": "Dog",
+  "emoji": "🐶",
+  "version": "1.0",
+  "total_symptoms": 25,
+  "sources_summary": ["PDSA", "RSPCA", "BlueCross", "ASPCA", "AVMA", "VCA", "AMC", "MSD"],
+  "symptoms": [
+    {
+      "id": "dog_001",
+      "symptom": "Vomiting",
+      "aliases": ["throwing up", "being sick", "sick"],
+      "category": "Gastrointestinal",
+      "description": "Forceful ejection of stomach contents through the mouth, often preceded by retching or nausea.",
+      "possible_causes": [
+        {"condition": "Dietary indiscretion", "likelihood": "very common", "brief": "Ate spoiled food, garbage, grass, or rich/fatty food"},
+        {"condition": "Gastritis (stomach irritation)", "likelihood": "common", "brief": "Inflammation of the stomach lining"},
+        {"condition": "Intestinal parasites (worms)", "likelihood": "common", "brief": "Especially in puppies or unwormed dogs"},
+        {"condition": "Foreign body obstruction", "likelihood": "occasional", "brief": "Swallowed toy, bone, sock - can be life-threatening"},
+        {"condition": "Pancreatitis", "likelihood": "occasional", "brief": "Inflammation of the pancreas, often after fatty meal"},
+        {"condition": "Parvovirus (puppies)", "likelihood": "occasional", "brief": "Highly contagious, often fatal without treatment"},
+        {"condition": "Bloat / GDV", "likelihood": "rare but critical", "brief": "Twisted stomach - life-threatening emergency"}
+      ],
+      "home_care": [
+        "Withhold food for 12 hours (water still allowed in small amounts)",
+        "Offer small amounts of water frequently to prevent dehydration",
+        "Reintroduce bland diet: plain boiled chicken with white rice in small portions",
+        "Gradually return to normal food over 2-3 days once vomiting stops",
+        "Avoid rich, fatty, or unfamiliar foods",
+        "Allow rest (no exercise) and skip walks until recovered"
+      ],
+      "vet_urgency": {
+        "low": "Single vomit, dog seems otherwise well - monitor at home, contact vet if it persists beyond 24 hours",
+        "medium": "Multiple episodes in 24 hours with mild lethargy - phone vet for advice within 24 hours",
+        "high": "Continuous vomiting, blood in vomit, bloated belly, collapse, or puppy with vomiting - seek emergency vet care immediately"
+      },
+      "red_flags": [
+        "Blood in vomit (red, brown, or coffee-ground appearance)",
+        "Continuous retching with little brought up (possible GDV/twisted stomach)",
+        "Distended or bloated abdomen",
+        "Unable to keep water down for more than 12 hours",
+        "Severe lethargy or collapse",
+        "Puppy under 6 months vomiting (parvovirus risk)",
+        "Suspected ingestion of toxic substance or foreign object"
+      ],
+      "combinations": [
+        {"with": ["diarrhoea", "lethargy"], "concern": "Possible gastroenteritis, pancreatitis, or parvovirus - vet visit within 24h"},
+        {"with": ["bloated_abdomen", "retching"], "concern": "Possible GDV (gastric dilatation-volvulus) - EMERGENCY, immediate vet"},
+        {"with": ["blood_in_vomit"], "concern": "Possible ulcer, foreign body, or serious illness - urgent vet care"},
+        {"with": ["loss_of_appetite", "weight_loss"], "concern": "Could indicate chronic illness - vet investigation needed"}
+      ],
+      "sources": ["PDSA", "ASPCA", "AVMA", "VCA"]
+    },
+
+    {
+      "id": "dog_002",
+      "symptom": "Diarrhoea",
+      "aliases": ["loose stool", "runny poo", "watery stool"],
+      "category": "Gastrointestinal",
+      "description": "Frequent, loose, or watery bowel movements, often more than usual in volume.",
+      "possible_causes": [
+        {"condition": "Dietary change or indiscretion", "likelihood": "very common", "brief": "New food, scavenging, or food intolerance"},
+        {"condition": "Stress (boarding, travel, new home)", "likelihood": "common", "brief": "Anxiety-related colitis"},
+        {"condition": "Intestinal parasites", "likelihood": "common", "brief": "Roundworms, hookworms, giardia"},
+        {"condition": "Bacterial or viral infection", "likelihood": "occasional", "brief": "Including parvovirus in puppies"},
+        {"condition": "Inflammatory bowel disease", "likelihood": "occasional", "brief": "Chronic, requires veterinary diagnosis"},
+        {"condition": "Toxin ingestion", "likelihood": "occasional", "brief": "Plants, chemicals, human medication"}
+      ],
+      "home_care": [
+        "Withhold food for 12 hours (water always available)",
+        "Reintroduce with bland diet (boiled chicken + white rice, plain)",
+        "Small frequent meals rather than one large portion",
+        "Probiotic paste (vet-approved) can help restore gut flora",
+        "Gradually return to normal food over 3-4 days",
+        "Ensure fresh water is always available to prevent dehydration"
+      ],
+      "vet_urgency": {
+        "low": "One or two soft stools, dog acting normal - monitor and offer bland diet",
+        "medium": "Persistent diarrhoea for more than 24-48 hours - phone vet for advice",
+        "high": "Bloody diarrhoea, severe dehydration, lethargy, or puppy with diarrhoea - emergency vet immediately"
+      },
+      "red_flags": [
+        "Blood (red or black/tarry) in stool",
+        "Watery diarrhoea with foul smell (possible parvovirus)",
+        "Continuing for more than 48 hours",
+        "Signs of dehydration (sunken eyes, dry gums, skin tenting)",
+        "Severe lethargy or weakness",
+        "Puppy with diarrhoea and vomiting"
+      ],
+      "combinations": [
+        {"with": ["vomiting"], "concern": "Risk of rapid dehydration - vet within 24h"},
+        {"with": ["lethargy", "loss_of_appetite"], "concern": "Possible serious GI illness - vet visit recommended"},
+        {"with": ["blood_in_stool"], "concern": "Could indicate haemorrhagic gastroenteritis or parvovirus - urgent vet"}
+      ],
+      "sources": ["PDSA", "ASPCA", "VCA"]
+    },
+
+    {
+      "id": "dog_003",
+      "symptom": "Lethargy",
+      "aliases": ["low energy", "tired", "sleeping more", "depressed"],
+      "category": "General / Systemic",
+      "description": "Reduced energy, unusual tiredness, less interest in normal activities like walks or play.",
+      "possible_causes": [
+        {"condition": "Mild viral illness", "likelihood": "common", "brief": "Like a 'doggy cold' - usually self-resolving"},
+        {"condition": "Pain (joint, dental, internal)", "likelihood": "common", "brief": "Dogs hide pain by reducing activity"},
+        {"condition": "Infection (bacterial, parasitic, tick-borne)", "likelihood": "common", "brief": "Lyme disease, ehrlichiosis"},
+        {"condition": "Anaemia", "likelihood": "occasional", "brief": "Reduced red blood cells - check gum colour"},
+        {"condition": "Heart disease", "likelihood": "occasional", "brief": "Especially in older dogs"},
+        {"condition": "Endocrine disorders", "likelihood": "occasional", "brief": "Hypothyroidism, Cushing's disease, diabetes"},
+        {"condition": "Poisoning or toxin exposure", "likelihood": "occasional", "brief": "Always consider if onset is sudden"}
+      ],
+      "home_care": [
+        "Allow rest in a quiet, comfortable space",
+        "Ensure fresh water is always available",
+        "Offer favourite gentle food to encourage appetite",
+        "Monitor temperature if possible (normal dog: 38.3-39.2°C / 101-102.5°F)",
+        "Check gums - should be pink and moist, not pale or yellow",
+        "Note when it started and any other subtle changes"
+      ],
+      "vet_urgency": {
+        "low": "Mildly subdued after exercise or hot day, otherwise eating and drinking - monitor 24h",
+        "medium": "Lethargy lasting more than 24 hours with reduced appetite - phone vet",
+        "high": "Severe weakness, collapse, pale or yellow gums, difficulty breathing - emergency vet"
+      },
+      "red_flags": [
+        "Collapse or inability to stand",
+        "Pale, white, blue, or yellow gums",
+        "Cold extremities",
+        "Combined with rapid or laboured breathing",
+        "Sudden onset after possible toxin exposure",
+        "Older dog with new severe lethargy"
+      ],
+      "combinations": [
+        {"with": ["loss_of_appetite", "vomiting"], "concern": "Systemic illness - vet visit within 24h"},
+        {"with": ["pale_gums"], "concern": "Possible anaemia or internal bleeding - urgent vet"},
+        {"with": ["breathing_difficulty"], "concern": "Possible cardiac or respiratory emergency - immediate vet"}
+      ],
+      "sources": ["PDSA", "VCA", "ASPCA"]
+    },
+
+    {
+      "id": "dog_004",
+      "symptom": "Loss of appetite",
+      "aliases": ["not eating", "anorexia", "fussy eating", "refusing food"],
+      "category": "General / Systemic",
+      "description": "Reduced or absent interest in food. Different from being a 'picky eater' - this is a change from normal eating habits.",
+      "possible_causes": [
+        {"condition": "Mild GI upset", "likelihood": "very common", "brief": "Often self-resolves in 24 hours"},
+        {"condition": "Dental pain or oral problems", "likelihood": "common", "brief": "Broken tooth, gum disease, oral tumour"},
+        {"condition": "Stress or recent changes", "likelihood": "common", "brief": "New home, new pet, owner absence"},
+        {"condition": "Vaccination reaction", "likelihood": "occasional", "brief": "Mild reaction in first 24-48h after jabs"},
+        {"condition": "Infection or fever", "likelihood": "occasional", "brief": "Body's response to illness"},
+        {"condition": "Serious internal disease", "likelihood": "occasional", "brief": "Kidney, liver, cancer - often the first sign"}
+      ],
+      "home_care": [
+        "Offer a small amount of bland, appealing food (warm chicken, plain rice)",
+        "Try slightly warming food to enhance smell",
+        "Hand-feed small pieces if needed",
+        "Ensure water intake continues",
+        "Check mouth gently for broken teeth, growths, or smell",
+        "Remove competing pets at meal times in case of bullying"
+      ],
+      "vet_urgency": {
+        "low": "Skipped one meal but otherwise normal - monitor for 24 hours",
+        "medium": "Not eating for 24-48 hours, especially with other mild symptoms - phone vet",
+        "high": "Not eating for more than 48 hours, or sudden complete refusal with other symptoms - vet visit"
+      },
+      "red_flags": [
+        "Not eating for more than 48 hours",
+        "Combined with vomiting, diarrhoea, or lethargy",
+        "Visible weight loss",
+        "Pale or yellow gums",
+        "Drooling excessively or pawing at mouth",
+        "Puppy not eating for more than 12 hours (hypoglycaemia risk)"
+      ],
+      "combinations": [
+        {"with": ["weight_loss"], "concern": "Chronic illness investigation needed"},
+        {"with": ["drinking_more", "weight_loss"], "concern": "Classic signs of diabetes, kidney disease - vet visit"},
+        {"with": ["vomiting", "lethargy"], "concern": "Systemic illness - vet within 24h"}
+      ],
+      "sources": ["PDSA", "VCA", "RSPCA"]
+    },
+
+    {
+      "id": "dog_005",
+      "symptom": "Limping",
+      "aliases": ["lameness", "favouring leg", "holding leg up", "limping"],
+      "category": "Musculoskeletal",
+      "description": "Favouring one or more limbs, reluctance to bear weight, or visibly abnormal gait.",
+      "possible_causes": [
+        {"condition": "Soft tissue injury / strain", "likelihood": "very common", "brief": "Sprain, muscle pull from rough play"},
+        {"condition": "Object in paw pad", "likelihood": "common", "brief": "Thorn, grass seed, glass, foxtail"},
+        {"condition": "Torn nail", "likelihood": "common", "brief": "Often very painful but heals well"},
+        {"condition": "Cruciate ligament rupture", "likelihood": "occasional", "brief": "Especially after twisting injury - common in larger dogs"},
+        {"condition": "Arthritis / osteoarthritis", "likelihood": "common in older dogs", "brief": "Chronic, worse in cold weather"},
+        {"condition": "Hip or elbow dysplasia", "likelihood": "occasional", "brief": "Inherited, especially in certain breeds"},
+        {"condition": "Fracture", "likelihood": "occasional", "brief": "Usually obvious after trauma"},
+        {"condition": "Bone tumour (older dogs)", "likelihood": "rare but serious", "brief": "Persistent lameness in large breeds"}
+      ],
+      "home_care": [
+        "Restrict exercise immediately - lead walks only for toilet, no running or jumping",
+        "Examine paw pads, between toes, and nails for cuts, thorns, or stones",
+        "Check for swelling, heat, or sensitivity along the leg (gently)",
+        "Allow rest on a soft, supportive surface",
+        "Cold compress for fresh injury (10 minutes, wrapped in towel)",
+        "Do not give human painkillers - paracetamol and ibuprofen are toxic to dogs"
+      ],
+      "vet_urgency": {
+        "low": "Mild limp after exercise, improving with rest within 24-48h - monitor",
+        "medium": "Persistent limp for more than 48 hours, or moderate pain - phone vet",
+        "high": "Cannot bear any weight, obvious fracture, severe pain, swelling, or combined with collapse - emergency vet"
+      },
+      "red_flags": [
+        "Visible deformity or bone protrusion (open fracture)",
+        "Complete inability to bear weight",
+        "Severe swelling of the limb",
+        "Dragging the leg",
+        "Limping with whining or yelping",
+        "Limping after road traffic accident or fall - check for internal injuries"
+      ],
+      "combinations": [
+        {"with": ["swelling", "heat"], "concern": "Possible fracture, infection, or joint disease - vet visit"},
+        {"with": ["lethargy", "fever"], "concern": "Possible tick-borne disease or systemic infection - vet visit"},
+        {"with": ["multiple_limbs_affected"], "concern": "Possible polyarthritis or immune disease - vet investigation"}
+      ],
+      "sources": ["PDSA", "BlueCross", "VCA"]
+    },
+
+    {
+      "id": "dog_006",
+      "symptom": "Excessive scratching",
+      "aliases": ["itching", "scratching", "biting at skin", "rubbing on furniture"],
+      "category": "Skin / Dermatological",
+      "description": "Frequent or intense scratching, biting, licking, or rubbing of the skin.",
+      "possible_causes": [
+        {"condition": "Fleas", "likelihood": "very common", "brief": "Most common cause; check for flea dirt at base of tail"},
+        {"condition": "Environmental allergies (atopy)", "likelihood": "very common", "brief": "Pollen, dust mites, grass"},
+        {"condition": "Food allergies", "likelihood": "common", "brief": "Often beef, chicken, dairy, or wheat"},
+        {"condition": "Mites (sarcoptic, demodex)", "likelihood": "common", "brief": "Mange - contagious and intensely itchy"},
+        {"condition": "Bacterial or yeast skin infection", "likelihood": "common", "brief": "Often secondary to allergies"},
+        {"condition": "Dry skin", "likelihood": "occasional", "brief": "Especially in winter or over-bathing"}
+      ],
+      "home_care": [
+        "Check thoroughly for fleas - run a flea comb over base of tail and belly",
+        "Apply vet-recommended flea treatment (Frontline, Advocate, etc.)",
+        "Bathe with a gentle, soap-free dog shampoo (oatmeal-based)",
+        "Use an Elizabethan collar if licking is causing self-trauma",
+        "Avoid known triggers (certain grasses, foods)",
+        "Add Omega-3 fish oil supplement (vet-approved) for skin health"
+      ],
+      "vet_urgency": {
+        "low": "Occasional scratching with no skin damage - monitor and treat for fleas",
+        "medium": "Persistent itching for more than 1 week or visible skin damage - vet appointment",
+        "high": "Severe self-trauma, open wounds, bleeding, infected skin, or signs of distress - urgent vet"
+      },
+      "red_flags": [
+        "Open wounds, bleeding, or hot spots",
+        "Pus, foul odour, or yellowish crusts",
+        "Bald patches",
+        "Combined with lethargy or loss of appetite",
+        "Skin smell strongly of yeast (musty)",
+        "Multiple pets in household showing same signs (possible mange)"
+      ],
+      "combinations": [
+        {"with": ["hair_loss"], "concern": "Possible mange, allergy, or hormonal disease - vet visit"},
+        {"with": ["bad_smell", "redness"], "concern": "Likely skin infection - vet for antibiotics/antifungals"},
+        {"with": ["head_shaking", "ear_scratching"], "concern": "Likely ear infection or mites - vet visit"}
+      ],
+      "sources": ["PDSA", "VCA", "ASPCA"]
+    },
+
+    {
+      "id": "dog_007",
+      "symptom": "Coughing",
+      "aliases": ["cough", "hacking", "honking", "wheezing"],
+      "category": "Respiratory",
+      "description": "Forceful expulsion of air from the lungs, ranging from soft cough to loud honking sound.",
+      "possible_causes": [
+        {"condition": "Kennel cough (canine infectious tracheobronchitis)", "likelihood": "very common", "brief": "Highly contagious; characteristic honking cough"},
+        {"condition": "Tracheal collapse", "likelihood": "common in small breeds", "brief": "Yorkies, Pomeranians - 'goose-honk' cough"},
+        {"condition": "Heart disease / congestive heart failure", "likelihood": "common in older dogs", "brief": "Soft cough especially at night"},
+        {"condition": "Pneumonia", "likelihood": "occasional", "brief": "Often with fever and lethargy"},
+        {"condition": "Lungworm", "likelihood": "occasional", "brief": "Increasingly common in UK"},
+        {"condition": "Foreign body in airway", "likelihood": "occasional", "brief": "Grass seed, especially in summer"},
+        {"condition": "Heartworm (depending on region)", "likelihood": "regional", "brief": "Mainly US, parts of Europe"}
+      ],
+      "home_care": [
+        "Keep environment calm, cool, and dust-free",
+        "Use a harness instead of collar to reduce tracheal pressure",
+        "Avoid exposure to other dogs while coughing (contagious risk)",
+        "Humidifier or steamy bathroom can ease irritation",
+        "A teaspoon of honey may soothe a mild cough (adults only, not puppies)",
+        "Ensure vaccinations are up to date - kennel cough vaccine available"
+      ],
+      "vet_urgency": {
+        "low": "Occasional, mild cough; dog otherwise bright and eating - monitor 24-48h",
+        "medium": "Persistent cough lasting more than a few days, or worsening - vet appointment",
+        "high": "Difficulty breathing, blue/grey gums, collapsing, coughing up blood - emergency vet"
+      },
+      "red_flags": [
+        "Blue, purple, or grey tongue or gums",
+        "Difficulty breathing or open-mouth breathing at rest",
+        "Coughing up blood or pink froth",
+        "Collapse during or after coughing",
+        "Severe lethargy with cough",
+        "Cough in unvaccinated puppy"
+      ],
+      "combinations": [
+        {"with": ["lethargy", "fever"], "concern": "Possible pneumonia - vet within 24h"},
+        {"with": ["breathing_difficulty"], "concern": "Heart failure or severe respiratory - emergency vet"},
+        {"with": ["weight_loss", "exercise_intolerance"], "concern": "Possible heart disease or lungworm - vet investigation"}
+      ],
+      "sources": ["PDSA", "ASPCA", "VCA"]
+    },
+
+    {
+      "id": "dog_008",
+      "symptom": "Excessive drinking",
+      "aliases": ["drinking lots", "polydipsia", "always thirsty", "drinking too much"],
+      "category": "Urinary / Endocrine",
+      "description": "Significantly increased water intake. Most healthy dogs drink roughly 50-100ml per kg of body weight per day.",
+      "possible_causes": [
+        {"condition": "Hot weather or exercise", "likelihood": "very common", "brief": "Normal physiological response"},
+        {"condition": "Diet change (dry food)", "likelihood": "common", "brief": "More water needed with dry kibble"},
+        {"condition": "Diabetes mellitus", "likelihood": "common", "brief": "Classic sign with weight loss"},
+        {"condition": "Kidney disease", "likelihood": "common in older dogs", "brief": "Especially common in seniors"},
+        {"condition": "Cushing's disease (hyperadrenocorticism)", "likelihood": "occasional", "brief": "Pot belly, hair loss, increased appetite"},
+        {"condition": "Urinary tract infection", "likelihood": "occasional", "brief": "Especially in female dogs"},
+        {"condition": "Pyometra (intact females)", "likelihood": "occasional but serious", "brief": "Womb infection - life-threatening"}
+      ],
+      "home_care": [
+        "Monitor water intake by measuring bowl",
+        "Note any changes in urination (frequency, volume, accidents)",
+        "Check weight regularly",
+        "Don't restrict water - can be dangerous; restrict only on vet's instruction",
+        "Note other changes: appetite, energy, coat condition",
+        "Take note of urine colour - very pale or very dark are both concerning"
+      ],
+      "vet_urgency": {
+        "low": "Slightly increased after exercise/heat, resolves - monitor",
+        "medium": "Persistent increase over several days with no clear cause - vet appointment",
+        "high": "Drinking and urinating excessively with weight loss, lethargy, vomiting - vet within 24h; intact female with vaginal discharge - emergency"
+      },
+      "red_flags": [
+        "Combined with significant weight loss",
+        "Unable to hold bladder overnight",
+        "Vaginal discharge in unspayed female (pyometra emergency)",
+        "Vomiting with increased thirst",
+        "Lethargy and increased thirst",
+        "Blood in urine"
+      ],
+      "combinations": [
+        {"with": ["weight_loss", "increased_appetite"], "concern": "Classic diabetes signs - vet for blood test"},
+        {"with": ["weight_loss", "loss_of_appetite"], "concern": "Possible kidney disease - vet investigation"},
+        {"with": ["vomiting", "lethargy"], "concern": "Could be diabetic ketoacidosis - urgent vet"}
+      ],
+      "sources": ["PDSA", "VCA", "MSD"]
+    },
+
+    {
+      "id": "dog_009",
+      "symptom": "Eye discharge",
+      "aliases": ["weepy eye", "eye gunk", "red eye", "squinting"],
+      "category": "Eye",
+      "description": "Discharge from one or both eyes, ranging from clear watering to thick yellow/green pus.",
+      "possible_causes": [
+        {"condition": "Allergies / irritants", "likelihood": "very common", "brief": "Pollen, dust, smoke; usually clear discharge"},
+        {"condition": "Conjunctivitis", "likelihood": "common", "brief": "Bacterial or viral; sticky/yellow discharge"},
+        {"condition": "Foreign body (grass seed)", "likelihood": "common in summer", "brief": "Often sudden, one eye only"},
+        {"condition": "Corneal ulcer", "likelihood": "occasional", "brief": "Painful; squinting and watering"},
+        {"condition": "Dry eye (KCS)", "likelihood": "occasional", "brief": "Thick sticky discharge, reduced tear production"},
+        {"condition": "Cherry eye (third eyelid)", "likelihood": "occasional", "brief": "Visible red lump in corner of eye"},
+        {"condition": "Glaucoma", "likelihood": "rare but serious", "brief": "Painful; eye may appear bulging"}
+      ],
+      "home_care": [
+        "Gently clean discharge with cooled boiled water and clean gauze",
+        "Use a separate piece of cotton for each eye",
+        "Wipe from inner corner outward",
+        "Prevent dog from rubbing eyes (Elizabethan collar if needed)",
+        "Check for foreign material (gently)",
+        "Do not use human eye drops without veterinary advice"
+      ],
+      "vet_urgency": {
+        "low": "Small amount of clear discharge, dog comfortable - clean and monitor 24h",
+        "medium": "Yellow/green discharge or persistent for more than 24-48h - vet appointment",
+        "high": "Severe pain, eye closed shut, cloudy or bulging eye, sudden vision loss - emergency vet"
+      },
+      "red_flags": [
+        "Eye held tightly closed (severe pain)",
+        "Cloudy or bluish appearance to the eye",
+        "Visible foreign object",
+        "Bulging eye",
+        "Blood in the eye",
+        "Pawing aggressively at eye",
+        "Sudden bumping into things (vision loss)"
+      ],
+      "combinations": [
+        {"with": ["sneezing", "nasal_discharge"], "concern": "Possible upper respiratory infection - vet"},
+        {"with": ["squinting", "tearing"], "concern": "Possible corneal ulcer or foreign body - vet within 24h"},
+        {"with": ["blindness", "bulging_eye"], "concern": "Possible glaucoma - emergency vet, can cause permanent blindness in hours"}
+      ],
+      "sources": ["PDSA", "VCA", "ASPCA"]
+    },
+
+    {
+      "id": "dog_010",
+      "symptom": "Ear problems",
+      "aliases": ["head shaking", "ear scratching", "smelly ears", "ear infection"],
+      "category": "Ear",
+      "description": "Repeated head shaking, scratching at ears, ear odour, or visible redness/discharge inside the ear.",
+      "possible_causes": [
+        {"condition": "Bacterial or yeast infection", "likelihood": "very common", "brief": "Especially in floppy-eared breeds"},
+        {"condition": "Ear mites", "likelihood": "common", "brief": "Coffee-ground appearance debris"},
+        {"condition": "Foreign body (grass seed)", "likelihood": "common in summer", "brief": "Sudden onset, one ear"},
+        {"condition": "Allergies (food or environmental)", "likelihood": "common", "brief": "Recurrent ear issues often allergy-related"},
+        {"condition": "Aural haematoma", "likelihood": "occasional", "brief": "Blood-filled swelling of ear flap from shaking"},
+        {"condition": "Polyp or growth", "likelihood": "rare", "brief": "Persistent, doesn't respond to treatment"}
+      ],
+      "home_care": [
+        "Examine ear gently for redness, debris, foreign material",
+        "Smell ear - yeasty or foul odour suggests infection",
+        "Clean only the visible outer ear with vet-approved cleaner",
+        "Never insert cotton buds (Q-tips) deep into the ear",
+        "Keep ears dry after swimming or bathing",
+        "Treat any fleas (which can carry ear mites)"
+      ],
+      "vet_urgency": {
+        "low": "Occasional head shake, no signs of pain or smell - monitor",
+        "medium": "Persistent shaking/scratching, discharge, smell - vet within 1-2 days",
+        "high": "Severe pain, head tilt, balance problems, swollen ear flap - vet within 24h"
+      },
+      "red_flags": [
+        "Head tilt to one side",
+        "Loss of balance or circling",
+        "Severe pain when ear touched",
+        "Swollen, balloon-like ear flap (haematoma)",
+        "Bloody discharge",
+        "Vomiting along with ear signs (possible middle ear)",
+        "Sudden deafness"
+      ],
+      "combinations": [
+        {"with": ["head_tilt", "loss_of_balance"], "concern": "Possible middle/inner ear infection - vet within 24h"},
+        {"with": ["scratching", "skin_irritation"], "concern": "Possible allergies - vet investigation"},
+        {"with": ["swollen_ear_flap"], "concern": "Aural haematoma - vet visit to drain"}
+      ],
+      "sources": ["PDSA", "BlueCross", "VCA"]
+    },
+
+    {
+      "id": "dog_011",
+      "symptom": "Bad breath",
+      "aliases": ["halitosis", "smelly breath", "stinky mouth"],
+      "category": "Dental / Oral",
+      "description": "Foul-smelling breath that is unusual or worse than normal 'dog breath'.",
+      "possible_causes": [
+        {"condition": "Dental disease (tartar, gingivitis)", "likelihood": "very common", "brief": "Most common cause - over 80% of dogs over 3 years"},
+        {"condition": "Periodontal disease", "likelihood": "very common", "brief": "Advanced gum disease"},
+        {"condition": "Tooth root abscess", "likelihood": "common", "brief": "Often a facial swelling under eye"},
+        {"condition": "Oral tumour", "likelihood": "occasional", "brief": "Especially in older dogs"},
+        {"condition": "Kidney disease", "likelihood": "occasional", "brief": "Ammonia-like or 'urine' smelling breath"},
+        {"condition": "Diabetes", "likelihood": "occasional", "brief": "Sweet or fruity smell can indicate ketoacidosis"},
+        {"condition": "Coprophagia (eating poo)", "likelihood": "common", "brief": "Often the most obvious cause!"}
+      ],
+      "home_care": [
+        "Brush teeth daily with dog-specific toothpaste (never human toothpaste)",
+        "Provide dental chews (VOHC-approved are best)",
+        "Use dental water additives or oral rinses (vet-approved)",
+        "Feed appropriate dental diet if vet recommends",
+        "Check mouth gently for broken teeth, growths, or red gums",
+        "Schedule professional dental cleaning if recommended"
+      ],
+      "vet_urgency": {
+        "low": "Mild doggy breath, no other symptoms - improve dental routine, mention at next check-up",
+        "medium": "Foul breath, visible tartar or red gums - vet appointment for dental check",
+        "high": "Severe foul odour with reduced eating, facial swelling, drooling, or systemic illness signs - vet within days"
+      },
+      "red_flags": [
+        "Facial swelling, especially below the eye",
+        "Difficulty eating or dropping food",
+        "Drooling excessively or with blood",
+        "Visible growths in mouth",
+        "Breath with ammonia/urine smell (possible kidney disease)",
+        "Sweet/fruity breath with increased drinking (possible diabetic ketoacidosis)"
+      ],
+      "combinations": [
+        {"with": ["loss_of_appetite", "drooling"], "concern": "Possible dental pain or oral disease - vet visit"},
+        {"with": ["drinking_more", "weight_loss"], "concern": "Possible kidney disease or diabetes - vet for bloods"},
+        {"with": ["facial_swelling"], "concern": "Likely tooth root abscess - vet within days"}
+      ],
+      "sources": ["PDSA", "VCA", "AVMA"]
+    },
+
+    {
+      "id": "dog_012",
+      "symptom": "Lump or swelling",
+      "aliases": ["mass", "growth", "bump", "tumour", "cyst"],
+      "category": "Skin / Systemic",
+      "description": "Any new growth, swelling, or mass under or on the skin.",
+      "possible_causes": [
+        {"condition": "Lipoma (benign fatty lump)", "likelihood": "very common", "brief": "Soft, moveable, painless - common in older dogs"},
+        {"condition": "Sebaceous cyst", "likelihood": "common", "brief": "Often resembles a small bump or wart"},
+        {"condition": "Wart / papilloma", "likelihood": "common", "brief": "Especially in young dogs or seniors"},
+        {"condition": "Abscess", "likelihood": "common", "brief": "Painful, warm, may discharge pus"},
+        {"condition": "Insect bite or sting", "likelihood": "common", "brief": "Sudden swelling, often facial"},
+        {"condition": "Mast cell tumour", "likelihood": "occasional", "brief": "Can vary in size; needs biopsy"},
+        {"condition": "Lymphoma", "likelihood": "occasional", "brief": "Enlarged lymph nodes under jaw, shoulders, groin"},
+        {"condition": "Hernia", "likelihood": "occasional", "brief": "Especially around belly button or groin"}
+      ],
+      "home_care": [
+        "Measure and photograph the lump for tracking",
+        "Note location, size, texture (soft/hard), mobility, and any pain",
+        "Check for additional lumps",
+        "Don't squeeze, pop, or irritate the lump",
+        "Monitor for rapid growth, colour changes, or discharge",
+        "Avoid letting the dog lick or chew the area (cone if needed)"
+      ],
+      "vet_urgency": {
+        "low": "Small, soft, slow-growing lump in older dog - mention at next routine check",
+        "medium": "Any new lump - vet appointment for examination (and likely fine needle aspirate)",
+        "high": "Rapidly growing, ulcerated, bleeding, painful lump or sudden facial swelling with breathing issues - urgent vet"
+      },
+      "red_flags": [
+        "Rapid growth over days or weeks",
+        "Bleeding, ulcerating, or weeping",
+        "Hard, fixed (immobile) lumps",
+        "Multiple lumps appearing together",
+        "Combined with weight loss or lethargy",
+        "Sudden facial swelling with breathing difficulty (anaphylaxis)",
+        "Lumps in lymph node areas (jaw, shoulders, groin)"
+      ],
+      "combinations": [
+        {"with": ["weight_loss", "lethargy"], "concern": "Possible malignancy - vet investigation"},
+        {"with": ["multiple_lumps"], "concern": "Possible lymphoma or systemic disease - vet visit"},
+        {"with": ["facial_swelling", "breathing_difficulty"], "concern": "Possible anaphylaxis - emergency vet"}
+      ],
+      "sources": ["PDSA", "ASPCA", "VCA", "AMC"]
+    },
+
+    {
+      "id": "dog_013",
+      "symptom": "Weight loss",
+      "aliases": ["losing weight", "thinning", "ribs showing"],
+      "category": "General / Systemic",
+      "description": "Unexplained or unintentional reduction in body weight over weeks to months.",
+      "possible_causes": [
+        {"condition": "Intestinal parasites", "likelihood": "common", "brief": "Especially in puppies"},
+        {"condition": "Diabetes", "likelihood": "common", "brief": "Despite increased appetite"},
+        {"condition": "Kidney disease", "likelihood": "common in older dogs", "brief": "Often with increased thirst"},
+        {"condition": "Hyperthyroidism (rare in dogs)", "likelihood": "rare", "brief": "More common in cats"},
+        {"condition": "Cancer", "likelihood": "occasional", "brief": "Especially in middle-aged to older dogs"},
+        {"condition": "Inflammatory bowel disease", "likelihood": "occasional", "brief": "With chronic diarrhoea"},
+        {"condition": "Heart disease", "likelihood": "occasional", "brief": "Cardiac cachexia"},
+        {"condition": "Dental disease", "likelihood": "common", "brief": "Pain reducing food intake"}
+      ],
+      "home_care": [
+        "Weigh dog weekly on same scales for accuracy",
+        "Track food intake - is appetite increased, decreased, or normal?",
+        "Note water consumption",
+        "Check for parasites with stool sample",
+        "Ensure deworming is up to date",
+        "Photograph dog from above and side weekly for body condition tracking"
+      ],
+      "vet_urgency": {
+        "low": "Small weight loss with clear cause (recent diet change, increased exercise) - monitor",
+        "medium": "Unexplained loss of 5-10% body weight over weeks - vet appointment",
+        "high": "Severe loss with lethargy, vomiting, or other symptoms - vet within 24h"
+      },
+      "red_flags": [
+        "Loss of more than 10% body weight over weeks",
+        "Visible ribs, spine, hip bones",
+        "Combined with vomiting or diarrhoea",
+        "Combined with increased thirst and urination",
+        "Severe lethargy",
+        "Loss despite increased appetite"
+      ],
+      "combinations": [
+        {"with": ["increased_thirst", "increased_appetite"], "concern": "Likely diabetes - vet bloodwork"},
+        {"with": ["increased_thirst", "loss_of_appetite"], "concern": "Likely kidney disease - vet bloodwork"},
+        {"with": ["chronic_diarrhoea"], "concern": "Possible IBD, parasites, or malabsorption - vet investigation"}
+      ],
+      "sources": ["PDSA", "VCA", "AMC"]
+    },
+
+    {
+      "id": "dog_014",
+      "symptom": "Weight gain",
+      "aliases": ["overweight", "obesity", "pot belly"],
+      "category": "General / Endocrine",
+      "description": "Increase in body weight beyond ideal range, or sudden abdominal enlargement.",
+      "possible_causes": [
+        {"condition": "Overfeeding / lack of exercise", "likelihood": "very common", "brief": "Most common cause; over 50% of UK pets overweight"},
+        {"condition": "Neutering effect", "likelihood": "common", "brief": "Metabolism slows post-neutering"},
+        {"condition": "Hypothyroidism", "likelihood": "common", "brief": "With lethargy and hair loss"},
+        {"condition": "Cushing's disease", "likelihood": "occasional", "brief": "Pot-bellied appearance with thin limbs"},
+        {"condition": "Pregnancy", "likelihood": "if unspayed", "brief": "Sudden weight gain over 2 months"},
+        {"condition": "Fluid retention (ascites)", "likelihood": "occasional", "brief": "Heart, liver, or kidney disease"}
+      ],
+      "home_care": [
+        "Use a measuring cup for accurate food portions",
+        "Reduce treats; substitute with vegetables (carrot, green beans)",
+        "Increase gentle exercise gradually (vet check first)",
+        "Weigh weekly and track progress",
+        "Use slow-feeder bowls and puzzle feeders",
+        "Avoid table scraps and high-calorie chews"
+      ],
+      "vet_urgency": {
+        "low": "Gradual gain with overfeeding - implement diet plan, weigh monthly",
+        "medium": "Significant gain despite calorie restriction - vet appointment for blood tests",
+        "high": "Sudden abdominal swelling, especially with breathing difficulty or lethargy - emergency vet"
+      },
+      "red_flags": [
+        "Sudden abdominal swelling (possible bloat or fluid)",
+        "Pot belly with thin legs (possible Cushing's)",
+        "Combined with hair loss and lethargy (possible hypothyroidism)",
+        "Difficulty breathing",
+        "Reluctance to lie down",
+        "Pale gums with bloated belly"
+      ],
+      "combinations": [
+        {"with": ["lethargy", "hair_loss"], "concern": "Likely hypothyroidism - vet bloodwork"},
+        {"with": ["increased_thirst", "thin_skin"], "concern": "Possible Cushing's disease - vet bloodwork"},
+        {"with": ["sudden_swelling", "vomiting"], "concern": "Possible GDV (bloat) - emergency"}
+      ],
+      "sources": ["PDSA", "VCA", "BlueCross"]
+    },
+
+    {
+      "id": "dog_015",
+      "symptom": "Difficulty breathing",
+      "aliases": ["laboured breathing", "panting heavily", "wheezing", "gasping"],
+      "category": "Respiratory",
+      "description": "Visible effort breathing, including rapid breathing at rest, open-mouth breathing, exaggerated chest/abdominal movement, or stretched neck.",
+      "possible_causes": [
+        {"condition": "Heatstroke", "likelihood": "common (warm weather)", "brief": "Especially flat-faced breeds; medical emergency"},
+        {"condition": "Heart failure", "likelihood": "common in older dogs", "brief": "Especially small breeds with murmurs"},
+        {"condition": "Pneumonia", "likelihood": "occasional", "brief": "Bacterial, viral, or aspiration"},
+        {"condition": "Allergic reaction / anaphylaxis", "likelihood": "occasional", "brief": "Stings, food, vaccine reactions"},
+        {"condition": "Foreign body in airway", "likelihood": "occasional", "brief": "Choking - sudden onset"},
+        {"condition": "Pyothorax / pneumothorax", "likelihood": "occasional", "brief": "Fluid or air in chest cavity"},
+        {"condition": "Brachycephalic obstructive airway syndrome", "likelihood": "common in flat-faced breeds", "brief": "Bulldogs, Pugs, Frenchies"}
+      ],
+      "home_care": [
+        "Move to a cool, calm, quiet environment immediately",
+        "Avoid stress and over-handling",
+        "Offer water if dog can drink safely",
+        "Do not give human medications",
+        "Check gum colour - pale, blue, or grey is emergency",
+        "Count breaths per minute (normal 10-30 at rest)"
+      ],
+      "vet_urgency": {
+        "low": "Brief panting after exercise that resolves - normal",
+        "medium": "Increased breathing rate at rest with no clear cause - same-day vet",
+        "high": "Open-mouth breathing at rest, blue/grey gums, collapse, choking, or breathing with neck stretched - EMERGENCY vet immediately"
+      },
+      "red_flags": [
+        "Blue, purple, or grey gums and tongue (cyanosis)",
+        "Open-mouth breathing at rest (especially serious in cats but also dogs)",
+        "Breathing with neck stretched out and elbows away from body",
+        "Collapse during breathing difficulty",
+        "Choking and unable to make noise",
+        "Frothing at mouth",
+        "Rapid breathing in extreme heat (heatstroke)"
+      ],
+      "combinations": [
+        {"with": ["coughing", "exercise_intolerance"], "concern": "Likely heart disease - urgent vet"},
+        {"with": ["facial_swelling", "hives"], "concern": "Anaphylaxis - emergency vet immediately"},
+        {"with": ["high_temperature", "collapse"], "concern": "Heatstroke - cool slowly, emergency vet"}
+      ],
+      "sources": ["PDSA", "ASPCA", "VCA"]
+    },
+
+    {
+      "id": "dog_016",
+      "symptom": "Frequent urination",
+      "aliases": ["peeing a lot", "polyuria", "accidents in house"],
+      "category": "Urinary",
+      "description": "Urinating more often than usual or in larger volumes, or having accidents in the house in a previously house-trained dog.",
+      "possible_causes": [
+        {"condition": "Urinary tract infection (UTI)", "likelihood": "common", "brief": "Especially in female dogs"},
+        {"condition": "Diabetes mellitus", "likelihood": "common", "brief": "With increased thirst and weight loss"},
+        {"condition": "Kidney disease", "likelihood": "common in older dogs", "brief": "Excessive thirst and urination together"},
+        {"condition": "Cushing's disease", "likelihood": "occasional", "brief": "Plus increased appetite, pot belly"},
+        {"condition": "Bladder stones", "likelihood": "occasional", "brief": "Straining, blood in urine"},
+        {"condition": "Incontinence (especially spayed females)", "likelihood": "common", "brief": "Leaking when asleep"},
+        {"condition": "Behavioural (anxiety, marking)", "likelihood": "occasional", "brief": "Not actually increased volume"}
+      ],
+      "home_care": [
+        "Track water intake and urination frequency",
+        "Note urine colour and any odour",
+        "Take more frequent toilet breaks",
+        "Provide easier outdoor access for older dogs",
+        "Do not punish for accidents - usually a medical issue",
+        "Collect a fresh urine sample if vet visit planned"
+      ],
+      "vet_urgency": {
+        "low": "Increased frequency after extra drinking or hot day - monitor",
+        "medium": "Persistent increase or new accidents in house - vet appointment for urine test",
+        "high": "Straining to urinate with no output (emergency in males), blood in urine, severe lethargy - vet within 24h"
+      },
+      "red_flags": [
+        "Straining to urinate with little or no output (blockage)",
+        "Blood in urine",
+        "Crying when urinating",
+        "Combined with vomiting or severe lethargy",
+        "Distended, painful abdomen"
+      ],
+      "combinations": [
+        {"with": ["increased_thirst", "weight_loss"], "concern": "Likely diabetes - vet bloodwork"},
+        {"with": ["straining", "blood_in_urine"], "concern": "Possible bladder stones or UTI - vet within 24h"},
+        {"with": ["straining_no_output"], "concern": "Urinary blockage - emergency vet (especially males)"}
+      ],
+      "sources": ["PDSA", "VCA", "MSD"]
+    },
+
+    {
+      "id": "dog_017",
+      "symptom": "Blood in urine",
+      "aliases": ["haematuria", "red urine", "pink wee"],
+      "category": "Urinary",
+      "description": "Urine appears red, pink, brown, or contains visible blood. Always abnormal.",
+      "possible_causes": [
+        {"condition": "Urinary tract infection (UTI)", "likelihood": "very common", "brief": "Most common cause - bacterial infection"},
+        {"condition": "Bladder stones", "likelihood": "common", "brief": "Visible on x-ray or ultrasound"},
+        {"condition": "Trauma", "likelihood": "occasional", "brief": "Recent fall or impact"},
+        {"condition": "Bladder or kidney tumour", "likelihood": "occasional", "brief": "Especially in older dogs"},
+        {"condition": "Clotting disorder / poisoning", "likelihood": "occasional", "brief": "Rat poison (warfarin-based) ingestion"},
+        {"condition": "Prostate disease (males)", "likelihood": "occasional", "brief": "Often in unneutered older males"},
+        {"condition": "Heat / season (females)", "likelihood": "common", "brief": "Vaginal blood not actually urine"}
+      ],
+      "home_care": [
+        "Collect a fresh urine sample if possible (clean dish slid under)",
+        "Note frequency, amount, and any straining",
+        "Provide plenty of fresh water",
+        "Don't restrict water intake",
+        "Check for other bleeding (gums, nose, stool) - possible clotting issue",
+        "Note any recent toxin exposure (rat bait, blue antifreeze)"
+      ],
+      "vet_urgency": {
+        "low": "Female in season (vaginal blood not UTI) - monitor, normal",
+        "medium": "Any actual urinary blood without other symptoms - vet within 24-48h",
+        "high": "Blood with straining, no urine output, vomiting, collapse, or suspected poisoning - emergency vet"
+      },
+      "red_flags": [
+        "Inability to urinate (blockage emergency)",
+        "Severe pain when urinating",
+        "Vomiting with bloody urine",
+        "Collapse or severe lethargy",
+        "Other bleeding (nose, gums, bruises - possible poisoning)",
+        "Recent possible rat bait exposure"
+      ],
+      "combinations": [
+        {"with": ["straining", "frequent_urination"], "concern": "Likely UTI or stones - vet within 24h"},
+        {"with": ["bleeding_elsewhere"], "concern": "Possible clotting disorder or poisoning - emergency vet"},
+        {"with": ["vomiting", "lethargy"], "concern": "Possible kidney or urinary obstruction - urgent vet"}
+      ],
+      "sources": ["PDSA", "VCA", "MSD"]
+    },
+
+    {
+      "id": "dog_018",
+      "symptom": "Constipation",
+      "aliases": ["unable to poo", "straining to defecate", "hard stool"],
+      "category": "Gastrointestinal",
+      "description": "Difficulty passing stool, straining without success, or absence of bowel movements for more than 48 hours.",
+      "possible_causes": [
+        {"condition": "Dietary issue (low fibre, dehydration)", "likelihood": "common", "brief": "Including too many bones"},
+        {"condition": "Eating non-food items", "likelihood": "common", "brief": "Hair, bones, sticks, fabric"},
+        {"condition": "Foreign body obstruction", "likelihood": "occasional", "brief": "Toy, stone, sock"},
+        {"condition": "Enlarged prostate (males)", "likelihood": "occasional", "brief": "Unneutered older males"},
+        {"condition": "Anal gland issues", "likelihood": "occasional", "brief": "Impacted glands cause pain when pooing"},
+        {"condition": "Neurological problems", "likelihood": "occasional", "brief": "Spinal injury or disease"},
+        {"condition": "Megacolon", "likelihood": "rare", "brief": "Stretched, weak colon"}
+      ],
+      "home_care": [
+        "Increase water intake (add water to food)",
+        "Add a tablespoon of plain pumpkin purée (not pie filling) to meals",
+        "Brief gentle exercise to stimulate bowel",
+        "Check anal area for matted fur or pain",
+        "Don't give human laxatives without vet advice",
+        "Monitor for any output and condition of stool"
+      ],
+      "vet_urgency": {
+        "low": "One missed bowel movement, dog otherwise well - monitor 24-48h",
+        "medium": "No movement for 48+ hours or persistent straining - vet appointment",
+        "high": "Straining with vomiting, pain, bloated abdomen, or suspected foreign body - urgent vet"
+      },
+      "red_flags": [
+        "Bloated, painful abdomen",
+        "Vomiting with constipation",
+        "Lethargy and weakness",
+        "Straining with no result and severe distress",
+        "Blood near anus",
+        "Known ingestion of foreign object"
+      ],
+      "combinations": [
+        {"with": ["vomiting", "bloated_abdomen"], "concern": "Possible obstruction - emergency vet"},
+        {"with": ["straining_repeatedly"], "concern": "May actually be urinary blockage - check"},
+        {"with": ["scooting", "bad_smell"], "concern": "Possible anal gland issue - vet visit"}
+      ],
+      "sources": ["PDSA", "ASPCA", "VCA"]
+    },
+
+    {
+      "id": "dog_019",
+      "symptom": "Hair loss",
+      "aliases": ["bald patches", "thinning fur", "alopecia", "shedding excessively"],
+      "category": "Skin / Endocrine",
+      "description": "Patchy or generalised loss of fur, or coat becoming noticeably thinner.",
+      "possible_causes": [
+        {"condition": "Allergies (food, environmental)", "likelihood": "very common", "brief": "Often with itching"},
+        {"condition": "Fleas / parasites", "likelihood": "common", "brief": "Especially flea allergy dermatitis"},
+        {"condition": "Mange (sarcoptic, demodectic)", "likelihood": "common", "brief": "Mites - very itchy"},
+        {"condition": "Ringworm (fungal)", "likelihood": "occasional", "brief": "Circular bald patches; contagious to humans"},
+        {"condition": "Hypothyroidism", "likelihood": "common", "brief": "Symmetrical hair loss on flanks; usually no itching"},
+        {"condition": "Cushing's disease", "likelihood": "occasional", "brief": "Thin skin, pot belly, increased thirst"},
+        {"condition": "Pressure points / friction", "likelihood": "common", "brief": "Elbow calluses in larger breeds"}
+      ],
+      "home_care": [
+        "Check for fleas with flea comb",
+        "Apply flea treatment (vet-approved)",
+        "Photograph bald areas to track progression",
+        "Note if itchy or not (key diagnostic clue)",
+        "Bathe with mild hypoallergenic shampoo if irritated",
+        "Keep environment clean and reduce stress"
+      ],
+      "vet_urgency": {
+        "low": "Mild seasonal shedding - normal",
+        "medium": "Patches of hair loss persistent over weeks - vet appointment",
+        "high": "Rapid widespread loss with skin damage or systemic illness signs - urgent vet"
+      },
+      "red_flags": [
+        "Combined with severe itching and skin damage",
+        "Crusty, smelly, infected skin",
+        "Combined with weight changes and lethargy",
+        "Multiple pets in house affected (contagious)",
+        "Family members developing skin lesions (ringworm)",
+        "Symmetric pattern on both sides of body (hormonal)"
+      ],
+      "combinations": [
+        {"with": ["weight_gain", "lethargy"], "concern": "Likely hypothyroidism - vet bloodwork"},
+        {"with": ["increased_thirst", "thin_skin"], "concern": "Possible Cushing's - vet bloodwork"},
+        {"with": ["intense_itching"], "concern": "Likely allergy or parasitic - vet visit"}
+      ],
+      "sources": ["PDSA", "VCA", "ASPCA"]
+    },
+
+    {
+      "id": "dog_020",
+      "symptom": "Hot spots / skin irritation",
+      "aliases": ["acute moist dermatitis", "raw patch", "inflamed skin"],
+      "category": "Skin",
+      "description": "A red, moist, painful patch of irritated skin, often caused by intense licking or scratching of one area.",
+      "possible_causes": [
+        {"condition": "Allergies (atopy)", "likelihood": "very common", "brief": "Often the underlying cause"},
+        {"condition": "Flea bite reaction", "likelihood": "common", "brief": "Single flea can trigger in allergic dogs"},
+        {"condition": "Matted fur (especially in long coats)", "likelihood": "common", "brief": "Moisture trapped under mats"},
+        {"condition": "Bacterial infection", "likelihood": "common", "brief": "Often secondary to other causes"},
+        {"condition": "Anal gland issues", "likelihood": "occasional", "brief": "Causes licking of rear/tail base"},
+        {"condition": "Boredom or anxiety licking", "likelihood": "occasional", "brief": "Acral lick dermatitis"}
+      ],
+      "home_care": [
+        "Carefully clip fur around the hot spot to expose air",
+        "Clean gently with cooled boiled water or saline",
+        "Apply Elizabethan collar to prevent further licking",
+        "Avoid creams not specifically vet-approved",
+        "Treat fleas if present",
+        "Keep area dry and clean"
+      ],
+      "vet_urgency": {
+        "low": "Tiny, dry, healing area - clean and monitor",
+        "medium": "Spreading, weeping, painful spot - vet appointment within 1-2 days",
+        "high": "Large infected area with pus, fever, or systemic signs - urgent vet"
+      },
+      "red_flags": [
+        "Rapid spread within hours",
+        "Yellow/green pus discharge",
+        "Foul smell",
+        "Combined with fever or lethargy",
+        "Dog cannot stop licking despite cone",
+        "Recurrent hot spots in same location"
+      ],
+      "combinations": [
+        {"with": ["fleas"], "concern": "Flea allergy dermatitis - need rigorous flea control"},
+        {"with": ["scooting", "anal_licking"], "concern": "Anal gland issue - vet to express"},
+        {"with": ["intense_itching", "hair_loss"], "concern": "Allergy diagnosis needed - vet visit"}
+      ],
+      "sources": ["PDSA", "ASPCA", "VCA"]
+    },
+
+    {
+      "id": "dog_021",
+      "symptom": "Pale gums",
+      "aliases": ["white gums", "blue gums", "pale mucous membranes"],
+      "category": "Cardiovascular / Systemic - URGENT",
+      "description": "Gums appear paler than normal (should be salmon pink). May be white, grey, blue, or yellow. ALWAYS a concerning sign.",
+      "possible_causes": [
+        {"condition": "Internal bleeding", "likelihood": "occasional but critical", "brief": "Trauma, tumour rupture, anticoagulant poisoning"},
+        {"condition": "Anaemia", "likelihood": "occasional", "brief": "Reduced red blood cells from various causes"},
+        {"condition": "Shock", "likelihood": "occasional", "brief": "From blood loss, dehydration, or sepsis"},
+        {"condition": "Severe dehydration", "likelihood": "common in sick dogs", "brief": "Tacky/dry gums also"},
+        {"condition": "Heart failure", "likelihood": "occasional", "brief": "Poor circulation"},
+        {"condition": "Poisoning (rat bait, onions, etc.)", "likelihood": "occasional", "brief": "Always consider"},
+        {"condition": "Cyanosis (blue gums - oxygen lack)", "likelihood": "rare", "brief": "Respiratory or cardiac failure"}
+      ],
+      "home_care": [
+        "Pale or coloured gums are an EMERGENCY - go to vet immediately",
+        "Note any other symptoms (lethargy, breathing, recent injury)",
+        "Check capillary refill: press gum, should return to pink within 2 seconds",
+        "Keep dog warm and calm during transport",
+        "Do not give food or water if collapse possible",
+        "Bring any suspected toxins to vet"
+      ],
+      "vet_urgency": {
+        "low": "(no low category - this is always urgent)",
+        "medium": "Slightly pale but dog stable - same-day vet appointment",
+        "high": "White, blue, grey, or yellow gums - EMERGENCY vet immediately"
+      },
+      "red_flags": [
+        "Any gum discolouration is a red flag in itself",
+        "Combined with collapse, weakness, or breathing difficulty",
+        "Capillary refill time longer than 2 seconds",
+        "Recent trauma",
+        "Suspected toxin ingestion",
+        "Distended abdomen (possible internal bleeding)"
+      ],
+      "combinations": [
+        {"with": ["collapse"], "concern": "Possible shock or severe bleeding - emergency"},
+        {"with": ["distended_abdomen"], "concern": "Possible internal bleeding (e.g. ruptured spleen) - emergency"},
+        {"with": ["breathing_difficulty"], "concern": "Cardiac or respiratory emergency"}
+      ],
+      "sources": ["PDSA", "VCA", "ASPCA"]
+    },
+
+    {
+      "id": "dog_022",
+      "symptom": "Seizures",
+      "aliases": ["fit", "convulsion", "fitting", "epilepsy"],
+      "category": "Neurological - URGENT",
+      "description": "Involuntary muscle activity ranging from twitching to full collapse with loss of consciousness, paddling, drooling, and loss of bladder/bowel control.",
+      "possible_causes": [
+        {"condition": "Idiopathic epilepsy", "likelihood": "common", "brief": "Most common cause; onset typically 6 months to 6 years"},
+        {"condition": "Toxin exposure", "likelihood": "occasional", "brief": "Slug bait, chocolate, xylitol, antifreeze"},
+        {"condition": "Liver disease", "likelihood": "occasional", "brief": "Especially in young dogs (portosystemic shunt)"},
+        {"condition": "Brain tumour", "likelihood": "occasional", "brief": "Especially new seizures in older dogs"},
+        {"condition": "Hypoglycaemia", "likelihood": "occasional", "brief": "Especially in puppies and toy breeds"},
+        {"condition": "Head trauma", "likelihood": "occasional", "brief": "Recent injury"},
+        {"condition": "Encephalitis", "likelihood": "rare", "brief": "Brain inflammation, infectious or autoimmune"}
+      ],
+      "home_care": [
+        "Stay calm; do NOT put hands near mouth - dog will not swallow tongue",
+        "Move furniture or hazards away to prevent injury",
+        "Time the seizure - over 5 minutes is emergency",
+        "Dim lights and keep environment quiet",
+        "Cool the dog if hot (a seizure raises body temperature)",
+        "Note triggers, time, and what happened",
+        "Allow recovery time in safe space afterwards"
+      ],
+      "vet_urgency": {
+        "low": "(no low category - all seizures need vet assessment)",
+        "medium": "First-ever seizure that lasted less than 2 minutes, dog now recovered - vet within 24h",
+        "high": "Seizure lasting more than 5 minutes, multiple seizures in 24 hours, or seizure followed by other illness signs - EMERGENCY vet immediately"
+      },
+      "red_flags": [
+        "Single seizure lasting more than 5 minutes (status epilepticus)",
+        "Two or more seizures in 24 hours (cluster seizures)",
+        "Difficulty recovering after seizure",
+        "Suspected toxin ingestion",
+        "First seizure in dog over 5 years old (rule out brain tumour)",
+        "Combined with vomiting, fever, or unusual behaviour"
+      ],
+      "combinations": [
+        {"with": ["recent_toxin_exposure"], "concern": "Toxicity - emergency vet with toxin info"},
+        {"with": ["disorientation_persists"], "concern": "Severe brain event - emergency vet"},
+        {"with": ["fever"], "concern": "Possible encephalitis - emergency vet"}
+      ],
+      "sources": ["PDSA", "ASPCA", "VCA"]
+    },
+
+    {
+      "id": "dog_023",
+      "symptom": "Excessive panting",
+      "aliases": ["heavy breathing", "puffing", "panting at rest"],
+      "category": "Respiratory / Systemic",
+      "description": "Heavy, rapid open-mouth breathing beyond what would be expected from heat or exercise.",
+      "possible_causes": [
+        {"condition": "Heat / exercise (normal)", "likelihood": "very common", "brief": "Normal cooling mechanism"},
+        {"condition": "Heatstroke", "likelihood": "common in summer", "brief": "EMERGENCY - especially flat-faced breeds"},
+        {"condition": "Pain", "likelihood": "common", "brief": "Anywhere in the body; dogs pant when in pain"},
+        {"condition": "Anxiety / stress", "likelihood": "common", "brief": "Thunder, fireworks, vet visits"},
+        {"condition": "Heart disease", "likelihood": "common in older dogs", "brief": "Especially with coughing"},
+        {"condition": "Cushing's disease", "likelihood": "occasional", "brief": "Plus pot belly, thinning skin"},
+        {"condition": "Steroid medication", "likelihood": "common side effect", "brief": "Prednisolone causes panting"}
+      ],
+      "home_care": [
+        "Move to cool, shaded area",
+        "Offer cool (not icy) water",
+        "Apply damp towel to belly and paws",
+        "Use a fan if available",
+        "Note ambient temperature and time of onset",
+        "Check gum colour (pink and moist normal)"
+      ],
+      "vet_urgency": {
+        "low": "After exercise or in warm weather, resolves with rest - normal",
+        "medium": "Panting at rest, in cool environment, lasting more than an hour - vet appointment",
+        "high": "Severe panting with collapse, vomiting, or in extreme heat - EMERGENCY (likely heatstroke)"
+      },
+      "red_flags": [
+        "Body temperature over 40°C (104°F)",
+        "Drooling thick saliva or foaming",
+        "Bright red or blue gums",
+        "Vomiting or diarrhoea with panting",
+        "Collapse, weakness, or disorientation",
+        "Panting with limping or pain signs"
+      ],
+      "combinations": [
+        {"with": ["high_temperature", "collapse"], "concern": "Heatstroke - cool slowly, emergency vet"},
+        {"with": ["coughing", "exercise_intolerance"], "concern": "Heart disease - vet within 24h"},
+        {"with": ["pot_belly", "increased_thirst"], "concern": "Cushing's - vet bloodwork"}
+      ],
+      "sources": ["PDSA", "VCA", "BlueCross"]
+    },
+
+    {
+      "id": "dog_024",
+      "symptom": "Disorientation / circling",
+      "aliases": ["confused", "wobbly", "head pressing", "circling"],
+      "category": "Neurological - URGENT",
+      "description": "Unusual behaviour including circling, head pressing against walls, getting stuck in corners, staring blankly, or appearing confused.",
+      "possible_causes": [
+        {"condition": "Vestibular disease (old dog vestibular)", "likelihood": "common in older dogs", "brief": "Sudden head tilt, circling, nausea; often improves"},
+        {"condition": "Inner ear infection", "likelihood": "common", "brief": "Often with head tilt"},
+        {"condition": "Brain tumour", "likelihood": "occasional", "brief": "Older dogs, gradual progression"},
+        {"condition": "Stroke (cerebrovascular event)", "likelihood": "occasional", "brief": "Sudden onset"},
+        {"condition": "Toxin / poisoning", "likelihood": "occasional", "brief": "Always consider"},
+        {"condition": "Liver shunt (young dogs)", "likelihood": "occasional", "brief": "Especially small breeds, gets worse after meals"},
+        {"condition": "Canine cognitive dysfunction", "likelihood": "common in seniors", "brief": "Doggy dementia; gradual onset"}
+      ],
+      "home_care": [
+        "Confine to small, safe area to prevent injury",
+        "Remove hazards (stairs, sharp edges)",
+        "Speak calmly and reassure",
+        "Do not force food/water if very disoriented",
+        "Note all symptoms and timing",
+        "Do not let outside unsupervised"
+      ],
+      "vet_urgency": {
+        "low": "(no low category for new disorientation)",
+        "medium": "Mild confusion in senior dog, possible cognitive dysfunction - vet appointment",
+        "high": "Sudden disorientation, head tilt, circling, head pressing, or after possible toxin exposure - urgent vet"
+      },
+      "red_flags": [
+        "Head pressing against walls (often serious brain disease)",
+        "Sudden complete change in behaviour",
+        "Seizures",
+        "Vomiting with disorientation",
+        "Eyes flicking side to side (nystagmus)",
+        "Recent possible toxin exposure"
+      ],
+      "combinations": [
+        {"with": ["head_tilt", "vomiting"], "concern": "Vestibular disease - vet within 24h"},
+        {"with": ["seizures"], "concern": "Serious brain event - emergency vet"},
+        {"with": ["head_pressing"], "concern": "Liver disease, brain tumour, or toxicity - urgent vet"}
+      ],
+      "sources": ["PDSA", "VCA", "AMC"]
+    },
+
+    {
+      "id": "dog_025",
+      "symptom": "Sudden collapse",
+      "aliases": ["fainted", "passed out", "syncope", "fell over"],
+      "category": "Cardiovascular / Neurological - EMERGENCY",
+      "description": "Sudden loss of strength causing the dog to fall down, which may or may not include loss of consciousness.",
+      "possible_causes": [
+        {"condition": "Heart arrhythmia / syncope", "likelihood": "common in older dogs", "brief": "Brief faint with quick recovery"},
+        {"condition": "Internal bleeding (e.g. ruptured spleen)", "likelihood": "occasional", "brief": "Pale gums, weakness"},
+        {"condition": "Heatstroke", "likelihood": "common in summer", "brief": "Emergency in warm weather"},
+        {"condition": "Anaphylaxis", "likelihood": "occasional", "brief": "Insect sting, vaccine reaction"},
+        {"condition": "Hypoglycaemia", "likelihood": "occasional", "brief": "Especially puppies, toy breeds, diabetics"},
+        {"condition": "GDV (bloat)", "likelihood": "occasional but critical", "brief": "Large breeds; distended abdomen"},
+        {"condition": "Stroke / seizure", "likelihood": "occasional", "brief": "Sudden neurological event"},
+        {"condition": "Severe pain", "likelihood": "occasional", "brief": "Including disc disease"}
+      ],
+      "home_care": [
+        "Sudden collapse is ALWAYS an emergency - call vet immediately while preparing to transport",
+        "Keep dog calm, warm, and on their side if possible",
+        "Note time of collapse, surroundings, recent activity",
+        "Check gum colour and breathing",
+        "Do not offer food or water",
+        "Note any recent toxin exposure or food",
+        "Transport to vet as fast as safely possible"
+      ],
+      "vet_urgency": {
+        "low": "(no low category - all collapse is emergency)",
+        "medium": "Brief faint with rapid full recovery (less than 30 seconds) - vet within 24h",
+        "high": "Any collapse with prolonged unconsciousness, pale gums, breathing changes, or in summer heat - EMERGENCY immediately"
+      },
+      "red_flags": [
+        "Loss of consciousness for more than 30 seconds",
+        "Pale, blue, or grey gums",
+        "Distended, bloated abdomen",
+        "Difficulty breathing",
+        "Seizure activity",
+        "Recent insect sting or vaccine",
+        "High body temperature (heatstroke)",
+        "Inability to stand after recovery"
+      ],
+      "combinations": [
+        {"with": ["pale_gums", "distended_abdomen"], "concern": "Possible internal bleeding (e.g. splenic mass rupture) - emergency"},
+        {"with": ["bloated_belly", "retching"], "concern": "GDV - emergency vet immediately"},
+        {"with": ["facial_swelling"], "concern": "Anaphylaxis - emergency vet"},
+        {"with": ["hot_weather"], "concern": "Heatstroke - cool slowly, emergency vet"}
+      ],
+      "sources": ["PDSA", "VCA", "ASPCA", "AMC"]
+    }
+  ]
+}

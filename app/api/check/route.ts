@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
+import { buildContext, getVerifiedSources } from "@/lib/pawcheck-library/buildContext";
 
 interface CheckRequest {
   pet: string;
@@ -13,17 +14,19 @@ interface CheckResult {
   sources: string[];
   urgencyLevel: "low" | "medium" | "high";
   urgencyMessage: string;
+  grounded?: boolean;
 }
 
-const SYSTEM_PROMPT = `You are PawCheck, a friendly and knowledgeable pet health assistant.
+const BASE_SYSTEM_PROMPT = `You are PawCheck, a friendly and knowledgeable pet health assistant.
 You provide clear, accurate, and compassionate advice to pet owners based
 on their pet's symptoms. Always recommend seeing a vet for serious concerns.
 Never use em dashes (—) in your writing; use commas, periods, or "and"/"so" instead.
+Never give a definitive diagnosis or specific medication dosages.
 Structure your response as JSON only, no markdown, exactly matching this schema:
 {
   likelyCauses: string[],        // 2-3 plain English possible causes
   homeAdvice: string[],          // 3-4 actionable tips
-  sources: string[],             // 3 reference names e.g. 'PetMD', 'AVMA', 'VCA Hospitals'
+  sources: string[],             // reference names actually used from the supplied reference material, if any
   urgencyLevel: 'low' | 'medium' | 'high',
   urgencyMessage: string         // one sentence, only shown if high
 }`;
@@ -65,11 +68,14 @@ export async function POST(req: NextRequest) {
     return NextResponse.json(cached);
   }
 
+  const { context, matchedEntries, isEmergencyCategory, toxinDetected } = buildContext({ pet, symptoms, severity });
+  const systemPrompt = context ? `${BASE_SYSTEM_PROMPT}\n\n${context}` : BASE_SYSTEM_PROMPT;
+
   try {
     const message = await anthropic.messages.create({
       model: "claude-haiku-4-5-20251001",
-      max_tokens: 600,
-      system: SYSTEM_PROMPT,
+      max_tokens: 700,
+      system: systemPrompt,
       messages: [
         {
           role: "user",
@@ -90,10 +96,20 @@ export async function POST(req: NextRequest) {
 
     const result = JSON.parse(cleaned) as CheckResult;
 
-    if (severity > 7) {
+    if (matchedEntries.length > 0) {
+      const verifiedSources = getVerifiedSources({ pet, symptoms });
+      if (verifiedSources.length > 0) {
+        result.sources = verifiedSources;
+        result.grounded = true;
+      }
+    }
+
+    if (severity > 7 || isEmergencyCategory || toxinDetected) {
       result.urgencyLevel = "high";
       if (!result.urgencyMessage) {
-        result.urgencyMessage = "Based on the severity, we recommend contacting a vet immediately.";
+        result.urgencyMessage = toxinDetected
+          ? "Possible poisoning: call the UK Animal Poison Line (01202 509000) or a vet immediately."
+          : "Based on the severity, we recommend contacting a vet immediately.";
       }
     }
 
@@ -106,7 +122,7 @@ export async function POST(req: NextRequest) {
         likelyCauses: ["We couldn't generate advice right now."],
         homeAdvice: ["If your pet seems unwell, please contact a vet for guidance."],
         sources: [],
-        urgencyLevel: severity > 7 ? "high" : "medium",
+        urgencyLevel: severity > 7 || isEmergencyCategory || toxinDetected ? "high" : "medium",
         urgencyMessage: "We recommend contacting a vet to be safe.",
       } satisfies CheckResult,
       { status: 200 }

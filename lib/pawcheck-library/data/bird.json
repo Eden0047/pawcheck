@@ -1,0 +1,525 @@
+{
+  "pet": "bird",
+  "display_name": "Bird",
+  "emoji": "🐦",
+  "version": "1.0.0",
+  "total_symptoms": 13,
+  "sources_summary": ["VCA Hospitals", "Cornell Lab of Ornithology", "PDSA", "MSD Vet Manual", "Beauty of Birds"],
+  "notes": "Birds instinctively mask illness as a survival behaviour. By the time symptoms are visible, the bird is often seriously unwell. Always err on the side of caution and contact an avian-experienced vet quickly.",
+  "symptoms": [
+    {
+      "id": "bird_001",
+      "symptom": "Fluffed feathers (puffed up)",
+      "aliases": ["puffed up", "fluffed up", "feathers ruffled"],
+      "category": "General illness",
+      "description": "Bird sits with feathers fluffed out to trap warm air, often hunched on a perch or on the cage floor. A classic sign of an unwell bird.",
+      "possible_causes": [
+        {"condition": "Infection (bacterial, viral, fungal)", "likelihood": "very common", "brief": "Body is trying to keep warm while fighting illness"},
+        {"condition": "Chill / cold environment", "likelihood": "common", "brief": "Cage near a draught or in a cold room"},
+        {"condition": "Pain or internal illness", "likelihood": "common", "brief": "Bird is conserving energy"},
+        {"condition": "Egg-binding (females)", "likelihood": "occasional", "brief": "Trouble passing an egg, can be life-threatening"},
+        {"condition": "Heavy metal toxicity", "likelihood": "occasional", "brief": "Lead or zinc poisoning from cage parts, toys, or paint"}
+      ],
+      "home_care": [
+        "Move cage to a warm, draught-free room (around 25-29°C)",
+        "Cover three sides of the cage to reduce stress and retain heat",
+        "Offer favourite foods to encourage eating",
+        "Ensure fresh water is easy to reach",
+        "Limit handling - rest is critical",
+        "Note any other symptoms (droppings, breathing, posture) to share with the vet"
+      ],
+      "vet_urgency": {
+        "low": "Briefly fluffed when resting or sleeping, otherwise active and eating - keep observing",
+        "medium": "Fluffed for several hours, slightly less active - phone an avian vet today",
+        "high": "Fluffed continuously, on cage floor, eyes closed, not eating - emergency avian vet immediately"
+      },
+      "red_flags": [
+        "Sitting on the cage floor",
+        "Eyes closed during the day",
+        "Not eating or drinking",
+        "Visibly laboured breathing",
+        "Any droppings change (colour, consistency, or none at all)"
+      ],
+      "combinations": [
+        {"with": ["not_eating", "lethargy"], "concern": "Serious systemic illness - urgent avian vet"},
+        {"with": ["tail_bobbing", "open_mouth_breathing"], "concern": "Respiratory infection or airway disease - EMERGENCY"},
+        {"with": ["runny_droppings"], "concern": "Possible infection or toxicity - vet within 24h"}
+      ],
+      "sources": ["VCA Hospitals", "PDSA", "Beauty of Birds"]
+    },
+    {
+      "id": "bird_002",
+      "symptom": "Feather plucking / chewing",
+      "aliases": ["feather picking", "self-mutilation", "barbering"],
+      "category": "Behavioural / Skin",
+      "description": "Bird repeatedly pulls out, chews, or damages its own feathers, often leaving bald patches on the chest, legs, or under the wings (the head is rarely affected because birds cannot reach it).",
+      "possible_causes": [
+        {"condition": "Boredom or lack of stimulation", "likelihood": "very common", "brief": "Most common in parrots kept alone with few toys"},
+        {"condition": "Stress or anxiety", "likelihood": "very common", "brief": "Changes at home, new pets, loud noises, isolation"},
+        {"condition": "Skin infection or parasites", "likelihood": "common", "brief": "Itchy skin from mites, lice, or fungal/bacterial infection"},
+        {"condition": "Low humidity / dry skin", "likelihood": "common", "brief": "Especially for tropical species in centrally heated homes"},
+        {"condition": "Hormonal behaviour", "likelihood": "occasional", "brief": "Breeding season frustration"},
+        {"condition": "Nutritional deficiency", "likelihood": "occasional", "brief": "Seed-only diets lacking vitamins or minerals"},
+        {"condition": "Liver or systemic disease", "likelihood": "occasional", "brief": "Can cause feather damage and poor quality"}
+      ],
+      "home_care": [
+        "Provide foraging toys, puzzle feeders, and rotate toys regularly",
+        "Increase out-of-cage time and one-to-one interaction daily",
+        "Mist or shower the bird (lukewarm water spray) to improve skin and feather health",
+        "Move the cage somewhere quieter if stress seems to be a trigger",
+        "Improve diet: add fresh vegetables and a quality pellet if currently seed-only",
+        "Keep a diary of when plucking happens to identify triggers"
+      ],
+      "vet_urgency": {
+        "low": "Mild, intermittent plucking, no broken skin - try environmental changes first, see vet if no improvement in 2-3 weeks",
+        "medium": "Persistent plucking, visible bald patches, possible skin irritation - avian vet within 1-2 weeks",
+        "high": "Self-mutilation drawing blood, open wounds, sudden severe onset - urgent avian vet"
+      },
+      "red_flags": [
+        "Bleeding from skin or feather follicles",
+        "Open sores or infected-looking patches",
+        "Sudden severe onset (hours to days)",
+        "Weight loss alongside plucking"
+      ],
+      "combinations": [
+        {"with": ["weight_loss", "lethargy"], "concern": "Possible underlying systemic illness - vet investigation needed"},
+        {"with": ["skin_redness", "scabs"], "concern": "Infection or severe self-mutilation - avian vet urgently"}
+      ],
+      "sources": ["VCA Hospitals", "Cornell Lab of Ornithology", "MSD Vet Manual"]
+    },
+    {
+      "id": "bird_003",
+      "symptom": "Nasal or eye discharge",
+      "aliases": ["runny nose", "wet nostrils", "watery eyes", "discharge"],
+      "category": "Respiratory",
+      "description": "Wet or crusty discharge around the nares (nostrils on top of the beak) or eyes. Healthy bird nares are clean and dry.",
+      "possible_causes": [
+        {"condition": "Respiratory infection (bacterial, viral, fungal)", "likelihood": "very common", "brief": "Including chlamydia (psittacosis) which can spread to humans"},
+        {"condition": "Vitamin A deficiency", "likelihood": "common", "brief": "Common in seed-only diets, weakens respiratory lining"},
+        {"condition": "Dusty or smoky environment", "likelihood": "common", "brief": "Air fresheners, cigarette smoke, dusty bedding"},
+        {"condition": "Allergies or irritants", "likelihood": "occasional", "brief": "Cleaning chemicals, scented candles"},
+        {"condition": "Sinus infection", "likelihood": "occasional", "brief": "Often follows untreated upper respiratory illness"}
+      ],
+      "home_care": [
+        "Remove any airborne irritants (aerosols, candles, smoke, scented plug-ins)",
+        "Improve air quality - some owners use HEPA filters near the cage",
+        "Keep the bird warm (around 27°C if unwell)",
+        "Add vitamin A rich foods: dark leafy greens, sweet potato, carrot",
+        "Do not attempt to clean inside the nostrils",
+        "Isolate from other birds in case of contagious illness"
+      ],
+      "vet_urgency": {
+        "low": "Brief sneeze with clear droplet, otherwise well - monitor for 24-48 hours",
+        "medium": "Persistent clear discharge or repeated sneezing - avian vet within a few days",
+        "high": "Thick, coloured, or crusty discharge, blocked nostrils, or breathing difficulty - urgent avian vet"
+      },
+      "red_flags": [
+        "Discoloured discharge (green, yellow, brown)",
+        "Crust blocking the nostrils",
+        "Tail bobbing or open-mouth breathing",
+        "Lethargy or fluffed feathers alongside",
+        "Other birds in household also showing signs"
+      ],
+      "combinations": [
+        {"with": ["sneezing", "fluffed_feathers"], "concern": "Likely respiratory infection - vet care needed"},
+        {"with": ["open_mouth_breathing", "tail_bobbing"], "concern": "Advanced respiratory disease - EMERGENCY"}
+      ],
+      "sources": ["VCA Hospitals", "PDSA", "Cornell Lab of Ornithology"]
+    },
+    {
+      "id": "bird_004",
+      "symptom": "Not eating",
+      "aliases": ["loss of appetite", "anorexia", "refusing food"],
+      "category": "Gastrointestinal / General illness",
+      "description": "Bird is not eating, or eating noticeably less than normal. Critical to act quickly because small birds can deteriorate within hours of stopping eating.",
+      "possible_causes": [
+        {"condition": "Illness (infection, organ disease)", "likelihood": "very common", "brief": "Reduced appetite is one of the first signs of any illness"},
+        {"condition": "Sudden diet change", "likelihood": "common", "brief": "Birds can be reluctant to try unfamiliar foods"},
+        {"condition": "Stress (new home, new pet, loud noises)", "likelihood": "common", "brief": "Suppresses appetite"},
+        {"condition": "Beak overgrowth or injury", "likelihood": "occasional", "brief": "Mechanical difficulty eating"},
+        {"condition": "Egg-binding (females)", "likelihood": "occasional", "brief": "Reproductive emergency"},
+        {"condition": "Heavy metal or toxin exposure", "likelihood": "occasional", "brief": "Can suppress appetite quickly"}
+      ],
+      "home_care": [
+        "Offer favourite foods (e.g. millet spray, small piece of fruit)",
+        "Warm the bird (around 27-29°C) - cold birds will not eat",
+        "Ensure perches and bowls are at comfortable height",
+        "Reduce environmental stress (cover sides of cage, dim lights, quiet area)",
+        "Weigh daily on a kitchen gram scale - any loss is significant",
+        "Do not force-feed - this can cause aspiration"
+      ],
+      "vet_urgency": {
+        "low": "Briefly reduced appetite for under 12 hours, otherwise bright - keep observing closely",
+        "medium": "Eating much less than normal for 12-24 hours - phone an avian vet today",
+        "high": "Not eating at all for 24+ hours (or 12+ hours in a small bird like a budgie or finch) - emergency avian vet"
+      },
+      "red_flags": [
+        "Small bird (budgie, canary, finch) not eating for 12+ hours",
+        "Visible weight loss or prominent breastbone (keel)",
+        "Lethargy, fluffed feathers, or on cage floor",
+        "No droppings or very reduced droppings"
+      ],
+      "combinations": [
+        {"with": ["fluffed_feathers", "lethargy"], "concern": "Serious illness - urgent avian vet"},
+        {"with": ["weight_loss", "discoloured_droppings"], "concern": "Significant illness or organ disease - urgent vet investigation"}
+      ],
+      "sources": ["VCA Hospitals", "PDSA", "MSD Vet Manual"]
+    },
+    {
+      "id": "bird_005",
+      "symptom": "Lethargy / on cage floor",
+      "aliases": ["weakness", "inactive", "sitting on floor", "not perching"],
+      "category": "General illness",
+      "description": "Bird is unusually quiet, sluggish, or unwilling to perch. Sitting on the cage floor is a serious sign in most species (some healthy parrots do play on the floor, but persistent floor-sitting is concerning).",
+      "possible_causes": [
+        {"condition": "Severe illness (infection, organ disease)", "likelihood": "very common", "brief": "Lethargy is a late-stage sign in birds"},
+        {"condition": "Toxin exposure", "likelihood": "common", "brief": "PTFE/Teflon fumes, heavy metals, plant toxins"},
+        {"condition": "Injury or pain", "likelihood": "common", "brief": "Sprain, fracture, or internal injury"},
+        {"condition": "Egg-binding (females)", "likelihood": "occasional", "brief": "Emergency - bird may strain on cage floor"},
+        {"condition": "Hypothermia", "likelihood": "occasional", "brief": "Cold draughts or low room temperature"}
+      ],
+      "home_care": [
+        "Warm the bird immediately - move to a warm room, cover the cage sides",
+        "Remove high perches that the bird might fall from",
+        "Place food and water within easy reach on the cage floor",
+        "Reduce stress - quiet environment, no handling unless essential",
+        "Check for any obvious injury, broken feathers, or bleeding",
+        "Prepare to transport to an avian vet"
+      ],
+      "vet_urgency": {
+        "low": "Briefly quiet after a meal or in the evening, otherwise normal - monitor",
+        "medium": "Notably less active than normal for several hours - phone an avian vet today",
+        "high": "On cage floor, eyes closed, fluffed feathers, or unresponsive - EMERGENCY avian vet"
+      },
+      "red_flags": [
+        "Unable or unwilling to perch",
+        "Eyes closed during the day",
+        "Not responding to your voice or movement",
+        "Visible breathing effort",
+        "Any sign of egg-binding in a female (straining, swollen abdomen)"
+      ],
+      "combinations": [
+        {"with": ["fluffed_feathers", "not_eating"], "concern": "Critical illness - EMERGENCY"},
+        {"with": ["open_mouth_breathing"], "concern": "Possible respiratory failure or toxin exposure - EMERGENCY"}
+      ],
+      "sources": ["VCA Hospitals", "PDSA", "Cornell Lab of Ornithology"]
+    },
+    {
+      "id": "bird_006",
+      "symptom": "Tail bobbing",
+      "aliases": ["tail pumping", "tail movement when breathing"],
+      "category": "Respiratory",
+      "description": "Bird's tail moves up and down with each breath, indicating laboured breathing. Always a serious sign because birds normally breathe almost invisibly.",
+      "possible_causes": [
+        {"condition": "Respiratory infection (lower airway, lungs, air sacs)", "likelihood": "very common", "brief": "Bacterial, fungal (aspergillosis), or viral"},
+        {"condition": "Aspergillosis (fungal lung disease)", "likelihood": "common", "brief": "Common in stressed or immunocompromised birds"},
+        {"condition": "Air sac mites (especially canaries, finches)", "likelihood": "common", "brief": "Parasitic infection of the respiratory tract"},
+        {"condition": "Inhaled toxin (PTFE/Teflon, smoke, aerosol)", "likelihood": "occasional", "brief": "Non-stick cookware fumes are rapidly fatal to birds"},
+        {"condition": "Egg-binding (females)", "likelihood": "occasional", "brief": "Pressure on air sacs"},
+        {"condition": "Heart disease", "likelihood": "occasional", "brief": "More common in older or overweight birds"}
+      ],
+      "home_care": [
+        "Move to a warm, calm environment - do not handle unless absolutely necessary",
+        "Remove any potential airborne toxins immediately (turn off non-stick pans, candles, aerosols)",
+        "Ensure good ventilation but no draughts",
+        "Do not stress the bird - chase or restraint can be fatal in respiratory distress",
+        "Contact an avian vet immediately"
+      ],
+      "vet_urgency": {
+        "low": "Mild tail movement only after exertion, settling quickly - still warrants a vet call",
+        "medium": "Persistent tail bobbing at rest - urgent avian vet within hours",
+        "high": "Tail bobbing with open-mouth breathing, fluffed feathers, or weakness - EMERGENCY"
+      },
+      "red_flags": [
+        "Open beak breathing",
+        "Clicking or wheezing sounds",
+        "Bluish or pale tongue/mouth",
+        "Weakness or collapse",
+        "Cannot perch"
+      ],
+      "combinations": [
+        {"with": ["open_mouth_breathing", "fluffed_feathers"], "concern": "Severe respiratory distress - EMERGENCY"},
+        {"with": ["nasal_discharge", "sneezing"], "concern": "Respiratory infection progressing - urgent vet care"}
+      ],
+      "sources": ["VCA Hospitals", "PDSA", "MSD Vet Manual"]
+    },
+    {
+      "id": "bird_007",
+      "symptom": "Sneezing or wheezing",
+      "aliases": ["respiratory noise", "clicking", "wheeze", "raspy breathing"],
+      "category": "Respiratory",
+      "description": "Repeated sneezing, audible wheezing, or clicking sounds during breathing. Occasional sneezing can be normal (clearing dust) but persistent or frequent sneezing is a concern.",
+      "possible_causes": [
+        {"condition": "Upper respiratory infection", "likelihood": "very common", "brief": "Bacterial or viral, often from stress or poor husbandry"},
+        {"condition": "Vitamin A deficiency", "likelihood": "common", "brief": "Weakens respiratory tract lining, especially on seed-only diets"},
+        {"condition": "Airborne irritants", "likelihood": "common", "brief": "Dust, scented products, cigarette smoke, cooking fumes"},
+        {"condition": "Sinusitis", "likelihood": "occasional", "brief": "Bacterial sinus infection, sometimes from untreated colds"},
+        {"condition": "Chlamydia (psittacosis)", "likelihood": "occasional", "brief": "Zoonotic - can spread to humans"},
+        {"condition": "Foreign body in nostril", "likelihood": "rare", "brief": "Seed husk or debris lodged"}
+      ],
+      "home_care": [
+        "Remove all airborne irritants from the room (aerosols, candles, smoke)",
+        "Increase humidity (light misting, humidifier, or shower steam nearby)",
+        "Improve diet with vitamin A rich foods if currently on seeds only",
+        "Keep the bird warm (around 27°C)",
+        "Isolate from other birds if a contagious cause is suspected"
+      ],
+      "vet_urgency": {
+        "low": "Occasional single sneeze, no discharge - monitor",
+        "medium": "Frequent sneezing or mild wheezing for more than 24 hours - avian vet within a few days",
+        "high": "Persistent wheezing, clicking, laboured breathing, or any discharge - urgent avian vet"
+      },
+      "red_flags": [
+        "Coloured nasal discharge (green, yellow, brown)",
+        "Audible breathing at rest",
+        "Tail bobbing",
+        "Open-mouth breathing"
+      ],
+      "combinations": [
+        {"with": ["nasal_discharge"], "concern": "Likely respiratory infection - avian vet"},
+        {"with": ["tail_bobbing", "fluffed_feathers"], "concern": "Lower respiratory tract involvement - EMERGENCY"}
+      ],
+      "sources": ["VCA Hospitals", "PDSA", "Beauty of Birds"]
+    },
+    {
+      "id": "bird_008",
+      "symptom": "Loss of voice / quiet bird",
+      "aliases": ["not singing", "voice change", "hoarse", "silent"],
+      "category": "Respiratory / Behavioural",
+      "description": "Normally vocal bird becomes quiet, hoarse, or loses its voice. Can indicate respiratory illness affecting the syrinx (voice box) or general unwellness.",
+      "possible_causes": [
+        {"condition": "Respiratory infection (syrinx involvement)", "likelihood": "very common", "brief": "Inflammation of the voice box"},
+        {"condition": "General illness", "likelihood": "very common", "brief": "Quiet behaviour is one of the first signs an unwell bird shows"},
+        {"condition": "Stress or environmental change", "likelihood": "common", "brief": "New home, new pets, changed routine"},
+        {"condition": "Aspergillosis", "likelihood": "occasional", "brief": "Fungal lung disease often causes voice changes"},
+        {"condition": "Tracheal worms or parasites", "likelihood": "rare", "brief": "Particularly in outdoor-housed birds"},
+        {"condition": "Normal moult", "likelihood": "common", "brief": "Birds are often quieter during heavy moulting"}
+      ],
+      "home_care": [
+        "Look for other signs of illness (fluffed feathers, droppings change, appetite)",
+        "Check for moulting feathers - this is normal seasonal behaviour",
+        "Reduce stress - quiet environment, regular routine",
+        "Improve diet if seed-only",
+        "Keep warm if any other unwell signs"
+      ],
+      "vet_urgency": {
+        "low": "Briefly quieter, no other symptoms, possibly moulting - monitor for a week",
+        "medium": "Voice change with mild other symptoms - avian vet within a few days",
+        "high": "Hoarse or silent with any breathing difficulty, fluffing, or appetite loss - urgent avian vet"
+      },
+      "red_flags": [
+        "Combined with any breathing difficulty",
+        "Combined with appetite loss or fluffed feathers",
+        "Gradually getting worse over days",
+        "Clicking or wheezing sounds when breathing"
+      ],
+      "combinations": [
+        {"with": ["fluffed_feathers", "not_eating"], "concern": "Illness in progress - urgent vet"},
+        {"with": ["tail_bobbing"], "concern": "Lower respiratory disease - EMERGENCY"}
+      ],
+      "sources": ["VCA Hospitals", "MSD Vet Manual"]
+    },
+    {
+      "id": "bird_009",
+      "symptom": "Runny / watery droppings",
+      "aliases": ["diarrhoea", "loose droppings", "watery poo", "polyuria"],
+      "category": "Gastrointestinal",
+      "description": "Bird droppings have three components: dark faeces, white urates, and clear urine. True diarrhoea means the faecal portion is unformed; polyuria means excess clear water around normal faeces. Both warrant attention.",
+      "possible_causes": [
+        {"condition": "Diet change or stress", "likelihood": "very common", "brief": "Fresh fruit and vegetables temporarily increase water content"},
+        {"condition": "Bacterial or yeast infection", "likelihood": "common", "brief": "Especially after antibiotic use or stress"},
+        {"condition": "Parasites (giardia, worms)", "likelihood": "common", "brief": "Common in birds with outdoor access"},
+        {"condition": "Kidney disease", "likelihood": "occasional", "brief": "Causes polyuria (excess clear urine)"},
+        {"condition": "Heavy metal toxicity", "likelihood": "occasional", "brief": "Lead or zinc poisoning"},
+        {"condition": "Chlamydia (psittacosis)", "likelihood": "occasional", "brief": "Lime-green droppings are a classic sign"}
+      ],
+      "home_care": [
+        "Place white kitchen paper under the perch to better assess droppings",
+        "Photograph droppings to show the vet",
+        "Reduce fresh produce temporarily, stick to pellets and small amount of seed",
+        "Ensure plenty of clean water",
+        "Keep bird warm and reduce stress",
+        "Clean the cage frequently to prevent re-infection"
+      ],
+      "vet_urgency": {
+        "low": "Briefly looser droppings after eating fruit, bird otherwise well - monitor",
+        "medium": "Persistent runny droppings beyond 24 hours - phone avian vet today",
+        "high": "Blood, lime-green colour, very dark/black droppings, or no droppings at all - urgent avian vet"
+      },
+      "red_flags": [
+        "Blood in droppings (red or black)",
+        "Lime-green droppings (possible psittacosis)",
+        "Very few or no droppings",
+        "Pasted vent (droppings stuck to feathers around the vent)",
+        "Lethargy or fluffed feathers alongside"
+      ],
+      "combinations": [
+        {"with": ["fluffed_feathers", "lethargy"], "concern": "Serious illness or infection - urgent vet"},
+        {"with": ["weight_loss", "not_eating"], "concern": "Chronic illness, possibly organ disease - vet investigation"}
+      ],
+      "sources": ["VCA Hospitals", "PDSA", "Cornell Lab of Ornithology"]
+    },
+    {
+      "id": "bird_010",
+      "symptom": "Weight loss / prominent keel bone",
+      "aliases": ["thin bird", "wasting", "sharp breastbone"],
+      "category": "General illness",
+      "description": "The keel (breastbone) becomes prominent and sharp to the touch as the muscle on either side wastes away. Birds hide weight loss well because feathers disguise it. Always weigh on a gram scale to detect early.",
+      "possible_causes": [
+        {"condition": "Chronic infection or parasites", "likelihood": "very common", "brief": "Long-term illness drains body condition"},
+        {"condition": "Internal parasites (worms, giardia)", "likelihood": "common", "brief": "Common in seed-based diets and outdoor birds"},
+        {"condition": "Organ disease (liver, kidney)", "likelihood": "common", "brief": "Progressive weight loss despite eating"},
+        {"condition": "Cancer or tumours", "likelihood": "occasional", "brief": "More common in older birds, especially budgies"},
+        {"condition": "Beak abnormality", "likelihood": "occasional", "brief": "Overgrown or damaged beak prevents proper eating"},
+        {"condition": "PBFD or other viral disease", "likelihood": "occasional", "brief": "Psittacine beak and feather disease"}
+      ],
+      "home_care": [
+        "Weigh daily on a digital gram scale to monitor",
+        "Offer high-energy foods (millet spray, small amount of seed alongside pellets)",
+        "Improve overall diet quality - vegetables, pellets, occasional fruit",
+        "Have a faecal sample tested by your vet for parasites",
+        "Note appetite, droppings, and activity changes",
+        "Keep warm (around 27°C) - underweight birds chill easily"
+      ],
+      "vet_urgency": {
+        "low": "Slight weight fluctuation (less than 5%) - monitor closely",
+        "medium": "Steady weight loss over weeks, or 5-10% loss - avian vet within a week",
+        "high": "Rapid weight loss, prominent keel, weakness - urgent avian vet"
+      },
+      "red_flags": [
+        "10% or greater body weight loss",
+        "Keel feels sharp like a knife edge",
+        "Eating less or refusing food",
+        "Lethargy, fluffed feathers",
+        "Any droppings abnormality"
+      ],
+      "combinations": [
+        {"with": ["not_eating", "lethargy"], "concern": "Significant illness - urgent vet investigation"},
+        {"with": ["runny_droppings"], "concern": "Possible parasites or infection - vet needed"}
+      ],
+      "sources": ["VCA Hospitals", "MSD Vet Manual", "PDSA"]
+    },
+    {
+      "id": "bird_011",
+      "symptom": "Egg-binding (female)",
+      "aliases": ["egg bound", "dystocia", "stuck egg"],
+      "category": "Reproductive emergency",
+      "description": "Female bird is unable to pass an egg through her reproductive tract. A life-threatening emergency, especially in small species (budgies, canaries, finches, cockatiels). Can become fatal within hours.",
+      "possible_causes": [
+        {"condition": "Calcium deficiency", "likelihood": "very common", "brief": "Soft-shelled eggs stick in the reproductive tract"},
+        {"condition": "First-time laying", "likelihood": "common", "brief": "Inexperienced layers"},
+        {"condition": "Obesity", "likelihood": "common", "brief": "Excess fat compresses the reproductive tract"},
+        {"condition": "Cold environment", "likelihood": "common", "brief": "Causes muscle weakness and contractions to fail"},
+        {"condition": "Large or malformed egg", "likelihood": "occasional", "brief": "Physical obstruction"},
+        {"condition": "Reproductive tract infection or inflammation", "likelihood": "occasional", "brief": "Salpingitis"}
+      ],
+      "home_care": [
+        "This is an emergency - phone an avian vet immediately while preparing to travel",
+        "Warm the bird gently (around 29-32°C, this is therapeutic)",
+        "Increase humidity (light misting or a humid bathroom)",
+        "Do NOT attempt to remove the egg yourself - can cause the egg to break inside and kill the bird",
+        "Place on a soft towel in a travel box and keep calm",
+        "Note when the bird started straining and any droppings changes"
+      ],
+      "vet_urgency": {
+        "low": "Not applicable - all suspected egg-binding requires urgent vet care",
+        "medium": "Not applicable",
+        "high": "EMERGENCY - any female bird straining, with a swollen abdomen, on the cage floor, or fluffed up after laying activity - immediate avian vet"
+      },
+      "red_flags": [
+        "Visibly straining or pumping the tail",
+        "Swollen lower abdomen",
+        "On cage floor, fluffed up",
+        "Open-mouth breathing (egg pressing on air sacs)",
+        "Leg weakness or paralysis (egg pressing on nerves)",
+        "No droppings (egg blocking the cloaca)"
+      ],
+      "combinations": [
+        {"with": ["lethargy", "fluffed_feathers"], "concern": "Critical - EMERGENCY"},
+        {"with": ["open_mouth_breathing", "leg_weakness"], "concern": "Egg compressing vital structures - EMERGENCY"}
+      ],
+      "sources": ["VCA Hospitals", "PDSA", "MSD Vet Manual"]
+    },
+    {
+      "id": "bird_012",
+      "symptom": "Open-mouth / gaping breathing",
+      "aliases": ["gasping", "panting", "open beak breathing"],
+      "category": "Respiratory emergency",
+      "description": "Bird breathes with its beak open. Always a serious sign in birds (unlike dogs, birds do not pant to cool down except in extreme heat). Suggests severe respiratory distress.",
+      "possible_causes": [
+        {"condition": "Severe respiratory infection", "likelihood": "very common", "brief": "Lower airway, lung, or air sac involvement"},
+        {"condition": "Inhaled toxin (PTFE/Teflon fumes)", "likelihood": "common", "brief": "Non-stick cookware fumes - rapidly fatal"},
+        {"condition": "Aspergillosis (fungal lung disease)", "likelihood": "common", "brief": "Common in stressed or immunocompromised birds"},
+        {"condition": "Foreign body or aspiration", "likelihood": "occasional", "brief": "Inhaled seed husk, food, or liquid"},
+        {"condition": "Heatstroke", "likelihood": "occasional", "brief": "Especially in hot rooms or direct sun"},
+        {"condition": "Heart disease", "likelihood": "occasional", "brief": "Fluid build-up in the chest"}
+      ],
+      "home_care": [
+        "EMERGENCY - phone an avian vet immediately",
+        "Remove any source of fumes or toxins (turn off non-stick pans, open windows)",
+        "Move to a calm, well-ventilated area but no cold draughts",
+        "Do NOT handle unless absolutely necessary - stress can be fatal",
+        "Keep cage on the floor (less far to fall if collapses)",
+        "Travel with the cage covered to reduce visual stimulation"
+      ],
+      "vet_urgency": {
+        "low": "Not applicable",
+        "medium": "Not applicable",
+        "high": "EMERGENCY - any open-mouth breathing requires immediate avian vet"
+      },
+      "red_flags": [
+        "Pale or blue tongue / inside of mouth",
+        "Tail bobbing with each breath",
+        "Cannot perch or stand",
+        "Audible clicking or wheezing",
+        "Recent kitchen exposure (non-stick fumes)"
+      ],
+      "combinations": [
+        {"with": ["tail_bobbing"], "concern": "Severe respiratory distress - EMERGENCY"},
+        {"with": ["lethargy", "fluffed_feathers"], "concern": "Critical illness - EMERGENCY"}
+      ],
+      "sources": ["VCA Hospitals", "PDSA", "Cornell Lab of Ornithology"]
+    },
+    {
+      "id": "bird_013",
+      "symptom": "Discoloured droppings",
+      "aliases": ["coloured poo", "black droppings", "lime green droppings", "yellow droppings"],
+      "category": "Gastrointestinal / Systemic",
+      "description": "Healthy droppings have three components: dark green-brown faeces, white urates, and clear urine. Changes in colour can indicate specific illnesses.",
+      "possible_causes": [
+        {"condition": "Lime-green droppings - psittacosis (chlamydia)", "likelihood": "common", "brief": "Zoonotic disease - urgent diagnosis needed"},
+        {"condition": "Yellow or mustard urates - liver disease", "likelihood": "common", "brief": "Discoloured white portion indicates liver issues"},
+        {"condition": "Red or black droppings - blood in faeces", "likelihood": "occasional", "brief": "Internal bleeding, ulcer, or heavy metal toxicity"},
+        {"condition": "Red urine - heavy metal poisoning (lead, zinc)", "likelihood": "occasional", "brief": "Wine-coloured urine portion is classic"},
+        {"condition": "Bright red - dietary (beetroot, red berries)", "likelihood": "occasional", "brief": "Harmless if recent diet matches"},
+        {"condition": "Very dark droppings - dehydration or upper GI bleeding", "likelihood": "occasional", "brief": "Black tarry droppings suggest digested blood"}
+      ],
+      "home_care": [
+        "Photograph the droppings (with paper underneath) for the vet",
+        "Note recent diet - some foods cause harmless colour changes",
+        "Check the cage for any chewed metal items or paint",
+        "Isolate from other birds in case of contagious cause",
+        "Keep the bird warm and reduce handling",
+        "Bring a fresh dropping sample to the vet appointment"
+      ],
+      "vet_urgency": {
+        "low": "Dietary colour change matching recent food, bird otherwise well - monitor",
+        "medium": "Sustained colour change beyond 24 hours with no dietary cause - avian vet within a few days",
+        "high": "Lime-green, red, black, or wine-coloured urine - urgent avian vet"
+      },
+      "red_flags": [
+        "Lime-green colour (psittacosis)",
+        "Red or black tarry droppings (blood)",
+        "Wine-coloured urine (lead/zinc poisoning)",
+        "Yellow urates (liver disease)",
+        "Combined with lethargy or appetite loss",
+        "Household has other ill birds or unwell humans (psittacosis is zoonotic)"
+      ],
+      "combinations": [
+        {"with": ["lethargy", "not_eating"], "concern": "Systemic illness - urgent vet investigation"},
+        {"with": ["weight_loss"], "concern": "Chronic disease - vet care needed"}
+      ],
+      "sources": ["VCA Hospitals", "MSD Vet Manual", "PDSA"]
+    }
+  ]
+}
